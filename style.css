@@ -1532,29 +1532,28 @@ strong {
 
 .story-panel {
 
-    min-height: 65vh;
+    min-height: auto;
 
     display: grid;
 
     grid-template-columns:
         58px 1fr;
 
-    gap: 25px;
+    gap: 20px;
 
-    align-content: center;
+    align-items: start;
 
     padding:
-        45px 0;
+        32px 0;
 
     border-top:
         1px solid var(--line);
 
-    opacity: .28;
+    opacity: .32;
 
     transition:
         opacity .4s ease,
         transform .4s ease;
-
 }
 
 
@@ -6072,4 +6071,6460 @@ strong {
     }
 
 
+}/* =========================================================
+   29. HOME / COVER BARU
+   ========================================================= */
+
+.tegal-home {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #173f35;
+
 }
+
+
+/* =========================================================
+   SPLIT SCREEN
+   ========================================================= */
+
+.tegal-home-main {
+
+    flex: 1;
+
+    min-height: calc(100vh - 82px);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(430px,.82fr)
+        minmax(0,1.28fr);
+
+}
+
+
+.tegal-home-left {
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(57,128,102,.18),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            150deg,
+            #173f35,
+            #214c3b
+        );
+
+    color: white;
+
+}
+
+
+.tegal-home-content {
+
+    width: 100%;
+
+    max-width: 720px;
+
+    padding: 54px 46px;
+
+}
+
+
+/* BRAND */
+
+.tegal-home-brand {
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    margin-bottom: 50px;
+
+}
+
+
+.tegal-brand-mark {
+
+    width: 43px;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 2px solid #e4cf55;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+
+    color: #e4cf55;
+
+}
+
+
+.tegal-home-brand strong {
+
+    display: block;
+
+    font-size: 16px;
+
+    letter-spacing: .3px;
+
+    color: #e4cf55;
+
+}
+
+
+.tegal-home-brand small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 10px;
+
+    color: rgba(255,255,255,.58);
+
+}
+
+
+.tegal-home-label {
+
+    margin-bottom: 15px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #e4cf55;
+
+}
+
+
+.tegal-home h1 {
+
+    max-width: 680px;
+
+    margin: 0 0 24px;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(39px, 4vw, 62px);
+
+    line-height: 1.08;
+
+    font-weight: 400;
+
+    letter-spacing: -1.4px;
+
+    color: #f5f5ed;
+
+}
+
+
+.tegal-home-subtitle {
+
+    max-width: 620px;
+
+    margin-bottom: 26px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    line-height: 1.55;
+
+    color: #f0e8bf;
+
+}
+
+
+.tegal-home-author {
+
+    margin-bottom: 20px;
+
+}
+
+
+.tegal-home-author strong {
+
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 15px;
+
+    color: white;
+
+}
+
+
+.tegal-home-author span {
+
+    font-size: 12px;
+
+    color: rgba(255,255,255,.69);
+
+}
+
+
+.tegal-home-advisor {
+
+    max-width: 570px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.tegal-home-advisor > span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #e4cf55;
+
+}
+
+
+.tegal-home-advisor p {
+
+    margin: 2px 0;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+
+    color: rgba(255,255,255,.76);
+
+}
+
+
+.tegal-explore-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px 18px;
+
+    border: 1px solid rgba(255,255,255,.52);
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+
+    transition: .25s ease;
+
+}
+
+
+.tegal-explore-btn:hover {
+
+    background: #f4f3e8;
+
+    border-color: #f4f3e8;
+
+    color: #173f35;
+
+}
+
+
+/* =========================================================
+   FOTO KANAN
+   ========================================================= */
+
+.tegal-home-right {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #d8e1dc;
+
+}
+
+
+.tegal-home-photo {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 640px;
+
+}
+
+
+.tegal-home-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+
+.tegal-photo-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(14,54,43,.18),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            0deg,
+            rgba(7,34,30,.34),
+            transparent 35%
+        );
+
+}
+
+
+.tegal-photo-caption {
+
+    position: absolute;
+
+    right: 30px;
+
+    bottom: 28px;
+
+    padding: 14px 17px;
+
+    background: rgba(13,51,43,.78);
+
+    backdrop-filter: blur(8px);
+
+    color: white;
+
+}
+
+
+.tegal-photo-caption span {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #e4cf55;
+
+}
+
+
+.tegal-photo-caption strong {
+
+    display: block;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    color: white;
+
+}
+
+
+.tegal-photo-caption p {
+
+    margin: 2px 0 0;
+
+    font-size: 10px;
+
+    color: rgba(255,255,255,.72);
+
+}
+
+
+/* =========================================================
+   MENU HORIZONTAL
+   ========================================================= */
+
+.tegal-home-nav {
+
+    position: relative;
+
+    z-index: 100;
+
+    flex: none;
+
+    background: #285741;
+
+    border-top: 1px solid rgba(255,255,255,.09);
+
+    border-bottom: 1px solid rgba(255,255,255,.16);
+
+}
+
+
+.tegal-home-nav-inner {
+
+    width: 94%;
+
+    max-width: 1500px;
+
+    min-height: 78px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+}
+
+
+.tegal-nav-item {
+
+    position: relative;
+
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 10px 13px;
+
+    border: 0;
+
+    border-bottom: 2px solid transparent;
+
+    background: transparent;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #fff2c8;
+
+    white-space: nowrap;
+
+    transition: .22s ease;
+
+}
+
+
+.tegal-nav-item:hover {
+
+    background: rgba(255,255,255,.06);
+
+    border-bottom-color: #e4cf55;
+
+    color: white;
+
+}
+
+
+.tegal-nav-number {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    color: #e4cf55;
+
+}
+
+
+/* Override menu-card lama */
+
+.tegal-home-nav .menu-card {
+
+    width: auto;
+
+    min-height: 78px;
+
+    display: flex;
+
+    gap: 7px;
+
+    align-items: center;
+
+    padding: 10px 13px;
+
+    border: 0;
+
+    border-bottom: 2px solid transparent;
+
+    background: transparent;
+
+}
+
+
+.tegal-home-nav .menu-card:hover {
+
+    padding-left: 13px;
+
+    background: rgba(255,255,255,.06);
+
+}
+
+
+/* =========================================================
+   DROPDOWN HASIL
+   ========================================================= */
+
+.tegal-nav-result {
+
+    position: relative;
+
+    display: flex;
+
+}
+
+
+.tegal-result-trigger {
+
+    cursor: pointer;
+
+}
+
+
+.tegal-dropdown-arrow {
+
+    margin-left: 2px;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    color: #e4cf55;
+
+    transition: transform .25s ease;
+
+}
+
+
+.hasil-card.open .tegal-dropdown-arrow {
+
+    transform: rotate(180deg);
+
+}
+
+
+.tegal-result-dropdown {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: calc(100% + 12px);
+
+    transform: translateX(-50%);
+
+    z-index: 500;
+
+    width: 365px;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: rgba(21,61,49,.98);
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    box-shadow: 0 18px 42px rgba(0,0,0,.28);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.tegal-result-dropdown.show {
+
+    display: block;
+
+}
+
+
+.tegal-result-dropdown-header {
+
+    padding: 17px 18px;
+
+    border-bottom: 1px solid rgba(255,255,255,.12);
+
+}
+
+
+.tegal-result-dropdown-header span {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #e4cf55;
+
+}
+
+
+.tegal-result-dropdown-header strong {
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    color: white;
+
+}
+
+
+.tegal-result-dropdown .tegal-result-item {
+
+    width: 100%;
+
+    min-height: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        26px 1fr 20px;
+
+    gap: 10px;
+
+    align-items: center;
+
+    padding: 13px 17px;
+
+    border: 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    background: transparent;
+
+    text-align: left;
+
+    color: white;
+
+}
+
+
+.tegal-result-dropdown .tegal-result-item:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+.tegal-result-dropdown .tegal-result-item:hover {
+
+    background: rgba(255,255,255,.08);
+
+}
+
+
+.tegal-result-number {
+
+    font-size: 9px;
+
+    color: #e4cf55;
+
+}
+
+
+.tegal-result-item strong {
+
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: white;
+
+}
+
+
+.tegal-result-item small {
+
+    display: block;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 400;
+
+    color: rgba(255,255,255,.55);
+
+}
+
+
+.tegal-result-item b {
+
+    justify-self: end;
+
+    font-weight: 400;
+
+    color: #e4cf55;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1150px) {
+
+    .tegal-home-main {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .tegal-home-content {
+
+        padding: 42px 30px;
+
+    }
+
+
+    .tegal-home-brand {
+
+        margin-bottom: 34px;
+
+    }
+
+
+    .tegal-home-nav-inner {
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+    }
+
+
+    .tegal-nav-item,
+    .tegal-home-nav .menu-card {
+
+        flex: none;
+
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .tegal-home-main {
+
+        display: block;
+
+        min-height: auto;
+
+    }
+
+
+    .tegal-home-left {
+
+        min-height: 610px;
+
+    }
+
+
+    .tegal-home-content {
+
+        padding: 36px 24px;
+
+    }
+
+
+    .tegal-home h1 {
+
+        font-size: 39px;
+
+    }
+
+
+    .tegal-home-subtitle {
+
+        font-size: 16px;
+
+    }
+
+
+    .tegal-home-right {
+
+        height: 340px;
+
+    }
+
+
+    .tegal-home-photo {
+
+        min-height: 340px;
+
+    }
+
+
+    .tegal-home-nav-inner {
+
+        width: 100%;
+
+        display: block;
+
+        overflow: visible;
+
+    }
+
+
+    .tegal-nav-item,
+    .tegal-home-nav .menu-card {
+
+        width: 100%;
+
+        min-height: 48px;
+
+        justify-content: flex-start;
+
+        padding: 11px 22px;
+
+        border-bottom:
+            1px solid rgba(255,255,255,.08);
+
+    }
+
+
+    .tegal-home-nav .menu-card:hover {
+
+        padding-left: 22px;
+
+    }
+
+
+    .tegal-nav-result {
+
+        display: block;
+
+    }
+
+
+    .tegal-result-dropdown {
+
+        position: static;
+
+        width: 100%;
+
+        transform: none;
+
+        box-shadow: none;
+
+        border-left: 0;
+
+        border-right: 0;
+
+    }
+
+}/* =========================================================
+   FIX NAVIGASI UTAMA DI ATAS
+   ========================================================= */
+
+.tegal-home-nav {
+
+    position: fixed !important;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    background:
+        rgba(33, 78, 59, 0.97);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 3px 16px rgba(0,0,0,.12);
+
+}
+
+
+/* =========================================================
+   TINGGI MENU
+   ========================================================= */
+
+.tegal-home-nav-inner {
+
+    width: 96%;
+
+    max-width: 1600px;
+
+    min-height: 72px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   ITEM MENU
+   ========================================================= */
+
+.tegal-nav-item,
+.tegal-home-nav .menu-card {
+
+    min-height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 8px 13px;
+
+    border: none;
+
+    border-bottom:
+        3px solid transparent;
+
+    background:
+        transparent;
+
+    color:
+        #fff3c9;
+
+    white-space:
+        nowrap;
+
+    font-size:
+        12px;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+}
+
+
+.tegal-nav-item:hover,
+.tegal-home-nav .menu-card:hover {
+
+    padding-left:
+        13px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border-bottom-color:
+        #e4cf55;
+
+    color:
+        #ffffff;
+
+}
+
+
+.tegal-nav-number {
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+    color:
+        #e4cf55;
+
+}
+
+
+/* =========================================================
+   AGAR SECTION TIDAK TERTUTUP MENU FIXED
+   ========================================================= */
+
+#cover,
+#latar-belakang,
+#research-gap,
+#batasan,
+#pertanyaan,
+#metode,
+#hasil-dsas,
+#hasil-cvi,
+#hasil-sedimen,
+#hasil-rf,
+#hasil-rdtr,
+#kesimpulan {
+
+    scroll-margin-top:
+        90px;
+
+}
+
+
+/* Cover diberi ruang untuk navbar */
+
+.tegal-home {
+
+    padding-top:
+        72px;
+
+}
+
+
+/* =========================================================
+   HASIL DAN PEMBAHASAN
+   ========================================================= */
+
+.tegal-nav-result {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        stretch;
+
+}
+
+
+.tegal-result-trigger {
+
+    cursor:
+        pointer;
+
+}
+
+
+/* Panah */
+
+.tegal-dropdown-arrow {
+
+    margin-left:
+        4px;
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+/* Ketika terbuka */
+
+.tegal-result-trigger.open
+.tegal-dropdown-arrow,
+
+.hasil-card.open
+.tegal-dropdown-arrow {
+
+    transform:
+        rotate(180deg);
+
+}
+
+
+/* =========================================================
+   DROPDOWN HASIL
+   SEKARANG TURUN KE BAWAH
+   ========================================================= */
+
+.tegal-result-dropdown {
+
+    position:
+        absolute !important;
+
+    top:
+        100% !important;
+
+    bottom:
+        auto !important;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    width:
+        380px;
+
+    margin:
+        0 !important;
+
+    padding:
+        0;
+
+    display:
+        none;
+
+    z-index:
+        10000;
+
+    background:
+        rgba(20,58,47,.99);
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    border-top:
+        3px solid #e4cf55;
+
+    box-shadow:
+        0 18px 38px rgba(0,0,0,.28);
+
+    backdrop-filter:
+        blur(12px);
+
+}
+
+
+/* Show dropdown */
+
+.tegal-result-dropdown.show {
+
+    display:
+        block !important;
+
+}
+
+
+/* Header dropdown */
+
+.tegal-result-dropdown-header {
+
+    padding:
+        16px 18px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.12);
+
+}
+
+
+.tegal-result-dropdown-header span {
+
+    display:
+        block;
+
+    margin-bottom:
+        4px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2px;
+
+    color:
+        #e4cf55;
+
+}
+
+
+.tegal-result-dropdown-header strong {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        19px;
+
+    font-weight:
+        500;
+
+    color:
+        white;
+
+}
+
+
+/* =========================================================
+   ITEM DROPDOWN
+   ========================================================= */
+
+.tegal-result-dropdown .tegal-result-item {
+
+    width:
+        100%;
+
+    min-height:
+        62px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        28px 1fr 20px;
+
+    gap:
+        10px;
+
+    align-items:
+        center;
+
+    padding:
+        12px 17px;
+
+    border:
+        none;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+    background:
+        transparent;
+
+    text-align:
+        left;
+
+    color:
+        white;
+
+}
+
+
+.tegal-result-dropdown
+.tegal-result-item:last-child {
+
+    border-bottom:
+        none;
+
+}
+
+
+.tegal-result-dropdown
+.tegal-result-item:hover {
+
+    background:
+        rgba(255,255,255,.09);
+
+}
+
+
+.tegal-result-number {
+
+    font-size:
+        9px;
+
+    color:
+        #e4cf55;
+
+}
+
+
+.tegal-result-item strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        2px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        14px;
+
+    font-weight:
+        500;
+
+    color:
+        white;
+
+}
+
+
+.tegal-result-item small {
+
+    display:
+        block;
+
+    font-size:
+        9px;
+
+    color:
+        rgba(255,255,255,.58);
+
+}
+
+
+.tegal-result-item b {
+
+    justify-self:
+        end;
+
+    color:
+        #e4cf55;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .tegal-home-nav {
+
+        position:
+            fixed !important;
+
+    }
+
+
+    .tegal-home-nav-inner {
+
+        width:
+            100%;
+
+        overflow-x:
+            auto;
+
+        display:
+            flex;
+
+        justify-content:
+            flex-start;
+
+    }
+
+
+    .tegal-nav-item,
+    .tegal-home-nav .menu-card {
+
+        width:
+            auto;
+
+        flex:
+            none;
+
+        min-height:
+            62px;
+
+        padding:
+            8px 12px;
+
+    }
+
+
+    .tegal-result-dropdown {
+
+        position:
+            fixed !important;
+
+        top:
+            62px !important;
+
+        left:
+            50%;
+
+        bottom:
+            auto !important;
+
+        width:
+            min(380px, 92vw);
+
+        transform:
+            translateX(-50%);
+
+    }
+
+
+    .tegal-home {
+
+        padding-top:
+            62px;
+
+    }
+
+}/* =========================================================
+   NAVBAR TESIS FINAL
+   POSISI DI BAWAH COVER -> STICKY SAAT SCROLL
+   ========================================================= */
+
+
+/* Matikan background lama #menu-tesis */
+#menu-tesis::before,
+#menu-tesis::after {
+    display: none !important;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+#menu-tesis.tegal-home-nav {
+
+    position: sticky !important;
+
+    top: 0;
+
+    z-index: 9999;
+
+    width: 100%;
+
+    background: #24543f !important;
+
+    border-top:
+        1px solid rgba(255,255,255,.10);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.08);
+
+    overflow: visible !important;
+
+}
+
+
+/* container menu */
+
+.tegal-home-nav-inner {
+
+    width: 94%;
+
+    max-width: 1550px;
+
+    min-height: 66px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    overflow: visible;
+
+}
+
+
+/* =========================================================
+   MENU ITEM
+   ========================================================= */
+
+.tegal-home-nav .tegal-nav-item,
+.tegal-home-nav .menu-card {
+
+    position: relative;
+
+    width: auto;
+
+    min-height: 66px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 10px 14px !important;
+
+    border: 0;
+
+    border-bottom:
+        3px solid transparent;
+
+    border-radius: 0;
+
+    background: transparent !important;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #f3f1e8 !important;
+
+    white-space: nowrap;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+
+}
+
+
+/* nomor kecil */
+
+.tegal-nav-number {
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    color: #e7d46b;
+
+}
+
+
+/* hover */
+
+.tegal-home-nav .tegal-nav-item:hover,
+.tegal-home-nav .menu-card:hover {
+
+    padding-left: 14px !important;
+
+    background:
+        rgba(255,255,255,.075) !important;
+
+    border-bottom-color:
+        #e7d46b;
+
+    color:
+        #ffffff !important;
+
+}
+
+
+/* =========================================================
+   HASIL DAN PEMBAHASAN
+   ========================================================= */
+
+.tegal-nav-result {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: stretch;
+
+    overflow: visible;
+
+}
+
+
+#hasilMenuBtn {
+
+    cursor: pointer;
+
+}
+
+
+/* panah */
+
+.tegal-dropdown-arrow {
+
+    margin-left: 4px;
+
+    font-size: 10px;
+
+    color: #e7d46b;
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+#hasilMenuBtn.open
+.tegal-dropdown-arrow {
+
+    transform:
+        rotate(180deg);
+
+}
+
+
+/* =========================================================
+   DROPDOWN
+   ========================================================= */
+
+#hasilSubmenu.tegal-result-dropdown {
+
+    position: absolute !important;
+
+    top: calc(100% + 1px) !important;
+
+    bottom: auto !important;
+
+    left: 50% !important;
+
+    transform:
+        translateX(-50%) !important;
+
+    width: 390px;
+
+    margin: 0 !important;
+
+    padding: 0;
+
+    display: none;
+
+    z-index: 10000;
+
+    background:
+        #173f35 !important;
+
+    border:
+        1px solid rgba(255,255,255,.13);
+
+    border-top:
+        3px solid #e7d46b;
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,.25);
+
+    overflow: hidden;
+
+}
+
+
+/* MUNCUL SAAT DIKLIK */
+
+#hasilSubmenu.tegal-result-dropdown.show {
+
+    display: block !important;
+
+}
+
+
+/* header dropdown */
+
+.tegal-result-dropdown-header {
+
+    padding: 16px 18px;
+
+    background:
+        #12372e;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.10);
+
+}
+
+
+.tegal-result-dropdown-header span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+
+    color: #e7d46b;
+
+}
+
+
+.tegal-result-dropdown-header strong {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 500;
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   ITEM HASIL
+   ========================================================= */
+
+#hasilSubmenu
+.tegal-result-item {
+
+    width: 100%;
+
+    min-height: 64px;
+
+    display: grid;
+
+    grid-template-columns:
+        30px 1fr 20px;
+
+    gap: 10px;
+
+    align-items: center;
+
+    padding: 12px 17px;
+
+    border: none;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+    background:
+        transparent !important;
+
+    text-align: left;
+
+    color: white;
+
+}
+
+
+#hasilSubmenu
+.tegal-result-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+#hasilSubmenu
+.tegal-result-item:hover {
+
+    background:
+        rgba(255,255,255,.08) !important;
+
+}
+
+
+.tegal-result-number {
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    color: #e7d46b;
+
+}
+
+
+#hasilSubmenu
+.tegal-result-item strong {
+
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+
+}
+
+
+#hasilSubmenu
+.tegal-result-item small {
+
+    display: block;
+
+    font-size: 9px;
+
+    font-weight: 400;
+
+    color:
+        rgba(255,255,255,.60);
+
+}
+
+
+#hasilSubmenu
+.tegal-result-item b {
+
+    justify-self: end;
+
+    color: #e7d46b;
+
+}
+
+
+/* =========================================================
+   AGAR JUDUL SECTION TIDAK TERTUTUP NAVBAR STICKY
+   ========================================================= */
+
+#latar-belakang,
+#research-gap,
+#batasan,
+#pertanyaan,
+#metode,
+#hasil-dsas,
+#hasil-cvi,
+#hasil-sedimen,
+#hasil-rf,
+#hasil-rdtr,
+#kesimpulan {
+
+    scroll-margin-top:
+        80px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1150px) {
+
+    .tegal-home-nav-inner {
+
+        justify-content:
+            flex-start;
+
+        overflow-x:
+            auto;
+
+        overflow-y:
+            visible;
+
+    }
+
+
+    .tegal-home-nav .tegal-nav-item,
+    .tegal-home-nav .menu-card {
+
+        flex:
+            none;
+
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    #menu-tesis.tegal-home-nav {
+
+        top:
+            0;
+
+    }
+
+
+    .tegal-home-nav-inner {
+
+        min-height:
+            58px;
+
+    }
+
+
+    .tegal-home-nav .tegal-nav-item,
+    .tegal-home-nav .menu-card {
+
+        min-height:
+            58px;
+
+        padding:
+            9px 12px !important;
+
+    }
+
+
+    #hasilSubmenu.tegal-result-dropdown {
+
+        position:
+            fixed !important;
+
+        top:
+            58px !important;
+
+        left:
+            50% !important;
+
+        width:
+            min(390px, 94vw);
+
+        transform:
+            translateX(-50%) !important;
+
+    }
+
+}/* =========================================================
+   NAVBAR FINAL
+   ========================================================= */
+
+#menu-tesis.tegal-home-nav {
+
+    position: sticky !important;
+
+    top: 0;
+
+    z-index: 9999;
+
+    width: 100%;
+
+    overflow: visible !important;
+
+    background: #245b43 !important;
+
+    border: none;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.10);
+
+}
+
+
+/* hapus background pseudo element lama */
+
+#menu-tesis::before,
+#menu-tesis::after {
+
+    display: none !important;
+
+}
+
+
+.tegal-home-nav-inner {
+
+    width: 96%;
+
+    max-width: 1600px;
+
+    min-height: 76px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+    overflow: visible !important;
+
+}
+
+
+.tegal-home-nav .tegal-nav-item,
+.tegal-home-nav .menu-card {
+
+    width: auto;
+
+    min-height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding:
+        10px 15px !important;
+
+    border: 0;
+
+    border-bottom:
+        3px solid transparent;
+
+    background:
+        transparent !important;
+
+    color:
+        #f3f4ed !important;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+}
+
+
+.tegal-home-nav .tegal-nav-item:hover,
+.tegal-home-nav .menu-card:hover {
+
+    padding-left:
+        15px !important;
+
+    background:
+        rgba(255,255,255,.07) !important;
+
+    border-bottom-color:
+        #e1d265;
+
+    color:
+        #ffffff !important;
+
+}
+
+
+.tegal-nav-number {
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    color: #e1d265;
+
+}
+
+
+/* =========================================================
+   HASIL & PEMBAHASAN
+   ========================================================= */
+
+.tegal-nav-result {
+
+    position: relative;
+
+    display: flex;
+
+    overflow: visible !important;
+
+}
+
+
+#hasilMenuBtn {
+
+    cursor: pointer;
+
+}
+
+
+.tegal-dropdown-arrow {
+
+    margin-left: 3px;
+
+    color: #e1d265;
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+#hasilMenuBtn.open
+.tegal-dropdown-arrow {
+
+    transform:
+        rotate(180deg);
+
+}
+
+
+/* =========================================================
+   DROPDOWN HASIL
+   ========================================================= */
+
+#hasilSubmenu {
+
+    display: none;
+
+}
+
+
+#hasilSubmenu.show {
+
+    display: block !important;
+
+}
+
+
+#hasilSubmenu.tegal-result-dropdown {
+
+    position: absolute !important;
+
+    top: 100% !important;
+
+    bottom: auto !important;
+
+    left: 50% !important;
+
+    transform:
+        translateX(-50%) !important;
+
+    width: 380px;
+
+    margin: 0 !important;
+
+    padding: 0;
+
+    z-index: 20000;
+
+    background:
+        #183f33 !important;
+
+    border-top:
+        3px solid #e1d265;
+
+    box-shadow:
+        0 16px 40px rgba(0,0,0,.28);
+
+    overflow: hidden;
+
+}
+
+
+.tegal-result-dropdown-header {
+
+    padding:
+        16px 18px;
+
+    background:
+        #12372d;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.10);
+
+}
+
+
+.tegal-result-dropdown-header span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+
+    color: #e1d265;
+
+}
+
+
+.tegal-result-dropdown-header strong {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 500;
+
+    color: white;
+
+}
+
+
+#hasilSubmenu .tegal-result-item {
+
+    width: 100%;
+
+    min-height: 61px;
+
+    display: grid;
+
+    grid-template-columns:
+        28px 1fr 20px;
+
+    gap: 10px;
+
+    align-items: center;
+
+    padding:
+        12px 17px;
+
+    border: 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+    background:
+        transparent !important;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+#hasilSubmenu .tegal-result-item:hover {
+
+    background:
+        rgba(255,255,255,.08) !important;
+
+}
+
+
+#hasilSubmenu
+.tegal-result-item strong {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: white;
+
+}
+
+
+#hasilSubmenu
+.tegal-result-item small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 9px;
+
+    color:
+        rgba(255,255,255,.60);
+
+}
+
+
+.tegal-result-number,
+#hasilSubmenu b {
+
+    color:
+        #e1d265;
+
+}
+
+
+/* =========================================================
+   OFFSET SAAT MENU DIKLIK
+   ========================================================= */
+
+#latar-belakang,
+#research-gap,
+#batasan,
+#pertanyaan,
+#metode,
+#hasil-dsas,
+#hasil-cvi,
+#hasil-sedimen,
+#hasil-rf,
+#hasil-rdtr,
+#kesimpulan {
+
+    scroll-margin-top:
+        90px;
+
+}/* =========================================================
+   NAVBAR FINAL
+   ========================================================= */
+
+#menu-tesis.tegal-home-nav {
+
+    position: sticky !important;
+
+    top: 0;
+
+    z-index: 9999;
+
+    width: 100%;
+
+    overflow: visible !important;
+
+    background: #245b43 !important;
+
+    border: none;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.10);
+
+}
+
+
+/* hapus background pseudo element lama */
+
+#menu-tesis::before,
+#menu-tesis::after {
+
+    display: none !important;
+
+}
+
+
+.tegal-home-nav-inner {
+
+    width: 96%;
+
+    max-width: 1600px;
+
+    min-height: 76px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+    overflow: visible !important;
+
+}
+
+
+.tegal-home-nav .tegal-nav-item,
+.tegal-home-nav .menu-card {
+
+    width: auto;
+
+    min-height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding:
+        10px 15px !important;
+
+    border: 0;
+
+    border-bottom:
+        3px solid transparent;
+
+    background:
+        transparent !important;
+
+    color:
+        #f3f4ed !important;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+}
+
+
+.tegal-home-nav .tegal-nav-item:hover,
+.tegal-home-nav .menu-card:hover {
+
+    padding-left:
+        15px !important;
+
+    background:
+        rgba(255,255,255,.07) !important;
+
+    border-bottom-color:
+        #e1d265;
+
+    color:
+        #ffffff !important;
+
+}
+
+
+.tegal-nav-number {
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    color: #e1d265;
+
+}
+
+
+/* =========================================================
+   HASIL & PEMBAHASAN
+   ========================================================= */
+
+.tegal-nav-result {
+
+    position: relative;
+
+    display: flex;
+
+    overflow: visible !important;
+
+}
+
+
+#hasilMenuBtn {
+
+    cursor: pointer;
+
+}
+
+
+.tegal-dropdown-arrow {
+
+    margin-left: 3px;
+
+    color: #e1d265;
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+#hasilMenuBtn.open
+.tegal-dropdown-arrow {
+
+    transform:
+        rotate(180deg);
+
+}
+
+
+/* =========================================================
+   DROPDOWN HASIL
+   ========================================================= */
+
+#hasilSubmenu {
+
+    display: none;
+
+}
+
+
+#hasilSubmenu.show {
+
+    display: block !important;
+
+}
+
+
+#hasilSubmenu.tegal-result-dropdown {
+
+    position: absolute !important;
+
+    top: 100% !important;
+
+    bottom: auto !important;
+
+    left: 50% !important;
+
+    transform:
+        translateX(-50%) !important;
+
+    width: 380px;
+
+    margin: 0 !important;
+
+    padding: 0;
+
+    z-index: 20000;
+
+    background:
+        #183f33 !important;
+
+    border-top:
+        3px solid #e1d265;
+
+    box-shadow:
+        0 16px 40px rgba(0,0,0,.28);
+
+    overflow: hidden;
+
+}
+
+
+.tegal-result-dropdown-header {
+
+    padding:
+        16px 18px;
+
+    background:
+        #12372d;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.10);
+
+}
+
+
+.tegal-result-dropdown-header span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+
+    color: #e1d265;
+
+}
+
+
+.tegal-result-dropdown-header strong {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 500;
+
+    color: white;
+
+}
+
+
+#hasilSubmenu .tegal-result-item {
+
+    width: 100%;
+
+    min-height: 61px;
+
+    display: grid;
+
+    grid-template-columns:
+        28px 1fr 20px;
+
+    gap: 10px;
+
+    align-items: center;
+
+    padding:
+        12px 17px;
+
+    border: 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+    background:
+        transparent !important;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+#hasilSubmenu .tegal-result-item:hover {
+
+    background:
+        rgba(255,255,255,.08) !important;
+
+}
+
+
+#hasilSubmenu
+.tegal-result-item strong {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: white;
+
+}
+
+
+#hasilSubmenu
+.tegal-result-item small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 9px;
+
+    color:
+        rgba(255,255,255,.60);
+
+}
+
+
+.tegal-result-number,
+#hasilSubmenu b {
+
+    color:
+        #e1d265;
+
+}
+
+
+/* =========================================================
+   OFFSET SAAT MENU DIKLIK
+   ========================================================= */
+
+#latar-belakang,
+#research-gap,
+#batasan,
+#pertanyaan,
+#metode,
+#hasil-dsas,
+#hasil-cvi,
+#hasil-sedimen,
+#hasil-rf,
+#hasil-rdtr,
+#kesimpulan {
+
+    scroll-margin-top:
+        90px;
+
+}/* =========================================================
+   NAVBAR FINAL
+   ========================================================= */
+
+#menu-tesis.tegal-home-nav {
+
+    position: sticky !important;
+
+    top: 0;
+
+    z-index: 9999;
+
+    width: 100%;
+
+    overflow: visible !important;
+
+    background: #245b43 !important;
+
+    border: none;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.10);
+
+}
+
+
+/* hapus background pseudo element lama */
+
+#menu-tesis::before,
+#menu-tesis::after {
+
+    display: none !important;
+
+}
+
+
+.tegal-home-nav-inner {
+
+    width: 96%;
+
+    max-width: 1600px;
+
+    min-height: 76px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+    overflow: visible !important;
+
+}
+
+
+.tegal-home-nav .tegal-nav-item,
+.tegal-home-nav .menu-card {
+
+    width: auto;
+
+    min-height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding:
+        10px 15px !important;
+
+    border: 0;
+
+    border-bottom:
+        3px solid transparent;
+
+    background:
+        transparent !important;
+
+    color:
+        #f3f4ed !important;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+}
+
+
+.tegal-home-nav .tegal-nav-item:hover,
+.tegal-home-nav .menu-card:hover {
+
+    padding-left:
+        15px !important;
+
+    background:
+        rgba(255,255,255,.07) !important;
+
+    border-bottom-color:
+        #e1d265;
+
+    color:
+        #ffffff !important;
+
+}
+
+
+.tegal-nav-number {
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    color: #e1d265;
+
+}
+
+
+/* =========================================================
+   HASIL & PEMBAHASAN
+   ========================================================= */
+
+.tegal-nav-result {
+
+    position: relative;
+
+    display: flex;
+
+    overflow: visible !important;
+
+}
+
+
+#hasilMenuBtn {
+
+    cursor: pointer;
+
+}
+
+
+.tegal-dropdown-arrow {
+
+    margin-left: 3px;
+
+    color: #e1d265;
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+#hasilMenuBtn.open
+.tegal-dropdown-arrow {
+
+    transform:
+        rotate(180deg);
+
+}
+
+
+/* =========================================================
+   DROPDOWN HASIL
+   ========================================================= */
+
+#hasilSubmenu {
+
+    display: none;
+
+}
+
+
+#hasilSubmenu.show {
+
+    display: block !important;
+
+}
+
+
+#hasilSubmenu.tegal-result-dropdown {
+
+    position: absolute !important;
+
+    top: 100% !important;
+
+    bottom: auto !important;
+
+    left: 50% !important;
+
+    transform:
+        translateX(-50%) !important;
+
+    width: 380px;
+
+    margin: 0 !important;
+
+    padding: 0;
+
+    z-index: 20000;
+
+    background:
+        #183f33 !important;
+
+    border-top:
+        3px solid #e1d265;
+
+    box-shadow:
+        0 16px 40px rgba(0,0,0,.28);
+
+    overflow: hidden;
+
+}
+
+
+.tegal-result-dropdown-header {
+
+    padding:
+        16px 18px;
+
+    background:
+        #12372d;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.10);
+
+}
+
+
+.tegal-result-dropdown-header span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+
+    color: #e1d265;
+
+}
+
+
+.tegal-result-dropdown-header strong {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 500;
+
+    color: white;
+
+}
+
+
+#hasilSubmenu .tegal-result-item {
+
+    width: 100%;
+
+    min-height: 61px;
+
+    display: grid;
+
+    grid-template-columns:
+        28px 1fr 20px;
+
+    gap: 10px;
+
+    align-items: center;
+
+    padding:
+        12px 17px;
+
+    border: 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+    background:
+        transparent !important;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+#hasilSubmenu .tegal-result-item:hover {
+
+    background:
+        rgba(255,255,255,.08) !important;
+
+}
+
+
+#hasilSubmenu
+.tegal-result-item strong {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: white;
+
+}
+
+
+#hasilSubmenu
+.tegal-result-item small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 9px;
+
+    color:
+        rgba(255,255,255,.60);
+
+}
+
+
+.tegal-result-number,
+#hasilSubmenu b {
+
+    color:
+        #e1d265;
+
+}
+
+
+/* =========================================================
+   OFFSET SAAT MENU DIKLIK
+   ========================================================= */
+
+#latar-belakang,
+#research-gap,
+#batasan,
+#pertanyaan,
+#metode,
+#hasil-dsas,
+#hasil-cvi,
+#hasil-sedimen,
+#hasil-rf,
+#hasil-rdtr,
+#kesimpulan {
+
+    scroll-margin-top:
+        90px;
+
+}/* =========================================================
+   STORY MAP - IMAGE POPUP
+   ========================================================= */
+
+.story-image-popup {
+
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 270px;
+
+    z-index: 30;
+
+    background: rgba(255,255,255,.96);
+
+    border:
+        1px solid rgba(18,55,70,.14);
+
+    box-shadow:
+        0 12px 30px rgba(18,55,70,.22);
+
+    overflow: hidden;
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+
+}
+
+
+.story-image-popup.changing {
+
+    opacity: 0;
+
+    transform:
+        translateY(-8px);
+
+}
+
+
+.story-image-popup img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 165px;
+
+    object-fit: cover;
+
+}
+
+
+.story-image-caption {
+
+    padding:
+        11px 13px 13px;
+
+}
+
+
+.story-image-caption span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #177f7b;
+
+}
+
+
+.story-image-caption strong {
+
+    display: block;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+
+    line-height: 1.35;
+
+    font-weight: 500;
+
+    color: #123746;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+    .story-image-popup {
+
+        width: 190px;
+
+        top: 10px;
+        right: 10px;
+
+    }
+
+
+    .story-image-popup img {
+
+        height: 115px;
+
+    }
+
+}/* =========================================================
+   STORY MAP — FOTO POPUP
+   ========================================================= */
+
+.story-map-frame {
+    position: relative;
+}
+
+
+.story-image-popup {
+
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 270px;
+
+    z-index: 30;
+
+    overflow: hidden;
+
+    background:
+        rgba(255,255,255,.96);
+
+    border:
+        1px solid rgba(18,55,70,.15);
+
+    box-shadow:
+        0 12px 30px rgba(18,55,70,.22);
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity .28s ease,
+        transform .28s ease;
+
+}
+
+
+.story-image-popup.changing {
+
+    opacity: 0;
+
+    transform:
+        translateY(-8px);
+
+}
+
+
+.story-image-popup img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 165px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    background:
+        #e7ecea;
+
+}
+
+
+.story-image-caption {
+
+    padding:
+        11px 13px 13px;
+
+    background:
+        rgba(255,255,255,.97);
+
+}
+
+
+.story-image-caption span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.6px;
+
+    color: #177f7b;
+
+}
+
+
+.story-image-caption strong {
+
+    display: block;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+
+    line-height: 1.35;
+
+    font-weight: 500;
+
+    color: #123746;
+
+}
+
+
+/* =========================================================
+   INFO PETA TETAP DI KIRI BAWAH
+   ========================================================= */
+
+.story-map-overlay {
+
+    z-index: 25;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .story-image-popup {
+
+        width: 190px;
+
+        top: 10px;
+        right: 10px;
+
+    }
+
+
+    .story-image-popup img {
+
+        height: 115px;
+
+    }
+
+
+    .story-image-caption {
+
+        padding:
+            8px 10px 10px;
+
+    }
+
+
+    .story-image-caption strong {
+
+        font-size: 12px;
+
+    }
+
+}
+
+/* =========================================================
+   30. RANDOM FOREST / PREDIKSI GARIS PANTAI 2035
+   FINAL - CLEAN VERSION
+   ========================================================= */
+
+#hasil-rf {
+    min-height: 100vh;
+    padding: 95px 0 110px;
+}
+
+#hasil-rf .result-wrapper {
+    width: 92%;
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+#hasil-rf .result-header {
+    max-width: 900px;
+    margin-bottom: 30px;
+}
+
+#hasil-rf .result-header h2 {
+    margin: 8px 0 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 4vw, 60px);
+    line-height: 1.08;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+#hasil-rf .result-lead {
+    max-width: 840px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   RF MAP + SUMMARY
+   ========================================================= */
+
+.rf-map-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2.1fr) minmax(320px, .9fr);
+    gap: 22px;
+    align-items: start;
+    margin-top: 28px;
+}
+
+.rf-map-column {
+    position: relative;
+    min-width: 0;
+}
+
+#rfMap {
+    width: 100%;
+    height: 500px;
+    min-height: 500px;
+    display: block;
+    background: #dce7e6;
+    border-top: 1px solid rgba(18,55,70,.18);
+    border-bottom: 1px solid rgba(18,55,70,.18);
+}
+
+
+/* =========================================================
+   RF LEGEND
+   ========================================================= */
+
+.rf-map-legend {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    z-index: 20;
+    width: 205px;
+    padding: 14px 15px;
+    background: rgba(255,255,255,.95);
+    box-shadow: 0 8px 22px rgba(18,55,70,.14);
+    backdrop-filter: blur(8px);
+}
+
+.rf-map-legend > strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 10px;
+    color: var(--navy);
+}
+
+.rf-map-legend .legend-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 8px 0;
+    font-size: 10px;
+    color: #60747b;
+}
+
+.rf-map-legend .legend-line {
+    display: inline-block;
+    width: 30px;
+    height: 4px;
+    flex: 0 0 auto;
+}
+
+.rf-map-legend .legend-line.actual {
+    background: #2367a0;
+}
+
+.rf-map-legend .legend-line.prediction {
+    background: #d64f45;
+}
+
+
+/* =========================================================
+   RF SUMMARY CARDS
+   ========================================================= */
+
+.rf-summary-column {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 12px;
+    align-content: start;
+}
+
+.rf-stat {
+    min-height: 150px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgba(255,255,255,.72);
+    border-top: 3px solid var(--teal);
+}
+
+.rf-stat span {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--teal);
+}
+
+.rf-stat strong {
+    display: block;
+    margin: 0 0 5px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 29px;
+    font-weight: 500;
+    line-height: 1.05;
+    color: var(--navy);
+}
+
+.rf-stat small {
+    display: block;
+    margin-top: 5px;
+    font-size: 10px;
+    line-height: 1.45;
+    color: #708389;
+}
+
+
+/* =========================================================
+   RF MODEL PERFORMANCE
+   ========================================================= */
+
+.rf-model-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    margin-top: 20px;
+    border-top: 1px solid rgba(18,55,70,.14);
+    border-bottom: 1px solid rgba(18,55,70,.14);
+}
+
+.rf-model-strip > div {
+    min-height: 96px;
+    padding: 16px 18px;
+    background: rgba(255,255,255,.58);
+    border-right: 1px solid rgba(18,55,70,.10);
+}
+
+.rf-model-strip > div:last-child {
+    border-right: none;
+}
+
+.rf-model-strip span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: #72858b;
+}
+
+.rf-model-strip strong {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+.rf-model-strip small {
+    display: block;
+    margin-top: 5px;
+    font-size: 9px;
+    color: #708389;
+}
+
+
+/* =========================================================
+   RF DISCUSSION
+   ========================================================= */
+
+.rf-short-discussion {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 28px;
+    margin-top: 42px;
+}
+
+.rf-short-discussion > div {
+    padding-top: 16px;
+    border-top: 2px solid rgba(23,127,123,.55);
+}
+
+.rf-short-discussion span {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--teal);
+}
+
+.rf-short-discussion h3 {
+    margin: 0 0 9px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--navy);
+}
+
+.rf-short-discussion p {
+    max-width: 620px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #60747b;
+}
+
+
+/* =========================================================
+   RF CONCLUSION
+   ========================================================= */
+
+#hasil-rf .editorial-conclusion {
+    margin-top: 48px;
+}
+
+#hasil-rf .editorial-conclusion blockquote {
+    max-width: 930px;
+}
+
+
+/* =========================================================
+   RF RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .rf-map-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .rf-summary-column {
+        grid-template-columns: repeat(4, minmax(0,1fr));
+    }
+
+    .rf-stat {
+        min-height: 125px;
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    #hasil-rf {
+        padding: 75px 0 90px;
+    }
+
+    #hasil-rf .result-wrapper {
+        width: 88%;
+    }
+
+    #rfMap {
+        height: 430px;
+        min-height: 430px;
+    }
+
+    .rf-summary-column {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+    .rf-model-strip {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+    .rf-short-discussion {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    #rfMap {
+        height: 360px;
+        min-height: 360px;
+    }
+
+    .rf-summary-column,
+    .rf-model-strip {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================================================
+   FEATURE IMPORTANCE - NUMERIK
+========================================================= */
+
+.rf-importance-section {
+
+    margin-top: 50px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid rgba(18,55,70,.18);
+
+}
+
+
+.rf-importance-header {
+
+    max-width: 800px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.rf-importance-header h3 {
+
+    margin:
+        5px 0 8px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    color:
+        var(--navy);
+
+}
+
+
+.rf-importance-header p {
+
+    font-size: 14px;
+
+    line-height: 1.65;
+
+    color:
+        var(--muted);
+
+}
+
+
+.rf-importance-chart {
+
+    max-width: 1000px;
+
+}
+
+
+.importance-row {
+
+    display: grid;
+
+    grid-template-columns:
+        190px
+        minmax(250px, 1fr)
+        85px;
+
+    gap: 18px;
+
+    align-items: center;
+
+    padding:
+        9px 0;
+
+}
+
+
+.importance-label {
+
+    font-size: 12px;
+
+    color:
+        var(--navy);
+
+}
+
+
+.importance-track {
+
+    height: 10px;
+
+    background:
+        rgba(18,55,70,.09);
+
+    overflow: hidden;
+
+}
+
+
+.importance-bar {
+
+    height: 100%;
+
+    min-width: 2px;
+
+    background:
+        var(--teal);
+
+}
+
+
+.importance-row.low
+.importance-bar {
+
+    opacity: .42;
+
+}
+
+
+.importance-bar.negative {
+
+    background:
+        #9db8b4;
+
+}
+
+
+.importance-row strong {
+
+    text-align: right;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color:
+        var(--navy);
+
+}
+
+
+.rf-importance-note {
+
+    max-width: 850px;
+
+    margin-top: 18px;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    color:
+        #798b90;
+
+}
+
+
+@media (max-width: 700px) {
+
+    .importance-row {
+
+        grid-template-columns:
+            125px
+            1fr
+            70px;
+
+        gap: 10px;
+
+    }
+
+
+    .importance-label {
+
+        font-size: 10px;
+
+    }
+
+
+    .importance-row strong {
+
+        font-size: 9px;
+
+    }
+
+}
+
+/* =========================================================
+   VALIDASI RANDOM FOREST
+========================================================= */
+
+.rf-validation-section {
+
+    margin-top: 48px;
+
+}
+
+
+.rf-validation-heading {
+
+    max-width: 800px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.rf-validation-heading h3 {
+
+    margin:
+        5px 0 8px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    color:
+        var(--navy);
+
+}
+
+
+.rf-validation-heading p {
+
+    font-size: 14px;
+
+    color:
+        var(--muted);
+
+}
+
+
+/* =========================================================
+   TABEL
+========================================================= */
+
+.rf-validation-table-wrap {
+
+    overflow-x: auto;
+
+}
+
+
+.rf-validation-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background:
+        rgba(255,255,255,.50);
+
+}
+
+
+.rf-validation-table th {
+
+    padding:
+        12px 14px;
+
+    border-bottom:
+        1px solid rgba(18,55,70,.18);
+
+    text-align: left;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+
+    text-transform: uppercase;
+
+    color:
+        var(--teal);
+
+}
+
+
+.rf-validation-table td {
+
+    padding:
+        15px 14px;
+
+    border-bottom:
+        1px solid rgba(18,55,70,.10);
+
+    font-size: 11px;
+
+    color:
+        #566c73;
+
+}
+
+
+.rf-validation-table td strong {
+
+    font-size: 12px;
+
+    color:
+        var(--navy);
+
+}
+
+
+.rf-selected-model {
+
+    background:
+        rgba(23,127,123,.07);
+
+}
+
+
+.rf-model-badge {
+
+    display: inline-block;
+
+    margin-left: 8px;
+
+    padding:
+        3px 6px;
+
+    background:
+        var(--teal);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   VALIDATION INSIGHT
+========================================================= */
+
+.rf-validation-insight {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0,1fr));
+
+    gap: 25px;
+
+    margin-top: 25px;
+
+}
+
+
+.rf-validation-insight > div {
+
+    padding-top: 15px;
+
+    border-top:
+        2px solid rgba(23,127,123,.48);
+
+}
+
+
+.rf-validation-insight span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    color:
+        var(--teal);
+
+}
+
+
+.rf-validation-insight strong {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 500;
+
+    color:
+        var(--navy);
+
+}
+
+
+.rf-validation-insight p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+    color:
+        var(--muted);
+
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.rf-validation-note {
+
+    margin-top: 25px;
+
+    padding:
+        17px 20px;
+
+    border-left:
+        3px solid var(--teal);
+
+    background:
+        rgba(23,127,123,.055);
+
+}
+
+
+.rf-validation-note span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    color:
+        var(--teal);
+
+}
+
+
+.rf-validation-note p {
+
+    max-width: 900px;
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+    color:
+        #586e75;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .rf-process-flow {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .rf-process-arrow {
+
+        justify-content: center;
+
+        transform: rotate(90deg);
+
+    }
+
+
+    .rf-validation-insight {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}/* =========================================================
+   LATAR BELAKANG - COMPACT CARDS
+========================================================= */
+
+.background-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.background-card {
+    min-height: 190px;
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 14px;
+    padding: 20px;
+    border: 1px solid rgba(18,55,70,.12);
+    border-top: 2px solid rgba(23,127,123,.38);
+    background: rgba(255,255,255,.52);
+    text-align: left;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.background-card:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,.88);
+    border-top-color: #177f7b;
+    box-shadow: 0 12px 28px rgba(18,55,70,.08);
+}
+
+.background-card.featured {
+    background: rgba(23,127,123,.06);
+    border-top-color: #177f7b;
+}
+
+.background-card-number {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #4ca39c;
+    border-radius: 50%;
+    font-size: 9px;
+    color: #177f7b;
+}
+
+.background-card small {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #177f7b;
+}
+
+.background-card h3 {
+    margin: 0 0 9px;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #123746;
+}
+
+.background-card p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.6;
+    color: #64787e;
+}
+
+.background-card-link {
+    display: block;
+    margin-top: 13px;
+    font-size: 9px;
+    font-weight: 700;
+    color: #177f7b;
+}
+
+
+/* =========================================================
+   INTI LATAR BELAKANG
+========================================================= */
+
+.background-key-message {
+    margin-top: 32px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(18,55,70,.25);
+    border-bottom: 1px solid rgba(18,55,70,.25);
+}
+
+.background-key-message span {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    color: #177f7b;
+}
+
+.background-key-message p {
+    max-width: 650px;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    line-height: 1.35;
+    color: #123746;
+}
+
+
+/* =========================================================
+   POPUP
+========================================================= */
+
+.background-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200000;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.background-modal.show {
+    display: flex;
+}
+
+.background-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(10,35,30,.62);
+    backdrop-filter: blur(5px);
+}
+
+.background-modal-box {
+    position: relative;
+    z-index: 2;
+    width: min(620px, 92vw);
+    max-height: 82vh;
+    overflow-y: auto;
+    padding: 34px;
+    background: #f8faf7;
+    box-shadow: 0 24px 70px rgba(0,0,0,.28);
+    border-top: 4px solid #177f7b;
+}
+
+.background-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: 0;
+    background: transparent;
+    font-size: 27px;
+    color: #61777c;
+    cursor: pointer;
+}
+
+.background-modal-box span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    color: #177f7b;
+}
+
+.background-modal-box h3 {
+    margin: 0 0 15px;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #123746;
+}
+
+.background-modal-box p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #60747b;
+}
+
+.background-detail-data {
+    display: none;
+}
+
+
+/* =========================================================
+   POPUP PROCESS
+========================================================= */
+
+.background-process,
+.background-research-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.background-process div {
+    flex: 1;
+    padding: 14px;
+    background: #edf4f1;
+    border-top: 2px solid #177f7b;
+}
+
+.background-process strong,
+.background-process small {
+    display: block;
+}
+
+.background-process small {
+    margin-top: 4px;
+    color: #72848a;
+}
+
+.background-process > b,
+.background-research-flow > b {
+    display: flex;
+    align-items: center;
+    color: #177f7b;
+}
+
+.background-research-flow strong {
+    padding: 12px 15px;
+    background: #edf4f1;
+    border-top: 2px solid #177f7b;
+    font-size: 11px;
+    color: #123746;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .background-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .background-card {
+        min-height: auto;
+    }
+
+    .background-process,
+    .background-research-flow {
+        flex-direction: column;
+    }
+
+    .background-process > b,
+    .background-research-flow > b {
+        justify-content: center;
+        transform: rotate(90deg);
+    }
+
+}/* =========================================================
+   BATASAN PENELITIAN - COMPACT CARDS
+========================================================= */
+
+.scope-card-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0,1fr));
+
+    gap: 14px;
+
+    margin-top: 34px;
+
+}
+
+
+.scope-card {
+
+    min-height: 150px;
+
+    display: grid;
+
+    grid-template-columns:
+        38px 1fr;
+
+    gap: 14px;
+
+    padding: 20px;
+
+    border:
+        1px solid rgba(18,55,70,.13);
+
+    border-top:
+        2px solid rgba(23,127,123,.38);
+
+    background:
+        rgba(255,255,255,.52);
+
+    transition:
+        .25s ease;
+
+}
+
+
+.scope-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(255,255,255,.88);
+
+    border-top-color:
+        #177f7b;
+
+    box-shadow:
+        0 12px 28px rgba(18,55,70,.08);
+
+}
+
+
+.scope-card.featured {
+
+    background:
+        rgba(23,127,123,.06);
+
+    border-top-color:
+        #177f7b;
+
+}
+
+
+/* NOMOR */
+
+.scope-card-number {
+
+    width: 32px;
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid #4ca39c;
+
+    border-radius:
+        50%;
+
+    font-size: 9px;
+
+    color:
+        #177f7b;
+
+}
+
+
+/* LABEL */
+
+.scope-card small {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color:
+        #177f7b;
+
+}
+
+
+/* TITLE */
+
+.scope-card h3 {
+
+    margin:
+        0 0 8px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 21px;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    color:
+        #123746;
+
+}
+
+
+/* TEXT */
+
+.scope-card p {
+
+    max-width: 420px;
+
+    margin: 0;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+
+    color:
+        #64787e;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .scope-card-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .scope-card {
+
+        min-height: auto;
+
+    }
+
+}/* =========================================================
+   DSAS SPATIAL FINDINGS - INTERACTIVE
+========================================================= */
+
+.dsas-finding-hint {
+
+    margin:
+        0 0 14px;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    color: #71858b;
+
+}
+
+
+.dsas-finding-btn {
+
+    width: 100%;
+
+    border:
+        0;
+
+    border-top:
+        1px solid rgba(18,55,70,.15);
+
+    background:
+        transparent;
+
+    text-align:
+        left;
+
+    cursor:
+        pointer;
+
+    transition:
+        .22s ease;
+
+}
+
+
+.dsas-finding-btn:last-of-type {
+
+    border-bottom:
+        1px solid rgba(18,55,70,.15);
+
+}
+
+
+.dsas-finding-btn:hover {
+
+    background:
+        rgba(23,127,123,.06);
+
+}
+
+
+.dsas-finding-btn.active {
+
+    padding-left:
+        12px;
+
+    background:
+        rgba(23,127,123,.10);
+
+    border-left:
+        3px solid #177f7b;
+
+}
+
+
+.dsas-finding-btn small {
+
+    display: block;
+
+    margin-top: 9px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    color: #177f7b;
+
+}
+
+
+.dsas-reset-view {
+
+    margin-top: 18px;
+
+    padding:
+        9px 12px;
+
+    border:
+        1px solid rgba(23,127,123,.42);
+
+    background:
+        transparent;
+
+    color: #177f7b;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.dsas-reset-view:hover {
+
+    background: #177f7b;
+
+    color: white;
+
+}/* =========================================================
+   METHOD - TABEL SKORING CVI
+========================================================= */
+
+.method-cvi-content {
+    width: 100%;
+    min-width: 0;
+}
+
+.method-cvi-intro {
+    max-width: 760px;
+    margin: 7px 0 22px;
+    font-size: 12px;
+    line-height: 1.65;
+    color: #63777d;
+}
+
+
+/* =========================================================
+   BLOK TABEL
+========================================================= */
+
+.cvi-scoring-block {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(18,55,70,.16);
+}
+
+.cvi-scoring-heading {
+    margin-bottom: 18px;
+}
+
+.cvi-scoring-heading > span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    color: #177f7b;
+}
+
+.cvi-scoring-heading h4 {
+    margin: 0 0 6px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #123746;
+}
+
+.cvi-scoring-heading p {
+    max-width: 760px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.6;
+    color: #6d7e84;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.cvi-scoring-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid rgba(18,55,70,.15);
+    background: rgba(255,255,255,.76);
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.cvi-scoring-table {
+    width: 100%;
+    min-width: 1050px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.cvi-scoring-table th,
+.cvi-scoring-table td {
+    padding: 12px 13px;
+    vertical-align: top;
+    border-right: 1px solid rgba(18,55,70,.13);
+    border-bottom: 1px solid rgba(18,55,70,.13);
+}
+
+.cvi-scoring-table th:last-child,
+.cvi-scoring-table td:last-child {
+    border-right: 0;
+}
+
+.cvi-scoring-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+
+/* HEADER */
+
+.cvi-scoring-table th {
+    background: #e7efec;
+    text-align: left;
+    font-size: 10px;
+    line-height: 1.35;
+    color: #123746;
+}
+
+.cvi-scoring-table th small {
+    display: block;
+    margin-top: 3px;
+    font-size: 8px;
+    font-weight: 500;
+    color: #687c81;
+}
+
+
+/* CELLS */
+
+.cvi-scoring-table td {
+    font-size: 10px;
+    line-height: 1.45;
+    color: #526970;
+}
+
+.cvi-scoring-table td small {
+    display: block;
+    margin-top: 3px;
+    font-size: 8px;
+    color: #7b8b8f;
+}
+
+
+/* PARAMETER COLUMN */
+
+.cvi-scoring-table th:first-child,
+.cvi-scoring-table td:first-child {
+    width: 180px;
+}
+
+.cvi-param-name {
+    background: rgba(23,127,123,.045);
+}
+
+.cvi-param-name strong {
+    color: #123746;
+}
+
+
+/* WARNA HALUS BERDASARKAN KELAS */
+
+.cvi-scoring-table th:nth-child(2) {
+    border-top: 3px solid #1a9850;
+}
+
+.cvi-scoring-table th:nth-child(3) {
+    border-top: 3px solid #91cf60;
+}
+
+.cvi-scoring-table th:nth-child(4) {
+    border-top: 3px solid #e3c45e;
+}
+
+.cvi-scoring-table th:nth-child(5) {
+    border-top: 3px solid #fc8d59;
+}
+
+.cvi-scoring-table th:nth-child(6) {
+    border-top: 3px solid #d73027;
+}
+
+
+/* SOURCE */
+
+.cvi-scoring-source {
+    margin: 11px 0 0;
+    font-size: 9px;
+    line-height: 1.5;
+    color: #71858a;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+    .cvi-scoring-table-wrap {
+        margin-right: -10px;
+    }
+
+    .cvi-scoring-heading h4 {
+        font-size: 20px;
+    }
+
+}/* =========================================================
+   RQ1 CVI VS SHORELINE
+========================================================= */
+
+.cvi-rq1-section {
+    margin-top: 42px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(18,55,70,.18);
+}
+
+.cvi-rq1-heading {
+    max-width: 820px;
+    margin-bottom: 24px;
+}
+
+.cvi-rq1-heading h3 {
+    margin: 5px 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    font-weight: 500;
+    color: #123746;
+}
+
+.cvi-rq1-heading p {
+    font-size: 12px;
+    line-height: 1.65;
+    color: #687b81;
+}
+
+.cvi-rq1-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 18px;
+}
+
+.cvi-rq1-card {
+    padding: 22px;
+    background: rgba(255,255,255,.64);
+    border-top: 3px solid rgba(23,127,123,.40);
+}
+
+.cvi-rq1-card.featured {
+    background: rgba(23,127,123,.06);
+    border-top-color: #177f7b;
+}
+
+.cvi-rq1-type {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #177f7b;
+}
+
+.cvi-rq1-card > strong {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #123746;
+}
+
+.cvi-rq1-number {
+    margin: 15px 0 4px;
+    font-family: Georgia, serif;
+    font-size: 31px;
+    color: #123746;
+}
+
+.cvi-rq1-card p {
+    margin: 0 0 10px;
+    font-size: 11px;
+    line-height: 1.6;
+    color: #62777d;
+}
+
+.cvi-rq1-card small {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #177f7b;
+}
+
+.cvi-rq1-interpretation {
+    margin-top: 20px;
+    padding: 18px 20px;
+    border-left: 3px solid #177f7b;
+    background: rgba(23,127,123,.05);
+}
+
+.cvi-rq1-interpretation span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #177f7b;
+}
+
+.cvi-rq1-interpretation p {
+    max-width: 900px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #596f75;
+}
+
+@media (max-width: 760px) {
+    .cvi-rq1-grid {
+        grid-template-columns: 1fr;
+    }
+}/* =========================================================
+   METODE - ATURAN PROKSI SEDIMEN
+========================================================= */
+
+.sed-proxy-rule {
+    margin-top: 28px;
+    padding-top: 23px;
+    border-top: 1px solid rgba(18,55,70,.16);
+}
+
+.sed-proxy-rule-header {
+    margin-bottom: 17px;
+}
+
+.sed-proxy-rule-header h4 {
+    margin: 5px 0 7px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #123746;
+}
+
+.sed-proxy-rule-header p {
+    max-width: 760px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.6;
+    color: #687b81;
+}
+
+.sed-proxy-table-wrap {
+    overflow-x: auto;
+    border: 1px solid rgba(18,55,70,.14);
+    background: rgba(255,255,255,.68);
+}
+
+.sed-proxy-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+}
+
+.sed-proxy-table th,
+.sed-proxy-table td {
+    padding: 12px 14px;
+    border-right: 1px solid rgba(18,55,70,.12);
+    border-bottom: 1px solid rgba(18,55,70,.12);
+    text-align: left;
+    vertical-align: top;
+}
+
+.sed-proxy-table th {
+    background: #e9f0ed;
+    font-size: 9px;
+    letter-spacing: .6px;
+    color: #123746;
+}
+
+.sed-proxy-table td {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #566b72;
+}
+
+.sed-proxy-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.sed-proxy-table th:last-child,
+.sed-proxy-table td:last-child {
+    border-right: 0;
+}
+
+.sed-class {
+    font-weight: 700;
+}
+
+.sed-class.surplus {
+    color: #16896a;
+}
+
+.sed-class.local {
+    color: #4d9d70;
+}
+
+.sed-class.balanced {
+    color: #a98c18;
+}
+
+.sed-class.bypass {
+    color: #d77739;
+}
+
+.sed-class.deficit {
+    color: #c43b34;
+}
+
+.sed-proxy-note {
+    margin-top: 10px;
+    font-size: 9px;
+    line-height: 1.5;
+    color: #71858a;
+}/* =========================================================
+   LOKASI PRIORITAS PROKSI SEDIMEN
+========================================================= */
+
+.sediment-location-section {
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(18,55,70,.18);
+}
+
+.sediment-location-heading {
+    max-width: 820px;
+    margin-bottom: 22px;
+}
+
+.sediment-location-heading h3 {
+    margin: 5px 0 8px;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: 500;
+    color: #123746;
+}
+
+.sediment-location-heading p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #687b81;
+}
+
+.sediment-location-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 16px;
+}
+
+.sediment-location-card {
+    padding: 20px;
+    background: rgba(255,255,255,.66);
+    border-top: 3px solid #177f7b;
+}
+
+.sediment-location-card.deficit {
+    border-top-color: #cf3f35;
+}
+
+.sediment-location-card.surplus {
+    border-top-color: #16896a;
+}
+
+.sediment-location-card.bypass {
+    border-top-color: #e68a4f;
+}
+
+.sediment-location-card > span {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: #177f7b;
+}
+
+.sediment-location-card h4 {
+    margin: 0 0 10px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #123746;
+}
+
+.sediment-location-card strong {
+    display: block;
+    margin-bottom: 3px;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #123746;
+}
+
+.sediment-location-card small {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 8px;
+    color: #74868b;
+}
+
+.sediment-location-card p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.6;
+    color: #5d7278;
+}
+
+.sediment-location-note {
+    margin-top: 18px;
+    padding: 17px 20px;
+    border-left: 3px solid #177f7b;
+    background: rgba(23,127,123,.05);
+}
+
+.sediment-location-note span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #177f7b;
+}
+
+.sediment-location-note p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.65;
+    color: #5d7076;
+}
+
+@media (max-width: 760px) {
+    .sediment-location-grid {
+        grid-template-columns: 1fr;
+    }
+}/* =========================================================
+   PERBANDINGAN TEMPORAL - GRAFIK
+========================================================= */
+
+.sediment-period-chart-section {
+    margin-top: 54px;
+    padding-top: 6px;
+}
+
+.sediment-period-chart-section h3 {
+    margin: 8px 0 28px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #123746;
+}
+
+.sediment-period-chart-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.period-chart-card {
+    padding: 22px 22px 20px;
+    background: rgba(255,255,255,.72);
+    border-top: 3px solid #177f7b;
+}
+
+.period-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    color: #177f7b;
+}
+
+.period-chart-card h4 {
+    margin: 0 0 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #123746;
+}
+
+.period-summary {
+    margin: 0 0 4px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #5b7177;
+}
+
+.period-summary strong {
+    color: #123746;
+}
+
+.period-summary span {
+    margin-left: 4px;
+    font-weight: 700;
+    color: #123746;
+}
+
+.period-valid {
+    margin: 0 0 18px;
+    font-size: 10px;
+    color: #7a8b90;
+}
+
+.mini-bar-chart {
+    display: grid;
+    gap: 16px;
+}
+
+.mini-bar-item {
+    display: grid;
+    gap: 5px;
+}
+
+.mini-bar-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #123746;
+}
+
+.mini-bar-track {
+    width: 100%;
+    height: 10px;
+    background: #dfe7e4;
+    overflow: hidden;
+    border-radius: 999px;
+}
+
+.mini-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.mini-bar-fill.surplus {
+    background: #1f9d78;
+}
+
+.mini-bar-fill.balanced {
+    background: #c8a93d;
+}
+
+.mini-bar-fill.bypass {
+    background: #e68a4f;
+}
+
+.mini-bar-fill.deficit {
+    background: #c74b3b;
+}
+
+.mini-bar-item small {
+    font-size: 9px;
+    color: #6d8187;
+}
+
+@media (max-width: 980px) {
+    .sediment-period-chart-grid {
+        grid-template-columns: 1fr;
+    }
+}/* =========================================================
+   PERBANDINGAN TEMPORAL - GRAFIK BESAR
+========================================================= */
+
+.sediment-big-chart-section {
+    margin-top: 54px;
+}
+
+.sediment-big-chart-section h3 {
+    margin: 10px 0 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 29px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #123746;
+}
+
+.sediment-big-chart-intro {
+    max-width: 920px;
+    margin: 0 0 24px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #687b81;
+}
+
+.sediment-big-chart {
+    border-top: 2px solid #177f7b;
+    background: rgba(255,255,255,.72);
+}
+
+.sediment-big-chart-header {
+    display: grid;
+    grid-template-columns: 160px 200px 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(18,55,70,.12);
+    background: rgba(23,127,123,.05);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: #177f7b;
+}
+
+.sediment-big-row {
+    display: grid;
+    grid-template-columns: 160px 200px 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 18px;
+    border-bottom: 1px solid rgba(18,55,70,.10);
+    align-items: start;
+}
+
+.sediment-big-row:last-child {
+    border-bottom: none;
+}
+
+.period-col strong {
+    display: block;
+    margin-bottom: 5px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #123746;
+}
+
+.period-col small {
+    font-size: 10px;
+    color: #7a8b90;
+}
+
+.dominant-col {
+    display: grid;
+    gap: 8px;
+    align-content: start;
+}
+
+.dominant-tag {
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .7px;
+    border-radius: 999px;
+    color: #fff;
+}
+
+.dominant-tag.surplus {
+    background: #1f9d78;
+}
+
+.dominant-tag.balanced {
+    background: #c8a93d;
+}
+
+.dominant-tag.bypass {
+    background: #e68a4f;
+}
+
+.dominant-tag.deficit {
+    background: #c74b3b;
+}
+
+.dominant-col strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #123746;
+}
+
+.bar-col {
+    display: grid;
+    gap: 6px;
+    align-content: start;
+}
+
+.bar-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #123746;
+}
+
+.bar-track {
+    width: 100%;
+    height: 10px;
+    background: #dce5e2;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.bar-fill.surplus {
+    background: #1f9d78;
+}
+
+.bar-fill.balanced {
+    background: #c8a93d;
+}
+
+.bar-fill.bypass {
+    background: #e68a4f;
+}
+
+.bar-fill.deficit {
+    background: #c74b3b;
+}
+
+.sediment-big-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 14px;
+    font-size: 10px;
+    color: #5d7278;
+}
+
+.sediment-big-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.legend-box {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+}
+
+.legend-box.surplus {
+    background: #1f9d78;
+}
+
+.legend-box.balanced {
+    background: #c8a93d;
+}
+
+.legend-box.bypass {
+    background: #e68a4f;
+}
+
+.legend-box.deficit {
+    background: #c74b3b;
+}
+
+@media (max-width: 1200px) {
+    .sediment-big-chart-header,
+    .sediment-big-row {
+        grid-template-columns: 140px 180px 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 980px) {
+    .sediment-big-chart {
+        overflow-x: auto;
+    }
+
+    .sediment-big-chart-header,
+    .sediment-big-row {
+        min-width: 980px;
+    }
+}.sediment-location-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 14px;
+    margin: 16px 0 14px;
+}
+
+.sediment-location-metrics > div {
+    padding-right: 12px;
+    border-right: 1px solid rgba(18,55,70,.14);
+}
+
+.sediment-location-metrics > div:last-child {
+    border-right: none;
+}
+
+.sediment-location-metrics strong {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: #123746;
+}
+
+.sediment-location-metrics small {
+    display: block;
+    margin-top: 4px;
+    font-size: 8px;
+    color: #74868b;
+}
+
+/* =========================================================
+   99. CVI CLEAN LAYOUT PATCH
+   Menjaga kompatibilitas dengan script.js yang memakai:
+   #cviMap, .cvi-param-btn, #cviCurrentTitle,
+   #cviCurrentParameter, #cviInfoTitle, #cviInfoText
+========================================================= */
+
+#hasil-cvi.cvi-result-section {
+    display: block !important;
+    width: 100%;
+    min-height: 100vh;
+    padding: 105px 0 120px;
+}
+
+#hasil-cvi .cvi-wrapper {
+    width: min(92%, 1450px);
+    margin: 0 auto;
+}
+
+#hasil-cvi .cvi-header {
+    max-width: 950px;
+    margin-bottom: 46px;
+}
+
+#hasil-cvi .cvi-header h2 {
+    margin: 0 0 7px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 5vw, 70px);
+    line-height: 1.08;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+#hasil-cvi .cvi-header h3 {
+    margin: 0 0 16px;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--teal);
+}
+
+#hasil-cvi .cvi-intro {
+    max-width: 900px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--muted);
+}
+
+#hasil-cvi .cvi-param-tabs {
+    width: 100%;
+}
+
+#hasil-cvi .cvi-map-section {
+    margin-top: 38px;
+}
+
+#hasil-cvi .cvi-map-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 28px;
+    margin-bottom: 20px;
+}
+
+#hasil-cvi .cvi-map-heading h3 {
+    margin: 3px 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+#hasil-cvi .cvi-map-heading > p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+#hasil-cvi .cvi-map-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(280px, .55fr);
+    gap: 32px;
+    align-items: stretch;
+}
+
+#hasil-cvi .cvi-map-box {
+    min-width: 0;
+}
+
+#hasil-cvi #cviMap {
+    width: 100% !important;
+    height: 650px !important;
+    min-height: 650px !important;
+    display: block !important;
+}
+
+#hasil-cvi .cvi-info-panel {
+    padding: 24px 0 24px 4px;
+}
+
+/* ---------- RQ 01 ---------- */
+
+#hasil-cvi .cvi-rq1-section {
+    margin-top: 58px;
+    padding-top: 34px;
+    border-top: 1px solid var(--line);
+}
+
+#hasil-cvi .cvi-rq1-heading {
+    max-width: 880px;
+    margin-bottom: 22px;
+}
+
+#hasil-cvi .cvi-rq1-heading h3 {
+    margin: 0 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--navy);
+}
+
+#hasil-cvi .cvi-rq1-heading > p:last-child {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+#hasil-cvi .cvi-rq1-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+#hasil-cvi .cvi-rq1-card {
+    padding: 24px;
+    border-top: 3px solid rgba(23,127,123,.55);
+    background: rgba(255,255,255,.68);
+}
+
+#hasil-cvi .cvi-rq1-card.featured {
+    border-top-color: var(--teal);
+    background: rgba(23,127,123,.06);
+}
+
+#hasil-cvi .cvi-rq1-type {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    color: var(--teal);
+}
+
+#hasil-cvi .cvi-rq1-card > strong {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+#hasil-cvi .cvi-rq1-number {
+    margin: 13px 0 5px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    color: var(--navy);
+}
+
+#hasil-cvi .cvi-rq1-card p {
+    margin: 0 0 7px;
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--muted);
+}
+
+#hasil-cvi .cvi-rq1-card small {
+    font-size: 9px;
+    color: var(--teal);
+}
+
+#hasil-cvi .cvi-rq1-interpretation {
+    margin-top: 16px;
+    padding: 18px 20px;
+    border-left: 3px solid var(--teal);
+    background: rgba(23,127,123,.05);
+}
+
+#hasil-cvi .cvi-rq1-interpretation span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    color: var(--teal);
+}
+
+#hasil-cvi .cvi-rq1-interpretation p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+/* ---------- POLA LOKASI ---------- */
+
+#hasil-cvi .cvi-location-section {
+    margin-top: 58px;
+    padding-top: 34px;
+    border-top: 1px solid var(--line);
+}
+
+#hasil-cvi .cvi-location-heading {
+    max-width: 900px;
+    margin-bottom: 22px;
+}
+
+#hasil-cvi .cvi-location-heading h3 {
+    margin: 0 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+#hasil-cvi .cvi-location-heading > p:last-child {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+#hasil-cvi .cvi-location-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+#hasil-cvi .cvi-location-card {
+    padding: 22px;
+    background: rgba(255,255,255,.68);
+    border-top: 3px solid var(--teal);
+}
+
+#hasil-cvi .cvi-location-card.west {
+    border-top-color: #cf3f35;
+}
+
+#hasil-cvi .cvi-location-card.center {
+    border-top-color: #16896a;
+}
+
+#hasil-cvi .cvi-location-card.east {
+    border-top-color: #e68a4f;
+}
+
+#hasil-cvi .cvi-location-card > span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--teal);
+}
+
+#hasil-cvi .cvi-location-card h4 {
+    margin: 0 0 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--navy);
+}
+
+#hasil-cvi .cvi-location-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0 0 15px;
+}
+
+#hasil-cvi .cvi-location-metrics > div {
+    padding-right: 10px;
+    border-right: 1px solid var(--line);
+}
+
+#hasil-cvi .cvi-location-metrics > div:last-child {
+    border-right: 0;
+}
+
+#hasil-cvi .cvi-location-metrics strong {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+#hasil-cvi .cvi-location-metrics small {
+    display: block;
+    margin-top: 3px;
+    font-size: 8px;
+    line-height: 1.45;
+    color: var(--muted);
+}
+
+#hasil-cvi .cvi-location-card p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+#hasil-cvi .cvi-location-note {
+    margin: 14px 0 0;
+    padding: 12px 14px;
+    background: rgba(23,127,123,.04);
+    font-size: 10px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+/* ---------- PARAMETER + KONDISI 2025 ---------- */
+
+#hasil-cvi .cvi-parameter-explanation {
+    margin-top: 60px;
+}
+
+#hasil-cvi .simplified-cvi-summary {
+    grid-template-columns: 1.08fr .92fr;
+}
+
+#hasil-cvi .cvi-spatial-result p {
+    margin: 0 0 9px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+#hasil-cvi .cvi-2025-numbers {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+@media (max-width: 1100px) {
+    #hasil-cvi .cvi-map-layout,
+    #hasil-cvi .cvi-result-summary {
+        grid-template-columns: 1fr;
+    }
+
+    #hasil-cvi .cvi-rq1-grid,
+    #hasil-cvi .cvi-location-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #hasil-cvi .cvi-2025-numbers {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    #hasil-cvi.cvi-result-section {
+        padding: 70px 0;
+    }
+
+    #hasil-cvi .cvi-wrapper {
+        width: 88%;
+    }
+
+    #hasil-cvi .cvi-map-heading {
+        display: block;
+    }
+
+    #hasil-cvi .cvi-map-heading > p {
+        margin-top: 8px;
+    }
+
+    #hasil-cvi #cviMap {
+        height: 500px !important;
+        min-height: 500px !important;
+    }
+
+    #hasil-cvi .cvi-2025-numbers {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   100. RF VALIDATION GRAPH + RQ 02
+   FINAL PATCH
+========================================================= */
+
+/* ---------- VALIDATION GRAPH ---------- */
+
+.rf-validation-chart {
+    margin-top: 44px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(18,55,70,.18);
+}
+
+.rf-validation-heading {
+    max-width: 850px;
+    margin-bottom: 22px;
+}
+
+.rf-validation-heading h3 {
+    margin: 5px 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+.rf-validation-heading p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+.rf-validation-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    margin: 0 0 22px;
+    font-size: 11px;
+    color: #5f7379;
+}
+
+.rf-validation-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rf-legend {
+    display: inline-block;
+    width: 24px;
+    height: 5px;
+}
+
+.rf-legend.random {
+    background: #9badab;
+}
+
+.rf-legend.temporal {
+    background: var(--teal);
+}
+
+.rf-metric-chart {
+    border-top: 1px solid rgba(18,55,70,.13);
+}
+
+.rf-metric-row {
+    display: grid;
+    grid-template-columns: 170px minmax(0,1fr);
+    gap: 30px;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(18,55,70,.13);
+}
+
+.rf-metric-name span {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    line-height: 1;
+    color: var(--navy);
+}
+
+.rf-metric-name small {
+    display: block;
+    margin-top: 7px;
+    font-size: 9px;
+    color: #7a8b90;
+}
+
+.rf-bars {
+    display: grid;
+    gap: 12px;
+}
+
+.rf-bar-line {
+    display: grid;
+    grid-template-columns: 80px minmax(180px,1fr) 62px;
+    gap: 12px;
+    align-items: center;
+}
+
+.rf-method {
+    font-size: 10px;
+    color: #62767c;
+}
+
+.rf-track {
+    height: 12px;
+    overflow: hidden;
+    background: #dfe7e4;
+}
+
+.rf-fill {
+    height: 100%;
+}
+
+.rf-fill.random {
+    background: #9badab;
+}
+
+.rf-fill.temporal {
+    background: var(--teal);
+}
+
+.rf-bar-line strong {
+    text-align: right;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+.rf-validation-result {
+    display: grid;
+    grid-template-columns: 210px minmax(0,1fr);
+    gap: 28px;
+    margin-top: 20px;
+    padding: 19px 20px;
+    border-left: 3px solid var(--teal);
+    background: rgba(23,127,123,.055);
+}
+
+.rf-validation-result span {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    color: var(--teal);
+}
+
+.rf-validation-result strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+.rf-validation-result p {
+    max-width: 850px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #5d7278;
+}
+
+
+/* ---------- PREDICTION MAP HEADING ---------- */
+
+.rf-prediction-section {
+    margin-top: 54px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(18,55,70,.18);
+}
+
+.rf-prediction-heading {
+    max-width: 850px;
+    margin-bottom: 20px;
+}
+
+.rf-prediction-heading h3 {
+    margin: 5px 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+.rf-prediction-heading p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+
+/* ---------- RQ 02 ---------- */
+
+.rf-rq2-section {
+    margin-top: 58px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(18,55,70,.18);
+}
+
+.rf-rq2-heading {
+    max-width: 930px;
+    margin-bottom: 22px;
+}
+
+.rf-rq2-heading h3 {
+    margin: 5px 0 9px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+.rf-rq2-heading > p:last-child {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--muted);
+}
+
+.rf-rq2-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 18px;
+}
+
+.rf-rq2-card {
+    min-height: 220px;
+    padding: 22px;
+    background: rgba(255,255,255,.68);
+    border-top: 3px solid var(--teal);
+}
+
+.rf-rq2-card.retreat {
+    border-top-color: #cf3f35;
+}
+
+.rf-rq2-card.advance {
+    border-top-color: #16896a;
+}
+
+.rf-rq2-card > span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--teal);
+}
+
+.rf-rq2-card h4 {
+    margin: 0 0 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    line-height: 1.28;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+.rf-rq2-card p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.72;
+    color: #5e7278;
+}
+
+.rf-rq2-link {
+    margin-top: 18px;
+    padding: 18px 20px;
+    border-left: 3px solid var(--teal);
+    background: rgba(23,127,123,.05);
+}
+
+.rf-rq2-link > span {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--teal);
+}
+
+.rf-rq2-link p {
+    max-width: 1050px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.75;
+    color: #586e75;
+}
+
+.rf-rq2-answer {
+    margin-top: 34px;
+    padding: 30px 0;
+    border-top: 1px solid var(--line-dark);
+    border-bottom: 1px solid var(--line-dark);
+}
+
+.rf-rq2-answer > span {
+    display: block;
+    margin-bottom: 13px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    color: var(--teal);
+}
+
+.rf-rq2-answer blockquote {
+    max-width: 1050px;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(26px, 2.8vw, 38px);
+    line-height: 1.35;
+    color: var(--navy);
+}
+
+
+/* ---------- RF RESPONSIVE ---------- */
+
+@media (max-width: 980px) {
+    .rf-rq2-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rf-metric-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 700px) {
+    .rf-validation-result {
+        grid-template-columns: 1fr;
+    }
+
+    .rf-bar-line {
+        grid-template-columns: 62px minmax(120px,1fr) 55px;
+        gap: 8px;
+    }
+
+    .rf-rq2-heading h3,
+    .rf-prediction-heading h3,
+    .rf-validation-heading h3 {
+        font-size: 27px;
+    }
+}
+

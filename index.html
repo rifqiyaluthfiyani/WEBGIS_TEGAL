@@ -1519,418 +1519,1797 @@
 
 
 <!-- =====================================================
-     COVER
+     COVER + NAVIGASI UTAMA
+     MODEL SPLIT SCREEN
 ===================================================== -->
 
-<section class="hero editorial-hero"
-         id="cover"
-         style="
-            background-image:
-            linear-gradient(
-                rgba(10,38,51,.52),
-                rgba(10,38,51,.48)
-            ),
-            url(
-                'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85'
-            );
-         ">
-
-    <div class="hero-content">
-
-        <p class="subtitle">
-            PRESENTASI PROGRESS TESIS
-        </p>
+<section class="tegal-home"
+         id="cover">
 
 
-        <h1>
+    <!-- =================================================
+         AREA UTAMA
+    ================================================== -->
 
-            Pemodelan Pengaruh Fisik terhadap Dinamika Garis Pantai
-            Kota Tegal Menggunakan DSAS,
-            <em>Random Forest</em> dan CVI
-
-        </h1>
+    <div class="tegal-home-main">
 
 
-        <div class="divider"></div>
+        <!-- =============================================
+             PANEL KIRI
+        ============================================== -->
+
+        <div class="tegal-home-left">
 
 
-        <p class="oleh">
-            oleh
-        </p>
+            <div class="tegal-home-content">
 
 
-        <h2 class="student-name">
-            Rifqiya Luthfiyani
-        </h2>
+                <div class="tegal-home-brand">
+
+                    <span class="tegal-brand-mark">
+                        ◉
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            WEBGIS TESIS
+                        </strong>
+
+                        <small>
+                            Magister Geografi · Universitas Indonesia
+                        </small>
+
+                    </div>
+
+                </div>
 
 
-        <p class="npm">
-            NPM. 2406372823
-        </p>
+                <h1>
+
+                    Pemodelan Pengaruh Fisik terhadap
+                    Dinamika Garis Pantai Kota Tegal
+
+                </h1>
 
 
-        <div class="advisor-box">
 
-            <p class="advisor-title">
-                PEMBIMBING
-            </p>
+                <p class="tegal-home-subtitle">
 
-            <p class="advisor-name">
+                    Mengintegrasikan DSAS,
+                    Coastal Vulnerability Index,
+                    proksi neraca sedimen,
+                    Random Forest,
+                    dan evaluasi tata ruang pesisir.
 
-                1. Dr.Eng. Masita Dwi Mandini Manessa,
-                S.Si., M.Si., M.Eng
+                </p>
 
-            </p>
 
-            <p class="advisor-name">
 
-                2. Dr. Iwan Gunawan, M.Sc
+                <div class="tegal-home-author">
 
-            </p>
+                    <strong>
+                        Rifqiya Luthfiyani
+                    </strong>
+
+                    <span>
+                        NPM. 2406372823
+                    </span>
+
+                </div>
+
+
+
+                <div class="tegal-home-advisor">
+
+                    <span>
+                        PEMBIMBING
+                    </span>
+
+                    <p>
+                        Dr.Eng. Masita Dwi Mandini Manessa,
+                        S.Si., M.Si., M.Eng
+                    </p>
+
+                    <p>
+                        Dr. Iwan Gunawan, M.Sc
+                    </p>
+
+                </div>
+
+
+
+                <button id="exploreBtn"
+                        class="tegal-explore-btn">
+
+                    MULAI EKSPLORASI
+                    <span>↓</span>
+
+                </button>
+
+
+            </div>
+
 
         </div>
 
 
-        <button id="exploreBtn">
-            MULAI EKSPLORASI
+
+        <!-- =============================================
+             PANEL KANAN / FOTO
+        ============================================== -->
+
+        <div class="tegal-home-right">
+
+
+            <div class="tegal-home-photo">
+
+
+                <!--
+                    GANTI URL DI BAWAH
+                    jika nanti Anda punya foto pesisir Tegal sendiri
+                -->
+
+                <img
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=88"
+                    alt="Pesisir Kota Tegal"
+                >
+
+
+                <div class="tegal-photo-overlay"></div>
+
+
+
+                <div class="tegal-photo-caption">
+
+                    <span>
+                        STUDY AREA
+                    </span>
+
+                    <strong>
+                        Kota Tegal
+                    </strong>
+
+                    <p>
+                        Pantai Utara Jawa · Jawa Tengah
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+</section>
+
+
+    <!-- =================================================
+         NAVIGASI HORIZONTAL
+         ID menu-tesis tetap dipertahankan agar
+         script lama tetap bekerja
+    ================================================== -->
+
+    <nav id="menu-tesis"
+     class="tegal-home-nav">
+
+    <div class="tegal-home-nav-inner">
+
+        <button type="button" class="menu-card tegal-nav-item" data-target="latar-belakang">
+            <span class="tegal-nav-number">01</span>
+            <span>Latar Belakang</span>
         </button>
 
+        <button type="button" class="menu-card tegal-nav-item" data-target="research-gap">
+            <span class="tegal-nav-number">02</span>
+            <span>Celah Penelitian</span>
+        </button>
 
-        <p class="year">
-            1988–2025
-        </p>
+        <button type="button" class="menu-card tegal-nav-item" data-target="batasan">
+            <span class="tegal-nav-number">03</span>
+            <span>Batasan Penelitian</span>
+        </button>
+
+        <button type="button" class="menu-card tegal-nav-item" data-target="pertanyaan">
+            <span class="tegal-nav-number">04</span>
+            <span>Pertanyaan Penelitian</span>
+        </button>
+
+        <button type="button" class="menu-card tegal-nav-item" data-target="metode">
+            <span class="tegal-nav-number">05</span>
+            <span>Metode Penelitian</span>
+        </button>
+
+        <div class="tegal-nav-result">
+            <button type="button" class="tegal-nav-item tegal-result-trigger hasil-card" id="hasilMenuBtn">
+                <span class="tegal-nav-number">06</span>
+                <span>Hasil &amp; Pembahasan</span>
+                <span class="menu-arrow tegal-dropdown-arrow">↓</span>
+            </button>
+
+            <div id="hasilSubmenu" class="hasil-submenu tegal-result-dropdown">
+                <div class="tegal-result-dropdown-header">
+                    <span>06 / HASIL DAN PEMBAHASAN</span>
+                    <strong>Pilih hasil analisis</strong>
+                </div>
+
+                <button type="button" class="result-card tegal-result-item" data-target="hasil-dsas">
+                    <span class="tegal-result-number">01</span>
+                    <div><strong>Dinamika Garis Pantai</strong><small>Digital Shoreline Analysis System</small></div>
+                    <b>→</b>
+                </button>
+
+                <button type="button" class="result-card tegal-result-item" data-target="hasil-cvi">
+                    <span class="tegal-result-number">02</span>
+                    <div><strong>Kerentanan Pesisir</strong><small>Coastal Vulnerability Index</small></div>
+                    <b>→</b>
+                </button>
+
+                <button type="button" class="result-card tegal-result-item" data-target="hasil-sedimen">
+                    <span class="tegal-result-number">03</span>
+                    <div><strong>Proksi Neraca Sedimen</strong><small>Sediment Balance Proxy</small></div>
+                    <b>→</b>
+                </button>
+
+                <button type="button" class="result-card tegal-result-item" data-target="hasil-rf">
+                    <span class="tegal-result-number">04</span>
+                    <div><strong>Prediksi Garis Pantai</strong><small>Random Forest · 2035</small></div>
+                    <b>→</b>
+                </button>
+
+                <button type="button" class="result-card tegal-result-item" data-target="hasil-rdtr">
+                    <span class="tegal-result-number">05</span>
+                    <div><strong>Evaluasi Tata Ruang</strong><small>RDTR &amp; Spatial Mismatch</small></div>
+                    <b>→</b>
+                </button>
+            </div>
+        </div>
+
+        <button type="button" class="menu-card tegal-nav-item" data-target="kesimpulan">
+            <span class="tegal-nav-number">07</span>
+            <span>Kesimpulan</span>
+        </button>
 
     </div>
-
-</section>
-
-
+</nav>
 
 <!-- =====================================================
-     MENU EKSPLORASI
+     STYLE KHUSUS COVER + MENU BARU
+     BOLEH DITARUH LANGSUNG DI INDEX.HTML
 ===================================================== -->
 
-<section id="menu-tesis"
-         class="menu-section editorial-menu">
+<style>
 
-    <div class="menu-container">
 
+/* =========================================================
+   HOME
+========================================================= */
 
-        <div class="menu-heading">
+.tegal-home {
 
-            <p class="menu-small-title">
-                NAVIGASI PENELITIAN
-            </p>
+    min-height:
+        100vh;
 
-            <h2>
-                Eksplorasi Tesis
-            </h2>
+    display:
+        flex;
 
-            <p>
-                Pilih bagian penelitian yang ingin ditampilkan.
-            </p>
+    flex-direction:
+        column;
 
-        </div>
+    background:
+        #173f35;
 
+}
 
 
-        <nav class="menu-grid editorial-menu-list">
 
+/* =========================================================
+   SPLIT SCREEN
+========================================================= */
 
-            <button class="menu-card"
-                    data-target="latar-belakang">
+.tegal-home-main {
 
-                <span class="menu-number">
-                    01
-                </span>
+    flex:
+        1;
 
-                <div>
+    min-height:
+        calc(100vh - 82px);
 
-                    <h3>
-                        Latar Belakang
-                    </h3>
+    display:
+        grid;
 
-                    <p>
-                        Konteks pesisir Kota Tegal dan urgensi penelitian.
-                    </p>
+    grid-template-columns:
+        minmax(430px,.82fr)
+        minmax(0,1.28fr);
 
-                </div>
+}
 
-            </button>
 
 
+/* =========================================================
+   PANEL KIRI
+========================================================= */
 
-            <button class="menu-card"
-                    data-target="research-gap">
+.tegal-home-left {
 
-                <span class="menu-number">
-                    02
-                </span>
+    display:
+        flex;
 
-                <div>
+    align-items:
+        center;
 
-                    <h3>
-                        Celah Penelitian
-                    </h3>
+    background:
 
-                    <p>
-                        Posisi penelitian di antara kajian yang telah ada.
-                    </p>
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(57,128,102,.18),
+            transparent 40%
+        ),
 
-                </div>
+        linear-gradient(
+            150deg,
+            #173f35,
+            #214c3b
+        );
 
-            </button>
+    color:
+        white;
 
+}
 
 
-            <button class="menu-card"
-                    data-target="batasan">
+.tegal-home-content {
 
-                <span class="menu-number">
-                    03
-                </span>
+    width:
+        100%;
 
-                <div>
+    max-width:
+        720px;
 
-                    <h3>
-                        Batasan Penelitian
-                    </h3>
+    padding:
+        54px 46px;
 
-                    <p>
-                        Wilayah, periode, parameter, dan cakupan analisis.
-                    </p>
+}
 
-                </div>
 
-            </button>
 
+/* BRAND */
 
+.tegal-home-brand {
 
-            <button class="menu-card"
-                    data-target="pertanyaan">
+    display:
+        flex;
 
-                <span class="menu-number">
-                    04
-                </span>
+    gap:
+        12px;
 
-                <div>
+    align-items:
+        center;
 
-                    <h3>
-                        Pertanyaan Penelitian
-                    </h3>
+    margin-bottom:
+        50px;
 
-                    <p>
-                        Tiga pertanyaan utama yang mengarahkan analisis.
-                    </p>
+}
 
-                </div>
 
-            </button>
+.tegal-brand-mark {
 
+    width:
+        43px;
 
+    height:
+        43px;
 
-            <button class="menu-card"
-                    data-target="metode">
+    display:
+        flex;
 
-                <span class="menu-number">
-                    05
-                </span>
+    align-items:
+        center;
 
-                <div>
+    justify-content:
+        center;
 
-                    <h3>
-                        Metode Penelitian
-                    </h3>
+    border:
+        2px solid #e4cf55;
 
-                    <p>
-                        Alur data, analisis, pemodelan, dan evaluasi.
-                    </p>
+    border-radius:
+        50%;
 
-                </div>
+    font-size:
+        15px;
 
-            </button>
+    color:
+        #e4cf55;
 
+}
 
 
-            <button class="menu-card hasil-card"
-                    id="hasilMenuBtn">
+.tegal-home-brand strong {
 
-                <span class="menu-number">
-                    06
-                </span>
+    display:
+        block;
 
-                <div>
+    font-size:
+        16px;
 
-                    <h3>
-                        Hasil dan Pembahasan
-                    </h3>
+    letter-spacing:
+        .3px;
 
-                    <p>
-                        DSAS, CVI, proksi sedimen, Random Forest, dan RDTR.
-                    </p>
+    color:
+        #e4cf55;
 
-                </div>
+}
 
-                <span class="menu-arrow">
-                    ↓
-                </span>
 
-            </button>
+.tegal-home-brand small {
 
+    display:
+        block;
 
+    margin-top:
+        2px;
 
-            <button class="menu-card"
-                    data-target="kesimpulan">
+    font-size:
+        10px;
 
-                <span class="menu-number">
-                    07
-                </span>
+    color:
+        rgba(255,255,255,.58);
 
-                <div>
+}
 
-                    <h3>
-                        Kesimpulan
-                    </h3>
 
-                    <p>
-                        Temuan utama dan implikasi bagi pengelolaan pesisir.
-                    </p>
 
-                </div>
+/* LABEL */
 
-            </button>
+.tegal-home-label {
 
+    margin-bottom:
+        15px;
 
-        </nav>
+    font-size:
+        10px;
 
+    font-weight:
+        700;
 
+    letter-spacing:
+        3px;
 
-        <!-- =================================================
-             SUBMENU HASIL
-        ================================================== -->
+    color:
+        #e4cf55;
 
-        <div id="hasilSubmenu"
-             class="hasil-submenu">
+}
 
 
-            <div class="submenu-heading">
 
-                <span>
-                    06 / HASIL DAN PEMBAHASAN
-                </span>
+/* TITLE */
 
-                <h3>
-                    Pilih hasil analisis
-                </h3>
+.tegal-home h1 {
 
-            </div>
+    max-width:
+        680px;
 
+    margin:
+        0 0 24px;
 
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
 
-            <div class="submenu-grid">
+    font-size:
+        clamp(
+            39px,
+            4vw,
+            62px
+        );
 
+    line-height:
+        1.08;
 
-                <button class="result-card"
-                        data-target="hasil-dsas">
+    font-weight:
+        400;
 
-                    <span>
-                        01
-                    </span>
+    letter-spacing:
+        -1.4px;
 
-                    <h4>
-                        Dinamika Garis Pantai
-                    </h4>
+    color:
+        #f5f5ed;
 
-                    <p>
-                        DSAS
-                    </p>
+}
 
-                </button>
 
 
+/* SUBTITLE */
 
-                <button class="result-card"
-                        data-target="hasil-cvi">
+.tegal-home-subtitle {
 
-                    <span>
-                        02
-                    </span>
+    max-width:
+        620px;
 
-                    <h4>
-                        Kerentanan Pesisir
-                    </h4>
+    margin-bottom:
+        26px;
 
-                    <p>
-                        CVI
-                    </p>
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-                </button>
+    font-size:
+        19px;
 
+    line-height:
+        1.55;
 
+    color:
+        #f0e8bf;
 
-                <button class="result-card"
-                        data-target="hasil-sedimen">
+}
 
-                    <span>
-                        03
-                    </span>
 
-                    <h4>
-                        Proksi Neraca Sedimen
-                    </h4>
 
-                    <p>
-                        Sediment Balance Proxy
-                    </p>
+/* AUTHOR */
 
-                </button>
+.tegal-home-author {
 
+    margin-bottom:
+        20px;
 
+}
 
-                <button class="result-card"
-                        data-target="hasil-rf">
 
-                    <span>
-                        04
-                    </span>
+.tegal-home-author strong {
 
-                    <h4>
-                        Prediksi Garis Pantai
-                    </h4>
+    display:
+        block;
 
-                    <p>
-                        Random Forest
-                    </p>
+    margin-bottom:
+        2px;
 
-                </button>
+    font-size:
+        15px;
 
+    color:
+        white;
 
+}
 
-                <button class="result-card"
-                        data-target="hasil-rdtr">
 
-                    <span>
-                        05
-                    </span>
+.tegal-home-author span {
 
-                    <h4>
-                        Evaluasi Tata Ruang
-                    </h4>
+    font-size:
+        12px;
 
-                    <p>
-                        RDTR & Spatial Mismatch
-                    </p>
+    color:
+        rgba(255,255,255,.69);
 
-                </button>
+}
 
 
-            </div>
 
-        </div>
+/* PEMBIMBING */
 
-    </div>
+.tegal-home-advisor {
 
-</section>
+    max-width:
+        570px;
+
+    margin-bottom:
+        28px;
+
+}
+
+
+.tegal-home-advisor > span {
+
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2px;
+
+    color:
+        #e4cf55;
+
+}
+
+
+.tegal-home-advisor p {
+
+    margin:
+        2px 0;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.55;
+
+    color:
+        rgba(255,255,255,.76);
+
+}
+
+
+
+/* BUTTON */
+
+.tegal-explore-btn {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    padding:
+        12px 18px;
+
+    border:
+        1px solid rgba(255,255,255,.52);
+
+    background:
+        transparent;
+
+    color:
+        white;
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1.8px;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.tegal-explore-btn:hover {
+
+    background:
+        #f4f3e8;
+
+    border-color:
+        #f4f3e8;
+
+    color:
+        #173f35;
+
+}
+
+
+
+/* =========================================================
+   PANEL KANAN
+========================================================= */
+
+.tegal-home-right {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    background:
+        #d8e1dc;
+
+}
+
+
+.tegal-home-photo {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    min-height:
+        640px;
+
+}
+
+
+.tegal-home-photo img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+}
+
+
+.tegal-photo-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(14,54,43,.18),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            0deg,
+            rgba(7,34,30,.34),
+            transparent 35%
+        );
+
+}
+
+
+
+/* CAPTION FOTO */
+
+.tegal-photo-caption {
+
+    position:
+        absolute;
+
+    right:
+        30px;
+
+    bottom:
+        28px;
+
+    padding:
+        14px 17px;
+
+    background:
+        rgba(13,51,43,.78);
+
+    backdrop-filter:
+        blur(8px);
+
+    color:
+        white;
+
+}
+
+
+.tegal-photo-caption span {
+
+    display:
+        block;
+
+    margin-bottom:
+        3px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2px;
+
+    color:
+        #e4cf55;
+
+}
+
+
+.tegal-photo-caption strong {
+
+    display:
+        block;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        20px;
+
+    font-weight:
+        500;
+
+    color:
+        white;
+
+}
+
+
+.tegal-photo-caption p {
+
+    margin:
+        2px 0 0;
+
+    font-size:
+        10px;
+
+    color:
+        rgba(255,255,255,.72);
+
+}
+
+
+
+/* =========================================================
+   NAVIGASI BAWAH
+========================================================= */
+
+.tegal-home-nav {
+
+    position:
+        relative;
+
+    z-index:
+        100;
+
+    flex:
+        none;
+
+    background:
+        #285741;
+
+    border-top:
+        1px solid rgba(255,255,255,.09);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.16);
+
+}
+
+
+.tegal-home-nav-inner {
+
+    width:
+        94%;
+
+    max-width:
+        1500px;
+
+    min-height:
+        78px;
+
+    margin:
+        auto;
+
+    display:
+        flex;
+
+    align-items:
+        stretch;
+
+    justify-content:
+        center;
+
+}
+
+
+
+/* =========================================================
+   ITEM NAV
+========================================================= */
+
+.tegal-nav-item {
+
+    position:
+        relative;
+
+    min-height:
+        78px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        10px 13px;
+
+    border:
+        0;
+
+    border-bottom:
+        2px solid transparent;
+
+    background:
+        transparent;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    color:
+        #fff2c8;
+
+    white-space:
+        nowrap;
+
+    transition:
+        .22s ease;
+
+}
+
+
+.tegal-nav-item:hover {
+
+    background:
+        rgba(255,255,255,.06);
+
+    border-bottom-color:
+        #e4cf55;
+
+    color:
+        white;
+
+}
+
+
+.tegal-nav-number {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+    color:
+        #e4cf55;
+
+}
+
+
+
+/* Override style lama menu-card */
+
+.tegal-home-nav .menu-card {
+
+    width:
+        auto;
+
+    min-height:
+        78px;
+
+    display:
+        flex;
+
+    grid-template-columns:
+        none;
+
+    gap:
+        7px;
+
+    align-items:
+        center;
+
+    padding:
+        10px 13px;
+
+    border:
+        0;
+
+    border-bottom:
+        2px solid transparent;
+
+    background:
+        transparent;
+
+}
+
+
+.tegal-home-nav .menu-card:hover {
+
+    padding-left:
+        13px;
+
+    background:
+        rgba(255,255,255,.06);
+
+}
+
+
+
+/* =========================================================
+   HASIL
+========================================================= */
+
+.tegal-nav-result {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+}
+
+
+.tegal-result-trigger {
+
+    cursor:
+        pointer;
+
+}
+
+
+.tegal-dropdown-arrow {
+
+    margin-left:
+        2px;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size:
+        11px;
+
+    color:
+        #e4cf55;
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+.hasil-card.open
+.tegal-dropdown-arrow {
+
+    transform:
+        rotate(180deg);
+
+}
+
+
+
+/* =========================================================
+   DROPDOWN HASIL
+========================================================= */
+
+.tegal-result-dropdown {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        calc(100% + 12px);
+
+    transform:
+        translateX(-50%);
+
+    z-index:
+        500;
+
+    width:
+        365px;
+
+    margin:
+        0;
+
+    padding:
+        0;
+
+    background:
+        rgba(21,61,49,.98);
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 18px 42px rgba(0,0,0,.28);
+
+    backdrop-filter:
+        blur(10px);
+
+}
+
+
+.tegal-result-dropdown.show {
+
+    display:
+        block;
+
+}
+
+
+.tegal-result-dropdown-header {
+
+    padding:
+        17px 18px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.12);
+
+}
+
+
+.tegal-result-dropdown-header span {
+
+    display:
+        block;
+
+    margin-bottom:
+        3px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2px;
+
+    color:
+        #e4cf55;
+
+}
+
+
+.tegal-result-dropdown-header strong {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        20px;
+
+    font-weight:
+        500;
+
+    color:
+        white;
+
+}
+
+
+
+/* RESULT ITEM */
+
+.tegal-result-dropdown
+.tegal-result-item {
+
+    width:
+        100%;
+
+    min-height:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        26px 1fr 20px;
+
+    gap:
+        10px;
+
+    align-items:
+        center;
+
+    padding:
+        13px 17px;
+
+    border:
+        0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+    background:
+        transparent;
+
+    text-align:
+        left;
+
+    color:
+        white;
+
+}
+
+
+.tegal-result-dropdown
+.tegal-result-item:last-child {
+
+    border-bottom:
+        0;
+
+}
+
+
+.tegal-result-dropdown
+.tegal-result-item:hover {
+
+    background:
+        rgba(255,255,255,.08);
+
+}
+
+
+.tegal-result-number {
+
+    font-size:
+        9px;
+
+    color:
+        #e4cf55;
+
+}
+
+
+.tegal-result-item strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        2px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        14px;
+
+    font-weight:
+        500;
+
+    color:
+        white;
+
+}
+
+
+.tegal-result-item small {
+
+    display:
+        block;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size:
+        8px;
+
+    font-weight:
+        400;
+
+    color:
+        rgba(255,255,255,.55);
+
+}
+
+
+.tegal-result-item b {
+
+    justify-self:
+        end;
+
+    font-weight:
+        400;
+
+    color:
+        #e4cf55;
+
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+
+    .tegal-home-main {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .tegal-home-content {
+
+        padding:
+            42px 30px;
+
+    }
+
+
+    .tegal-home-brand {
+
+        margin-bottom:
+            34px;
+
+    }
+
+
+    .tegal-home-nav-inner {
+
+        overflow-x:
+            auto;
+
+        justify-content:
+            flex-start;
+
+    }
+
+
+    .tegal-nav-item,
+    .tegal-home-nav .menu-card {
+
+        flex:
+            none;
+
+    }
+
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+
+    .tegal-home-main {
+
+        display:
+            block;
+
+        min-height:
+            auto;
+
+    }
+
+
+    .tegal-home-left {
+
+        min-height:
+            610px;
+
+    }
+
+
+    .tegal-home-content {
+
+        padding:
+            36px 24px;
+
+    }
+
+
+    .tegal-home h1 {
+
+        font-size:
+            39px;
+
+    }
+
+
+    .tegal-home-subtitle {
+
+        font-size:
+            16px;
+
+    }
+
+
+    .tegal-home-right {
+
+        height:
+            340px;
+
+    }
+
+
+    .tegal-home-photo {
+
+        min-height:
+            340px;
+
+    }
+
+
+    .tegal-home-nav-inner {
+
+        width:
+            100%;
+
+        display:
+            block;
+
+        overflow:
+            visible;
+
+    }
+
+
+    .tegal-nav-item,
+    .tegal-home-nav .menu-card {
+
+        width:
+            100%;
+
+        min-height:
+            48px;
+
+        justify-content:
+            flex-start;
+
+        padding:
+            11px 22px;
+
+        border-bottom:
+            1px solid rgba(255,255,255,.08);
+
+    }
+
+
+    .tegal-home-nav .menu-card:hover {
+
+        padding-left:
+            22px;
+
+    }
+
+
+    .tegal-nav-result {
+
+        display:
+            block;
+
+    }
+
+
+    .tegal-result-dropdown {
+
+        position:
+            static;
+
+        width:
+            100%;
+
+        transform:
+            none;
+
+        box-shadow:
+            none;
+
+        border-left:
+            0;
+
+        border-right:
+            0;
+
+    }
+
+
+}
+
+
+</style>
+
+<!-- =====================================================
+     NAVBAR FINAL — STICKY + DROPDOWN
+     Override diletakkan setelah style cover agar menang
+     terhadap aturan lama.
+===================================================== -->
+<style>
+    /* Cover + navbar memenuhi satu viewport seperti contoh */
+    .tegal-home {
+        min-height: calc(100vh - 76px) !important;
+        padding-top: 0 !important;
+    }
+
+    .tegal-home-main {
+        min-height: calc(100vh - 76px) !important;
+    }
+
+    /* Navbar berada di bawah cover lalu menempel di atas saat scroll */
+    #menu-tesis.tegal-home-nav {
+        position: sticky !important;
+        top: 0 !important;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 99999 !important;
+        overflow: visible !important;
+        isolation: auto !important;
+        background: #245b43 !important;
+        border-top: 1px solid rgba(255,255,255,.08);
+        border-bottom: 1px solid rgba(255,255,255,.16);
+        box-shadow: 0 3px 12px rgba(0,0,0,.10);
+    }
+
+    /* Pseudo-background lama pada #menu-tesis harus dimatikan */
+    #menu-tesis::before,
+    #menu-tesis::after {
+        content: none !important;
+        display: none !important;
+    }
+
+    .tegal-home-nav-inner {
+        width: 96%;
+        max-width: 1600px;
+        min-height: 76px;
+        margin: 0 auto;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        overflow: visible !important;
+    }
+
+    .tegal-home-nav .tegal-nav-item,
+    .tegal-home-nav .menu-card {
+        width: auto;
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        padding: 10px 15px !important;
+        border: 0;
+        border-bottom: 3px solid transparent;
+        border-radius: 0;
+        background: transparent !important;
+        color: #f3f4ed !important;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+    .tegal-home-nav .tegal-nav-item:hover,
+    .tegal-home-nav .menu-card:hover {
+        padding-left: 15px !important;
+        background: rgba(255,255,255,.07) !important;
+        border-bottom-color: #e1d265;
+        color: #ffffff !important;
+    }
+
+    .tegal-nav-number {
+        font-size: 8px;
+        font-weight: 700;
+        color: #e1d265;
+    }
+
+    .tegal-nav-result {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        overflow: visible !important;
+    }
+
+    #hasilMenuBtn {
+        cursor: pointer;
+    }
+
+    .tegal-dropdown-arrow {
+        margin-left: 3px;
+        color: #e1d265;
+        transition: transform .25s ease;
+    }
+
+    #hasilMenuBtn.open .tegal-dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+    /* Dropdown harus tersembunyi sebelum tombol diklik */
+    #hasilSubmenu {
+        display: none !important;
+    }
+
+    /* Ditampilkan oleh script dengan class .show */
+    #hasilSubmenu.show {
+        display: block !important;
+    }
+
+    #hasilSubmenu.tegal-result-dropdown {
+        position: absolute !important;
+        top: 100% !important;
+        bottom: auto !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 390px;
+        margin: 0 !important;
+        padding: 0;
+        z-index: 100000 !important;
+        background: #183f33 !important;
+        border: 1px solid rgba(255,255,255,.12);
+        border-top: 3px solid #e1d265;
+        box-shadow: 0 16px 40px rgba(0,0,0,.28);
+        overflow: hidden;
+    }
+
+    .tegal-result-dropdown-header {
+        padding: 16px 18px;
+        background: #12372d;
+        border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+
+    .tegal-result-dropdown-header span {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 1.7px;
+        color: #e1d265;
+    }
+
+    .tegal-result-dropdown-header strong {
+        font-family: Georgia, serif;
+        font-size: 19px;
+        font-weight: 500;
+        color: #ffffff;
+    }
+
+    #hasilSubmenu .tegal-result-item {
+        width: 100%;
+        min-height: 61px;
+        display: grid;
+        grid-template-columns: 28px 1fr 20px;
+        gap: 10px;
+        align-items: center;
+        padding: 12px 17px;
+        border: 0;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+        background: transparent !important;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    #hasilSubmenu .tegal-result-item:hover {
+        background: rgba(255,255,255,.08) !important;
+    }
+
+    #hasilSubmenu .tegal-result-item strong {
+        display: block;
+        color: #ffffff;
+    }
+
+    #hasilSubmenu .tegal-result-item small {
+        display: block;
+        margin-top: 2px;
+        color: rgba(255,255,255,.60);
+    }
+
+    .tegal-result-number,
+    #hasilSubmenu b {
+        color: #e1d265;
+    }
+
+    /* Saat menu diklik, judul section tidak tertutup navbar */
+    #latar-belakang,
+    #research-gap,
+    #batasan,
+    #pertanyaan,
+    #metode,
+    #hasil-dsas,
+    #hasil-cvi,
+    #hasil-sedimen,
+    #hasil-rf,
+    #hasil-rdtr,
+    #kesimpulan {
+        scroll-margin-top: 90px;
+    }
+
+    @media (max-width: 1150px) {
+        .tegal-home-nav-inner {
+            justify-content: flex-start;
+            overflow-x: auto !important;
+            overflow-y: visible !important;
+        }
+
+        .tegal-home-nav .tegal-nav-item,
+        .tegal-home-nav .menu-card {
+            flex: none;
+        }
+    }
+
+    @media (max-width: 760px) {
+        .tegal-home {
+            min-height: auto !important;
+        }
+
+        .tegal-home-main {
+            min-height: auto !important;
+        }
+
+        .tegal-home-nav-inner {
+            min-height: 58px;
+        }
+
+        .tegal-home-nav .tegal-nav-item,
+        .tegal-home-nav .menu-card {
+            min-height: 58px;
+            width: auto;
+            flex: none;
+            justify-content: center;
+            padding: 9px 12px !important;
+        }
+
+        #hasilSubmenu.tegal-result-dropdown {
+            position: fixed !important;
+            top: 58px !important;
+            left: 50% !important;
+            width: min(390px, 94vw);
+            transform: translateX(-50%) !important;
+        }
+    }
+</style>
 
 
 
@@ -1938,11 +3317,13 @@
      LATAR BELAKANG
 ===================================================== -->
 
-<section id="latar-belakang"
-         class="story-bg-section">
+<section id="latar-belakang" class="story-bg-section">
 
     <div class="story-wrapper">
 
+        <!-- =============================================
+             HEADER
+        ============================================== -->
 
         <header class="story-header">
 
@@ -1951,36 +3332,36 @@
             </p>
 
             <h2>
-                Kota pesisir yang tumbuh di ruang yang terus berubah
+                Dinamika Pesisir Kota Tegal
             </h2>
 
             <p class="story-intro">
 
-                Kota Tegal merupakan bagian dari Pantai Utara Jawa yang
-                berkembang sebagai kawasan permukiman, pelabuhan,
-                perikanan, tambak, dan aktivitas maritim.
+                Kota Tegal merupakan kawasan pesisir Pantura
+                dengan aktivitas permukiman, perikanan,
+                tambak, pelabuhan, dan industri yang berkembang
+                pada dataran pesisir rendah.
 
-                Pada saat yang sama, wilayah pesisir menghadapi
-                abrasi, rob, kenaikan muka laut, perubahan suplai
-                sedimen, serta perubahan penggunaan lahan.
+                Perkembangan tersebut berlangsung bersamaan dengan
+                abrasi, rob, perubahan suplai sedimen,
+                dan tekanan pemanfaatan ruang yang memengaruhi
+                dinamika garis pantai.
 
             </p>
 
         </header>
 
 
-
         <div class="story-layout">
 
 
-            <!-- =============================================
-                 PETA STICKY
-            ============================================== -->
+            <!-- =========================================
+                 PETA
+            ========================================== -->
 
             <aside class="story-map-side">
 
                 <div class="story-map-sticky">
-
 
                     <div class="story-map-top">
 
@@ -1988,26 +3369,17 @@
                             STUDY AREA
                         </p>
 
-                        <h3>
-                            Pesisir Kota Tegal
-                        </h3>
-
-                        <p>
-                            Pantai Utara Jawa, Provinsi Jawa Tengah
-                        </p>
+        
 
                     </div>
 
 
-
                     <div class="story-map-frame">
-
 
                         <div id="storyMap"></div>
 
 
                         <div class="story-map-overlay">
-
 
                             <div class="story-map-mini">
 
@@ -2047,7 +3419,6 @@
 
                             </div>
 
-
                         </div>
 
                     </div>
@@ -2056,8 +3427,8 @@
                     <div class="story-map-caption"
                          id="storyCaption">
 
-                        Lokasi penelitian berada di pesisir Kota Tegal,
-                        bagian dari koridor Pantai Utara Jawa.
+                        Kota Tegal berkembang pada dataran pesisir rendah
+                        di koridor Pantai Utara Jawa.
 
                     </div>
 
@@ -2067,347 +3438,315 @@
 
 
 
-            <!-- =============================================
+            <!-- =========================================
                  NARASI
-            ============================================== -->
+            ========================================== -->
 
             <div class="story-content-side">
 
-
-                <article class="story-panel active"
-                         data-step="1"
-                         data-zoom="11.5"
-                         data-caption="Lokasi penelitian berada di pesisir Kota Tegal, bagian dari koridor Pantai Utara Jawa.">
-
-                    <span class="story-number">
-                        01
-                    </span>
-
-                    <div class="story-text">
-
-                        <p class="story-kicker">
-                            KONTEKS WILAYAH
-                        </p>
-
-                        <h3>
-                            Pesisir Tegal berada pada koridor ekonomi Pantura
-                        </h3>
-
-                        <p>
-
-                            Aktivitas pelabuhan, perikanan, tambak,
-                            permukiman, dan industri maritim berlangsung
-                            pada dataran pesisir rendah yang berhadapan
-                            langsung dengan Laut Jawa.
-
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-
-                <article class="story-panel"
-                         data-step="2"
-                         data-zoom="11.2"
-                         data-caption="Tekanan pesisir di Tegal tidak berasal dari satu faktor, tetapi dari kombinasi proses fisik dan aktivitas manusia.">
-
-                    <span class="story-number">
-                        02
-                    </span>
-
-                    <div class="story-text">
-
-                        <p class="story-kicker">
-                            TEKANAN PESISIR
-                        </p>
-
-                        <h3>
-                            Perubahan garis pantai lahir dari interaksi banyak proses
-                        </h3>
-
-                        <p>
-
-                            Abrasi dan akresi dipengaruhi oleh gelombang,
-                            pasang surut, kenaikan muka laut, geomorfologi,
-                            elevasi, kemiringan, tutupan lahan,
-                            serta struktur pantai.
-
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-
-                <article class="story-panel"
-                         data-step="3"
-                         data-zoom="11.8"
-                         data-caption="Dinamika garis pantai Tegal tidak seragam antarsegmen; ada bagian yang mundur, stabil, maupun maju.">
-
-                    <span class="story-number">
-                        03
-                    </span>
-
-                    <div class="story-text">
-
-                        <p class="story-kicker">
-                            DINAMIKA SPASIAL
-                        </p>
-
-                        <h3>
-                            Respons garis pantai berbeda dari satu segmen ke segmen lain
-                        </h3>
-
-                        <p>
-
-                            Hasil pengamatan multitemporal memperlihatkan
-                            bahwa sebagian segmen mengalami abrasi,
-                            sebagian relatif stabil, dan bagian lainnya
-                            mengalami akresi.
-
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-
-                <article class="story-panel"
-                         data-step="4"
-                         data-zoom="12.0"
-                         data-caption="Kerentanan pesisir dibentuk oleh kondisi biofisik dan tingkat modifikasi ruang di sepanjang pantai.">
-
-                    <span class="story-number">
-                        04
-                    </span>
-
-                    <div class="story-text">
-
-                        <p class="story-kicker">
-                            KERENTANAN
-                        </p>
-
-                        <h3>
-                            Kondisi fisik menentukan sensitivitas segmen pantai
-                        </h3>
-
-                        <p>
-
-                            CVI digunakan untuk membaca sensitivitas
-                            melalui geomorfologi, slope, elevasi,
-                            abrasi–akresi, gelombang, pasang surut,
-                            kenaikan muka laut, dan tutupan lahan.
-
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-
-                <article class="story-panel"
-                         data-step="5"
-                         data-zoom="12.1"
-                         data-caption="Sedimen menjadi penghubung antara sumber material, redistribusi oleh gelombang, dan respons shoreline.">
-
-                    <span class="story-number">
-                        05
-                    </span>
-
-                    <div class="story-text">
-
-                        <p class="story-kicker">
-                            PROSES SEDIMEN
-                        </p>
-
-                        <h3>
-                            Suplai dan redistribusi sedimen membantu menjelaskan abrasi dan akresi
-                        </h3>
-
-                        <p>
-
-                            Karena neraca sedimen absolut tidak tersedia,
-                            penelitian menggunakan pendekatan proksi
-                            melalui TSS, jarak ke muara,
-                            karakter gelombang, dan respons shoreline.
-
-                        </p>
-
-
-                        <div class="story-inline-flow">
-
-                            <div class="flow-item">
-                                <strong>Muara</strong>
-                                <span>sumber potensial</span>
-                            </div>
-
-                            <div class="flow-arrow">
-                                →
-                            </div>
-
-                            <div class="flow-item">
-                                <strong>TSS</strong>
-                                <span>ketersediaan material</span>
-                            </div>
-
-                            <div class="flow-arrow">
-                                →
-                            </div>
-
-                            <div class="flow-item">
-                                <strong>Gelombang</strong>
-                                <span>redistribusi</span>
-                            </div>
-
-                            <div class="flow-arrow">
-                                →
-                            </div>
-
-                            <div class="flow-item">
-                                <strong>Shoreline</strong>
-                                <span>respons morfologi</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-
-                <article class="story-panel"
-                         data-step="6"
-                         data-zoom="11.6"
-                         data-caption="Penelitian bergerak dari rekonstruksi historis menuju prediksi dan evaluasi tata ruang.">
-
-                    <span class="story-number">
-                        06
-                    </span>
-
-                    <div class="story-text">
-
-                        <p class="story-kicker">
-                            KEBUTUHAN PENELITIAN
-                        </p>
-
-                        <h3>
-                            Analisis historis dilanjutkan menuju prediksi dan evaluasi ruang
-                        </h3>
-
-                        <p>
-
-                            DSAS digunakan untuk memahami perubahan historis,
-                            CVI untuk kerentanan,
-                            proksi sedimen untuk konteks proses,
-                            Random Forest untuk prediksi,
-                            dan RDTR untuk evaluasi tata ruang.
-
-                        </p>
-
-
-                        <div class="research-journey-inline">
-
-                            <div class="journey-inline-step">
-                                <span>01</span>
-                                <strong>DSAS</strong>
-                                <small>1988–2025</small>
-                            </div>
-
-                            <div class="journey-inline-arrow">
-                                →
-                            </div>
-
-                            <div class="journey-inline-step">
-                                <span>02</span>
-                                <strong>CVI</strong>
-                                <small>kerentanan</small>
-                            </div>
-
-                            <div class="journey-inline-arrow">
-                                →
-                            </div>
-
-                            <div class="journey-inline-step">
-                                <span>03</span>
-                                <strong>Proksi Sedimen</strong>
-                                <small>surplus / defisit</small>
-                            </div>
-
-                            <div class="journey-inline-arrow">
-                                →
-                            </div>
-
-                            <div class="journey-inline-step">
-                                <span>04</span>
-                                <strong>Random Forest</strong>
-                                <small>prediksi 2035</small>
-                            </div>
-
-                            <div class="journey-inline-arrow">
-                                →
-                            </div>
-
-                            <div class="journey-inline-step">
-                                <span>05</span>
-                                <strong>RDTR</strong>
-                                <small>spatial mismatch</small>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-
-                <section class="editorial-conclusion">
-
-                    <span>
-                        INTI LATAR BELAKANG
-                    </span>
-
-                    <blockquote>
-
-                        Dinamika garis pantai Kota Tegal perlu dipahami
-                        sebagai hasil interaksi antara kondisi fisik,
-                        perubahan suplai sedimen, aktivitas manusia,
-                        dan pemanfaatan ruang.
-
-                    </blockquote>
-
-                </section>
-
-
-
-                <div class="background-navigation story-nav">
-
-                    <button class="back-menu">
-                        ← Kembali ke Menu
-                    </button>
-
-                    <button class="next-section"
-                            data-target="research-gap">
-                        Lanjut: Celah Penelitian →
-                    </button>
-
-                </div>
-
+    <div class="background-card-grid">
+
+        <!-- 01 -->
+        <button class="background-card"
+                data-bg-detail="bg-detail-1">
+
+            <span class="background-card-number">
+                01
+            </span>
+
+            <div>
+                <small>
+                    KONTEKS WILAYAH
+                </small>
+
+                <h3>
+                    Kota pesisir dengan aktivitas intensif
+                </h3>
+
+                <p>
+                    Permukiman, perikanan, tambak,
+                    pelabuhan, dan industri berkembang
+                    pada dataran pesisir rendah.
+                </p>
+
+                <span class="background-card-link">
+                    Lihat konteks →
+                </span>
             </div>
 
+        </button>
+
+
+        <!-- 02 -->
+        <button class="background-card"
+                data-bg-detail="bg-detail-2">
+
+            <span class="background-card-number">
+                02
+            </span>
+
+            <div>
+                <small>
+                    TEKANAN PESISIR
+                </small>
+
+                <h3>
+                    Pesisir berkembang di wilayah yang rentan
+                </h3>
+
+                <p>
+                    Abrasi, rob, subsidence,
+                    perubahan sedimen, dan konversi lahan
+                    meningkatkan tekanan pesisir.
+                </p>
+
+                <span class="background-card-link">
+                    Lihat tekanan →
+                </span>
+            </div>
+
+        </button>
+
+
+        <!-- 03 -->
+        <button class="background-card"
+                data-bg-detail="bg-detail-3">
+
+            <span class="background-card-number">
+                03
+            </span>
+
+            <div>
+                <small>
+                    RESPONS SPASIAL
+                </small>
+
+                <h3>
+                    Perubahan Garis Pantai
+                </h3>
+
+                <p>
+                    Interaksi proses alam dan manusia
+                    membentuk segmen abrasi,
+                    stabil, dan akresi.
+                </p>
+
+                <span class="background-card-link">
+                    Lihat proses →
+                </span>
+            </div>
+
+        </button>
+
+
+        <!-- 04 -->
+        <button class="background-card featured"
+                data-bg-detail="bg-detail-4">
+
+            <span class="background-card-number">
+                04
+            </span>
+
+            <div>
+                <small>
+                    KEBUTUHAN PENELITIAN
+                </small>
+
+                <h3>
+                    Dari historis menuju prediksi
+                </h3>
+
+                <p>
+                    Analisis diarahkan dari perubahan historis
+                    menuju kerentanan, proses sedimen,
+                    prediksi, dan tata ruang.
+                </p>
+
+                <span class="background-card-link">
+                    Lihat integrasi →
+                </span>
+            </div>
+
+        </button>
+
+    </div>
+
+
+    <!-- =============================================
+         RINGKASAN
+    ============================================== -->
+
+    <section class="background-key-message">
+
+        <span>
+            INTI LATAR BELAKANG
+        </span>
+
+        <p>
+            Dinamika garis pantai Kota Tegal merupakan respons
+            terhadap interaksi kondisi fisik,
+            suplai sedimen, dan aktivitas manusia.
+        </p>
+
+    </section>
+
+
+    <div class="background-navigation story-nav">
+
+        <button class="back-menu">
+            ← Kembali ke Menu
+        </button>
+
+        <button class="next-section"
+                data-target="research-gap">
+            Lanjut: Celah Penelitian →
+        </button>
+
+    </div>
+
+</div>
+
+    </div>
+
+    <!-- =====================================================
+     POPUP LATAR BELAKANG
+===================================================== -->
+
+<div class="background-modal"
+     id="backgroundModal">
+
+    <div class="background-modal-backdrop"
+         id="backgroundModalBackdrop">
+    </div>
+
+    <div class="background-modal-box">
+
+        <button class="background-modal-close"
+                id="backgroundModalClose">
+            ×
+        </button>
+
+        <div id="backgroundModalContent">
         </div>
 
     </div>
 
+</div>
+
+
+<!-- ISI DETAIL -->
+
+<div class="background-detail-data"
+     id="bg-detail-1">
+
+    <span>KONTEKS WILAYAH</span>
+
+    <h3>
+        Kota pesisir dengan aktivitas intensif
+    </h3>
+
+    <p>
+        Kota Tegal merupakan bagian dari koridor Pantura.
+        Permukiman, perikanan, tambak, pelabuhan,
+        dan industri berkembang pada dataran pesisir rendah.
+    </p>
+
+</div>
+
+
+<div class="background-detail-data"
+     id="bg-detail-2">
+
+    <span>TEKANAN PESISIR</span>
+
+    <h3>
+        Aktivitas berkembang bersamaan dengan tekanan lingkungan
+    </h3>
+
+    <p>
+        Abrasi, rob, penurunan muka tanah,
+        perubahan suplai sedimen, konversi mangrove,
+        dan pemanfaatan ruang meningkatkan
+        kerentanan pesisir Kota Tegal.
+    </p>
+
+</div>
+
+
+<div class="background-detail-data"
+     id="bg-detail-3">
+
+    <span>RESPONS GARIS PANTAI</span>
+
+    <h3>
+        Abrasi dan akresi tidak tersebar seragam
+    </h3>
+
+    <p>
+        Perubahan kondisi fisik, suplai sedimen,
+        struktur pantai, dan aktivitas manusia
+        menghasilkan respons shoreline yang berbeda
+        antarsegmen.
+    </p>
+
+    <div class="background-process">
+
+        <div>
+            <strong>Proses Alam</strong>
+            <small>gelombang · pasut · elevasi</small>
+        </div>
+
+        <b>+</b>
+
+        <div>
+            <strong>Aktivitas Manusia</strong>
+            <small>pelabuhan · tambak · struktur</small>
+        </div>
+
+        <b>→</b>
+
+        <div>
+            <strong>Shoreline</strong>
+            <small>abrasi · stabil · akresi</small>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="background-detail-data"
+     id="bg-detail-4">
+
+    <span>KEBUTUHAN PENELITIAN</span>
+
+    <h3>
+        Analisis perlu bergerak menuju prediksi
+    </h3>
+
+    <p>
+        Perubahan historis tidak cukup untuk mendukung
+        perencanaan pesisir. Penelitian menghubungkan
+        dinamika shoreline, kerentanan, proses sedimen,
+        prediksi 2035, dan tata ruang.
+    </p>
+
+    <div class="background-research-flow">
+
+        <strong>DSAS</strong>
+        <b>→</b>
+        <strong>CVI</strong>
+        <b>→</b>
+        <strong>Sedimen</strong>
+        <b>→</b>
+        <strong>RF</strong>
+        <b>→</b>
+        <strong>RDTR</strong>
+
+    </div>
+
+</div>
 </section>
-
-
 
 <!-- =====================================================
      CELAH PENELITIAN
@@ -2435,12 +3774,12 @@
         </p>
 
         <h2>
-            Dari analisis terpisah menuju kerangka yang terintegrasi
+            Dari analisis terpisah menuju kerangka analisis yang terintegrasi
         </h2>
 
         <p class="lead">
 
-            Kajian pesisir banyak membahas perubahan garis pantai
+            Kajian pesisir yang ada banyak membahas perubahan garis pantai
             dan kerentanan secara terpisah,
             sedangkan integrasi dinamika historis,
             kerentanan, sedimen, prediksi,
@@ -2461,8 +3800,8 @@
 
                     Analisis masih dominan historis-deskriptif
                     dan belum secara konsisten menghubungkan
-                    DSAS dengan CVI, proses sedimen,
-                    prediksi shoreline, serta RDTR.
+                    DSAS dengan CVI, sedimen,
+                    prediksi shoreline, serta tata ruang.
 
                 </p>
 
@@ -2479,7 +3818,7 @@
 
                     Penelitian mengintegrasikan DSAS,
                     CVI, proksi neraca sedimen,
-                    Random Forest, dan RDTR
+                    Random Forest, dan tata ruang
                     dalam satu kerangka spasial-temporal.
 
                 </p>
@@ -2560,108 +3899,176 @@
 
 
 
-        <div class="scope-editorial-list">
+       <!-- =================================================
+            BATASAN PENELITIAN - COMPACT CARDS
+        ================================================== -->
+
+<div class="scope-card-grid">
 
 
-            <div class="scope-editorial-item">
+    <!-- 01 -->
+    <article class="scope-card">
 
-                <span>
-                    01
-                </span>
+        <span class="scope-card-number">
+            01
+        </span>
 
-                <div>
-                    <strong>Wilayah</strong>
-                    <p>Pesisir Kota Tegal.</p>
-                </div>
+        <div>
 
-            </div>
+            <small>
+                WILAYAH
+            </small>
 
+            <h3>
+                Pesisir Kota Tegal
+            </h3>
 
-            <div class="scope-editorial-item">
-
-                <span>
-                    02
-                </span>
-
-                <div>
-                    <strong>Periode</strong>
-                    <p>Garis pantai multitemporal 1988–2025.</p>
-                </div>
-
-            </div>
-
-
-            <div class="scope-editorial-item">
-
-                <span>
-                    03
-                </span>
-
-                <div>
-                    <strong>Kerentanan</strong>
-                    <p>
-                        Geomorfologi, slope, elevasi,
-                        abrasi–akresi, gelombang,
-                        pasut, SLR, dan tutupan lahan.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="scope-editorial-item">
-
-                <span>
-                    04
-                </span>
-
-                <div>
-                    <strong>Proksi Sedimen</strong>
-                    <p>
-                        TSS, muara, gelombang,
-                        respons shoreline,
-                        tiga periode dan tiga sel sedimen.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="scope-editorial-item">
-
-                <span>
-                    05
-                </span>
-
-                <div>
-                    <strong>Prediksi</strong>
-                    <p>
-                        Posisi garis pantai 10 tahun mendatang
-                        menggunakan Random Forest.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="scope-editorial-item">
-
-                <span>
-                    06
-                </span>
-
-                <div>
-                    <strong>Tata ruang</strong>
-                    <p>
-                        Evaluasi keterkaitan hasil dengan
-                        pola ruang RDTR Kota Tegal.
-                    </p>
-                </div>
-
-            </div>
-
+            <p>
+                Analisis difokuskan pada kawasan pesisir
+                Kota Tegal.
+            </p>
 
         </div>
+
+    </article>
+
+
+    <!-- 02 -->
+    <article class="scope-card">
+
+        <span class="scope-card-number">
+            02
+        </span>
+
+        <div>
+
+            <small>
+                PERIODE
+            </small>
+
+            <h3>
+                1988–2025
+            </h3>
+
+            <p>
+                Garis pantai multitemporal selama
+                37 tahun pengamatan.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- 03 -->
+    <article class="scope-card">
+
+        <span class="scope-card-number">
+            03
+        </span>
+
+        <div>
+
+            <small>
+                KERENTANAN PESISIR
+            </small>
+
+            <h3>
+                Delapan parameter CVI
+            </h3>
+
+            <p>
+                Shoreline, geomorfologi, slope, elevasi,
+                gelombang, pasut, SLR, dan tutupan lahan.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- 04 -->
+    <article class="scope-card">
+
+        <span class="scope-card-number">
+            04
+        </span>
+
+        <div>
+
+            <small>
+                PROKSI SEDIMEN
+            </small>
+
+            <h3>
+                Tiga periode · tiga sel
+            </h3>
+
+            <p>
+                TSS, muara, gelombang,
+                dan respons perubahan shoreline.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- 05 -->
+    <article class="scope-card">
+
+        <span class="scope-card-number">
+            05
+        </span>
+
+        <div>
+
+            <small>
+                PREDIKSI
+            </small>
+
+            <h3>
+                Garis pantai 2035
+            </h3>
+
+            <p>
+                Prediksi posisi shoreline
+                10 tahun menggunakan Random Forest.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- 06 -->
+    <article class="scope-card featured">
+
+        <span class="scope-card-number">
+            06
+        </span>
+
+        <div>
+
+            <small>
+                TATA RUANG
+            </small>
+
+            <h3>
+                Evaluasi RDTR
+            </h3>
+
+            <p>
+                Keterkaitan kondisi pesisir
+                dengan pola ruang Kota Tegal.
+            </p>
+
+        </div>
+
+    </article>
+
+
+</div>
 
 
         <div class="background-navigation">
@@ -2705,7 +4112,7 @@
 
             <p class="rq-intro">
 
-                Ketiga pertanyaan disusun berurutan:
+                Ketiga pertanyaan disusun berurutan bertujuan untuk
                 memahami kondisi,
                 memprediksi perubahan,
                 kemudian mengevaluasi implikasi tata ruang.
@@ -3015,6 +4422,10 @@
     <div class="method-wrapper">
 
 
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
         <div class="method-header">
 
             <p class="section-tag">
@@ -3026,20 +4437,24 @@
             </h2>
 
             <p class="method-intro">
-
-                Penelitian bergerak dari pengolahan data multitemporal
-                menuju analisis dinamika, kerentanan,
+                Penelitian dilaksanakan dari pengolahan data multitemporal
+                sampai analisis dinamika, kerentanan,
                 proksi sedimen, pemodelan prediktif,
                 dan evaluasi tata ruang.
-
             </p>
 
         </div>
 
 
 
+        <!-- =================================================
+             ALUR UTAMA
+        ================================================== -->
+
         <div class="method-diagram">
 
+
+            <!-- 01 DATA -->
 
             <button class="method-step method-step-visual"
                     data-method="method-detail-data">
@@ -3068,6 +4483,9 @@
             </div>
 
 
+
+            <!-- 02 PREPROCESS -->
+
             <button class="method-step method-step-visual"
                     data-method="method-detail-preprocess">
 
@@ -3094,6 +4512,9 @@
                 →
             </div>
 
+
+
+            <!-- 03 DSAS -->
 
             <button class="method-step method-step-visual"
                     data-method="method-detail-dsas">
@@ -3122,6 +4543,9 @@
             </div>
 
 
+
+            <!-- 04 CVI -->
+
             <button class="method-step method-step-visual"
                     data-method="method-detail-cvi">
 
@@ -3148,6 +4572,9 @@
                 →
             </div>
 
+
+
+            <!-- 05 SEDIMEN -->
 
             <button class="method-step method-step-visual"
                     data-method="method-detail-sedimen">
@@ -3176,6 +4603,9 @@
             </div>
 
 
+
+            <!-- 06 RANDOM FOREST -->
+
             <button class="method-step method-step-visual featured-method"
                     data-method="method-detail-rf">
 
@@ -3203,6 +4633,9 @@
             </div>
 
 
+
+            <!-- 07 RDTR -->
+
             <button class="method-step method-step-visual output-method"
                     data-method="method-detail-rdtr">
 
@@ -3224,6 +4657,7 @@
 
             </button>
 
+
         </div>
 
 
@@ -3241,7 +4675,7 @@
 
 
         <!-- =================================================
-             DETAIL DATA
+             DETAIL 01 - DATA
         ================================================== -->
 
         <div id="method-detail-data"
@@ -3270,7 +4704,7 @@
 
                     <span>
                         DEM
-                        <small>Elevasi & slope</small>
+                        <small>Elevasi &amp; slope</small>
                     </span>
 
                     <span>
@@ -3302,7 +4736,7 @@
 
 
         <!-- =================================================
-             DETAIL PREPROCESS
+             DETAIL 02 - PREPROCESS
         ================================================== -->
 
         <div id="method-detail-preprocess"
@@ -3326,14 +4760,19 @@
 
                     <span>Seleksi citra</span>
                     <b>→</b>
+
                     <span>Cloud masking</span>
                     <b>→</b>
+
                     <span>Median composite</span>
                     <b>→</b>
+
                     <span>MNDWI + Otsu</span>
                     <b>→</b>
+
                     <span>Shoreline</span>
                     <b>→</b>
+
                     <span>Koreksi pasut</span>
 
                 </div>
@@ -3345,7 +4784,7 @@
 
 
         <!-- =================================================
-             DETAIL DSAS
+             DETAIL 03 - DSAS
         ================================================== -->
 
         <div id="method-detail-dsas"
@@ -3358,7 +4797,7 @@
             <div>
 
                 <span class="method-detail-label">
-                    DSAS
+                    DIGITAL SHORELINE ANALYSIS SYSTEM
                 </span>
 
                 <h3>
@@ -3369,8 +4808,10 @@
 
                     <span>Baseline</span>
                     <b>→</b>
+
                     <span>Transek 200 m</span>
                     <b>→</b>
+
                     <span>LRR</span>
                     <span>EPR</span>
                     <span>NSM</span>
@@ -3385,7 +4826,7 @@
 
 
         <!-- =================================================
-             DETAIL CVI
+             DETAIL 04 - CVI
         ================================================== -->
 
         <div id="method-detail-cvi"
@@ -3395,15 +4836,26 @@
                 04
             </div>
 
-            <div>
+
+            <div class="method-cvi-content">
 
                 <span class="method-detail-label">
                     COASTAL VULNERABILITY INDEX
                 </span>
 
                 <h3>
-                    Menilai kerentanan fisik setiap segmen pantai
+                    Parameter kerentanan fisik setiap segmen pantai
                 </h3>
+
+                <p class="method-cvi-intro">
+                    CVI disusun menggunakan delapan parameter
+                    yang diklasifikasikan ke dalam lima tingkat
+                    kerentanan, dari sangat rendah hingga sangat tinggi.
+                </p>
+
+
+
+                <!-- 8 PARAMETER -->
 
                 <div class="method-parameter-grid">
 
@@ -3418,66 +4870,394 @@
 
                 </div>
 
-            </div>
-
-        </div>
 
 
+                <!-- =============================================
+                     TABEL SKORING CVI
+                ============================================== -->
 
-        <!-- =================================================
-             DETAIL SEDIMEN
-        ================================================== -->
+                <div class="cvi-scoring-block">
 
-        <div id="method-detail-sedimen"
-             class="method-detail method-detail-visual">
+                    <div class="cvi-scoring-heading">
 
-            <div class="method-detail-number">
-                05
-            </div>
+                        <span>
+                            KLASIFIKASI PARAMETER
+                        </span>
 
-            <div>
+                        <h4>
+                            Skoring Coastal Vulnerability Index
+                        </h4>
 
-                <span class="method-detail-label">
-                    PROKSI NERACA SEDIMEN
-                </span>
+                        <p>
+                            Setiap parameter diberi skor 1–5.
+                            Semakin tinggi skor,
+                            semakin tinggi tingkat kerentanan pesisir.
+                        </p>
 
-                <h3>
-                    Menginterpretasikan kecenderungan surplus dan defisit
-                </h3>
+                    </div>
 
-                <div class="method-mini-process">
 
-                    <span>
-                        Muara
-                        <small>Sumber</small>
-                    </span>
+                    <div class="cvi-scoring-table-wrap">
 
-                    <b>+</b>
+                        <table class="cvi-scoring-table">
 
-                    <span>
-                        TSS
-                        <small>Ketersediaan</small>
-                    </span>
+                            <thead>
 
-                    <b>+</b>
+                                <tr>
 
-                    <span>
-                        Hs · MWD · MWP
-                        <small>Redistribusi</small>
-                    </span>
+                                    <th>
+                                        Parameter
+                                    </th>
 
-                    <b>+</b>
+                                    <th>
+                                        Kelas 1
+                                        <small>Sangat Rendah</small>
+                                    </th>
 
-                    <span>
-                        Shoreline
-                        <small>Respons</small>
-                    </span>
+                                    <th>
+                                        Kelas 2
+                                        <small>Rendah</small>
+                                    </th>
 
-                    <b>→</b>
+                                    <th>
+                                        Kelas 3
+                                        <small>Sedang</small>
+                                    </th>
 
-                    <span>
-                        Proksi Sedimen
-                    </span>
+                                    <th>
+                                        Kelas 4
+                                        <small>Tinggi</small>
+                                    </th>
+
+                                    <th>
+                                        Kelas 5
+                                        <small>Sangat Tinggi</small>
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <!-- SHORELINE -->
+
+                                <tr>
+
+                                    <td class="cvi-param-name">
+
+                                        <strong>
+                                            Dinamika garis pantai
+                                        </strong>
+
+                                        <small>
+                                            abrasi–akresi (m/tahun)
+                                        </small>
+
+                                    </td>
+
+                                    <td>
+                                        ≥ 2,0
+                                        <small>Akresi tinggi</small>
+                                    </td>
+
+                                    <td>
+                                        1,0 – 2,0
+                                    </td>
+
+                                    <td>
+                                        −1,0 – 1,0
+                                        <small>Stabil</small>
+                                    </td>
+
+                                    <td>
+                                        −1,1 – −2,0
+                                    </td>
+
+                                    <td>
+                                        ≤ −2,0
+                                        <small>Abrasi tinggi</small>
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- GEOMORFOLOGI -->
+
+                                <tr>
+
+                                    <td class="cvi-param-name">
+                                        <strong>
+                                            Geomorfologi pantai
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Tebing batuan /
+                                        rocky coast
+                                    </td>
+
+                                    <td>
+                                        Pantai pasir kasar
+                                    </td>
+
+                                    <td>
+                                        Pantai pasir halus
+                                    </td>
+
+                                    <td>
+                                        Dataran aluvial /
+                                        estuari
+                                    </td>
+
+                                    <td>
+                                        Rawa, mangrove,
+                                        tambak, mudflat
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- SLOPE -->
+
+                                <tr>
+
+                                    <td class="cvi-param-name">
+                                        <strong>
+                                            Slope (%)
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        &gt; 12
+                                    </td>
+
+                                    <td>
+                                        8 – 12
+                                    </td>
+
+                                    <td>
+                                        4 – 8
+                                    </td>
+
+                                    <td>
+                                        2 – 4
+                                    </td>
+
+                                    <td>
+                                        &lt; 2
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- ELEVASI -->
+
+                                <tr>
+
+                                    <td class="cvi-param-name">
+                                        <strong>
+                                            Elevasi (m)
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        &gt; 30,1
+                                    </td>
+
+                                    <td>
+                                        20,1 – 30,0
+                                    </td>
+
+                                    <td>
+                                        10,1 – 20,0
+                                    </td>
+
+                                    <td>
+                                        5,1 – 10,0
+                                    </td>
+
+                                    <td>
+                                        0 – 5,0
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- GELOMBANG -->
+
+                                <tr>
+
+                                    <td class="cvi-param-name">
+
+                                        <strong>
+                                            Tinggi gelombang rata-rata
+                                        </strong>
+
+                                        <small>
+                                            meter
+                                        </small>
+
+                                    </td>
+
+                                    <td>
+                                        &lt; 0,245
+                                    </td>
+
+                                    <td>
+                                        0,245 – 0,258
+                                    </td>
+
+                                    <td>
+                                        0,258 – 0,268
+                                    </td>
+
+                                    <td>
+                                        0,268 – 0,275
+                                    </td>
+
+                                    <td>
+                                        &gt; 0,275
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- SLR -->
+
+                                <tr>
+
+                                    <td class="cvi-param-name">
+
+                                        <strong>
+                                            Kenaikan muka laut relatif
+                                        </strong>
+
+                                        <small>
+                                            mm/tahun
+                                        </small>
+
+                                    </td>
+
+                                    <td>
+                                        &lt; −1,21
+                                    </td>
+
+                                    <td>
+                                        −1,21 – 0,1
+                                    </td>
+
+                                    <td>
+                                        0,1 – 1,24
+                                    </td>
+
+                                    <td>
+                                        1,24 – 1,36
+                                    </td>
+
+                                    <td>
+                                        &gt; 1,36
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- PASUT -->
+
+                                <tr>
+
+                                    <td class="cvi-param-name">
+
+                                        <strong>
+                                            Pasang surut rata-rata
+                                        </strong>
+
+                                        <small>
+                                            meter
+                                        </small>
+
+                                    </td>
+
+                                    <td>
+                                        &gt; 0,921
+                                    </td>
+
+                                    <td>
+                                        0,884 – 0,921
+                                    </td>
+
+                                    <td>
+                                        0,873 – 0,884
+                                    </td>
+
+                                    <td>
+                                        0,837 – 0,873
+                                    </td>
+
+                                    <td>
+                                        &lt; 0,837
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- LAND COVER -->
+
+                                <tr>
+
+                                    <td class="cvi-param-name">
+
+                                        <strong>
+                                            Tutupan lahan
+                                        </strong>
+
+                                    </td>
+
+                                    <td>
+                                        Mangrove
+                                    </td>
+
+                                    <td>
+                                        Pantai
+                                    </td>
+
+                                    <td>
+                                        Tambak campuran
+                                    </td>
+
+                                    <td>
+                                        Muara / lahan terbuka dinamis
+                                    </td>
+
+                                    <td>
+                                        Bangunan / pelabuhan /
+                                        kawasan terbangun padat
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <p class="cvi-scoring-source">
+                        Sumber: Gornitz (1991);
+                        Thieler &amp; Hammar-Klose (2000);
+                        Aboudha (2006).
+                    </p>
 
                 </div>
 
@@ -3488,7 +5268,314 @@
 
 
         <!-- =================================================
-             DETAIL RF
+             DETAIL 05 - PROKSI SEDIMEN
+        ================================================== -->
+
+        <div id="method-detail-sedimen"
+             class="method-detail method-detail-visual">
+
+            <div class="method-detail-number">
+                05
+            </div>
+
+
+            <div class="method-sedimen-content">
+
+                <span class="method-detail-label">
+                    PROKSI NERACA SEDIMEN
+                </span>
+
+                <h3>
+                    Menginterpretasikan kecenderungan surplus dan defisit
+                </h3>
+
+
+                <!-- =============================================
+                     ALUR PROKSI
+                ============================================== -->
+
+                <div class="method-mini-process">
+
+                    <span>
+                        Muara
+                        <small>Jarak</small>
+                    </span>
+
+                    <b>+</b>
+
+
+                    <span>
+                        TSS
+                        <small>Ketersediaan</small>
+                    </span>
+
+                    <b>+</b>
+
+
+                    <span>
+                        Hs · MWD · MWP
+                        <small>Redistribusi</small>
+                    </span>
+
+                    <b>+</b>
+
+
+                    <span>
+                        Shoreline
+                        <small>Respons</small>
+                    </span>
+
+                    <b>→</b>
+
+
+                    <span>
+                        Proksi Sedimen
+                    </span>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     ATURAN KLASIFIKASI
+                ============================================== -->
+
+                <div class="sed-proxy-rule">
+
+                    <div class="sed-proxy-rule-header">
+
+                        <span class="method-detail-label">
+                            ATURAN KLASIFIKASI
+                        </span>
+
+                        <h4>
+                            Interpretasi proksi neraca sedimen
+                        </h4>
+
+                        <p>
+                            Kelas proksi ditentukan dari kombinasi
+                            respons garis pantai dan posisi TSS
+                            terhadap ambang lokal.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="sed-proxy-table-wrap">
+
+                        <table class="sed-proxy-table">
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Respons Shoreline
+                                    </th>
+
+                                    <th>
+                                        Status TSS
+                                    </th>
+
+                                    <th>
+                                        Kelas Proksi
+                                    </th>
+
+                                    <th>
+                                        Interpretasi
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+
+                            <tbody>
+
+
+                                <!-- AKRESI + TSS TINGGI -->
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            Akresi
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Di atas ambang lokal
+                                    </td>
+
+                                    <td>
+
+                                        <span class="sed-class surplus">
+                                            Surplus / Deposisi
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        Material tersedia dan diikuti
+                                        kemajuan garis pantai.
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- AKRESI + TSS RENDAH -->
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            Akresi
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Di bawah ambang lokal
+                                    </td>
+
+                                    <td>
+
+                                        <span class="sed-class local">
+                                            Deposisi Lokal
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        Pantai tetap maju meskipun
+                                        TSS relatif rendah.
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- STABIL -->
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            Stabil
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Tidak menjadi pembeda utama
+                                    </td>
+
+                                    <td>
+
+                                        <span class="sed-class balanced">
+                                            Relatif Seimbang
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        Respons shoreline menunjukkan
+                                        kondisi relatif stabil.
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- ABRASI + TSS TINGGI -->
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            Abrasi
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Di atas ambang lokal
+                                    </td>
+
+                                    <td>
+
+                                        <span class="sed-class bypass">
+                                            Bypass / Export
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        Material tersedia tetapi
+                                        tidak terakumulasi pada segmen.
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- ABRASI + TSS RENDAH -->
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            Abrasi
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Di bawah ambang lokal
+                                    </td>
+
+                                    <td>
+
+                                        <span class="sed-class deficit">
+                                            Defisit / Erosi
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        Ketersediaan material rendah
+                                        disertai kemunduran shoreline.
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <p class="sed-proxy-note">
+
+                        Kelas merupakan interpretasi proksi proses sedimen,
+                        bukan neraca sedimen absolut dalam satuan volume
+                        atau massa.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             DETAIL 06 - RANDOM FOREST
         ================================================== -->
 
         <div id="method-detail-rf"
@@ -3512,14 +5599,19 @@
 
                     <span>DSAS</span>
                     <b>+</b>
+
                     <span>CVI</span>
                     <b>+</b>
+
                     <span>Proksi Sedimen</span>
                     <b>→</b>
+
                     <span>Random Forest</span>
                     <b>→</b>
+
                     <span>R² · MAE · RMSE</span>
                     <b>→</b>
+
                     <span>Shoreline 2035</span>
 
                 </div>
@@ -3531,7 +5623,7 @@
 
 
         <!-- =================================================
-             DETAIL RDTR
+             DETAIL 07 - RDTR
         ================================================== -->
 
         <div id="method-detail-rdtr"
@@ -3555,12 +5647,16 @@
 
                     <span>CVI</span>
                     <b>+</b>
+
                     <span>Prediksi 2035</span>
                     <b>+</b>
+
                     <span>RDTR</span>
                     <b>→</b>
+
                     <span>Overlay</span>
                     <b>→</b>
+
                     <span>Spatial Mismatch</span>
 
                 </div>
@@ -3571,6 +5667,10 @@
 
 
 
+        <!-- =================================================
+             NAVIGASI
+        ================================================== -->
+
         <div class="background-navigation">
 
             <button class="back-menu">
@@ -3579,7 +5679,9 @@
 
             <button class="next-section"
                     data-target="hasil-dsas">
-                Lanjut: Hasil & Pembahasan →
+
+                Lanjut: Hasil &amp; Pembahasan →
+
             </button>
 
         </div>
@@ -3588,7 +5690,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -3618,7 +5719,7 @@
             <p class="dsas-intro">
 
                 Analisis 46 transek pada periode 1988–2025
-                menunjukkan kecenderungan abrasi bersih,
+                menunjukkan kecenderungan abrasi,
                 tetapi pola perubahan sangat heterogen secara spasial.
 
             </p>
@@ -3757,11 +5858,7 @@
                 </h3>
 
                 <p>
-                    Klik transek untuk melihat LRR,
-                    EPR, NSM, SCE, kategori perubahan,
-                    dan geomorfologi.
-                </p>
-
+               
             </div>
 
 
@@ -3814,84 +5911,109 @@
 
                 <aside class="dsas-spatial-panel">
 
-                    <p class="panel-small">
-                        TEMUAN SPASIAL
-                    </p>
+    <p class="panel-small">
+        TEMUAN SPASIAL
+    </p>
+
+    
 
 
-                    <div class="spatial-finding">
+    <!-- 01 -->
+    <button class="spatial-finding dsas-finding-btn"
+            data-finding="abrasion-clusters">
 
-                        <span class="finding-number">
-                            01
-                        </span>
+        <span class="finding-number">
+            01
+        </span>
 
-                        <div>
+        <div>
 
-                            <h4>
-                                Tiga klaster abrasi utama
-                            </h4>
+            <h4>
+                Tiga klaster abrasi utama
+            </h4>
 
-                            <p>
+            <p>
+                T02–T04 dan T06–T07,
+                T14–T17,
+                serta T36–T41.
+            </p>
 
-                                Klaster abrasi muncul pada
-                                T02–T04 dan T06–T07,
-                                T14–T17,
-                                serta T36–T41.
+            <small>
+                Tampilkan pada peta →
+            </small>
 
-                            </p>
+        </div>
 
-                        </div>
-
-                    </div>
-
-
-                    <div class="spatial-finding">
-
-                        <span class="finding-number">
-                            02
-                        </span>
-
-                        <div>
-
-                            <h4>
-                                Abrasi maksimum pada T36
-                            </h4>
-
-                            <p>
-                                LRR paling negatif mencapai
-                                −4,93 m/tahun.
-                            </p>
-
-                        </div>
-
-                    </div>
+    </button>
 
 
-                    <div class="spatial-finding">
+    <!-- 02 -->
+    <button class="spatial-finding dsas-finding-btn"
+            data-finding="maximum-abrasion">
 
-                        <span class="finding-number">
-                            03
-                        </span>
+        <span class="finding-number">
+            02
+        </span>
 
-                        <div>
+        <div>
 
-                            <h4>
-                                Stabil–akresi pada T24–T35
-                            </h4>
+            <h4>
+                Abrasi maksimum pada T36
+            </h4>
 
-                            <p>
+            <p>
+                LRR paling negatif mencapai
+                −4,93 m/tahun.
+            </p>
 
-                                Segmen relatif stabil hingga akretif
-                                terkonsentrasi di sekitar Pelabuhan Tegal
-                                dan struktur pemecah gelombang.
+            <small>
+                Zoom ke T36 →
+            </small>
 
-                            </p>
+        </div>
 
-                        </div>
+    </button>
 
-                    </div>
 
-                </aside>
+    <!-- 03 -->
+    <button class="spatial-finding dsas-finding-btn"
+            data-finding="stable-accretion">
+
+        <span class="finding-number">
+            03
+        </span>
+
+        <div>
+
+            <h4>
+                Stabil–akresi pada T24–T35
+            </h4>
+
+            <p>
+                Segmen relatif stabil hingga akretif
+                terkonsentrasi di sekitar Pelabuhan Tegal
+                dan struktur pantai.
+            </p>
+
+            <small>
+                Tampilkan pada peta →
+            </small>
+
+        </div>
+
+    </button>
+
+
+    <!-- RESET -->
+
+    <button class="dsas-reset-view"
+            id="dsasResetView">
+
+        Tampilkan seluruh transek
+
+    </button>
+
+</aside>
 
 
             </div>
@@ -3910,14 +6032,14 @@
                 </p>
 
                 <h3>
-                    Abrasi mendominasi, tetapi tidak terpusat pada satu lokasi
+                    Hasil dominasi abrasi, tetapi tidak terpusat pada satu lokasi
                 </h3>
 
                 <p>
 
                     Nilai LRR rata-rata negatif menunjukkan
                     kecenderungan mundurnya garis pantai,
-                    tetapi pola spasial menunjukkan tekanan
+                    dengan pola spasial menunjukkan tekanan
                     abrasi terbagi ke beberapa klaster.
 
                 </p>
@@ -3939,8 +6061,7 @@
                 <p>
 
                     Konsentrasi kondisi stabil–akresi pada T24–T35
-                    berasosiasi dengan kawasan pelabuhan
-                    dan struktur pantai.
+                    berasosiasi dengan struktur buatan pantai.
 
                 </p>
 
@@ -3960,9 +6081,9 @@
             <blockquote>
 
                 Pesisir Kota Tegal selama 1988–2025
-                menunjukkan kecenderungan abrasi bersih
+                menunjukkan kecenderungan abrasi
                 dengan rata-rata LRR −0,96 m/tahun,
-                tetapi perubahan berlangsung heterogen antarsegmen.
+                tetapi perubahan heterogen antarsegmen.
 
             </blockquote>
 
@@ -3990,16 +6111,18 @@
 
 
 
-<!-- =====================================================
-     HASIL DAN PEMBAHASAN — CVI
-===================================================== -->
+<!-- =================================================
+     HASIL & PEMBAHASAN - CVI
+================================================== -->
 
 <section id="hasil-cvi"
          class="result-section editorial-results cvi-result-section">
 
     <div class="cvi-wrapper">
 
-
+        <!-- =================================================
+             HEADER
+        ================================================== -->
         <div class="cvi-header">
 
             <p class="section-tag">
@@ -4015,429 +6138,361 @@
             </h3>
 
             <p class="cvi-intro">
-
-                Setiap parameter penyusun ditampilkan
-                terlebih dahulu sebelum CVI total,
-                sehingga pola akhir dapat ditelusuri
-                kembali ke kondisi fisik
-                dan penggunaan lahan tiap segmen.
-
+                CVI digunakan untuk membaca variasi kerentanan fisik pesisir Kota Tegal
+                berdasarkan delapan parameter, kemudian dibandingkan dengan dinamika
+                perubahan garis pantai hasil DSAS.
             </p>
 
         </div>
 
 
-
         <!-- =================================================
-             STATISTIK CVI
+             STATISTIK UTAMA
         ================================================== -->
-
         <div class="cvi-stat-grid">
 
-
             <div class="cvi-stat-item">
-
-                <span>
-                    PARAMETER
-                </span>
-
-                <strong>
-                    8
-                </strong>
-
-                <small>
-                    penyusun CVI
-                </small>
-
+                <span>PARAMETER</span>
+                <strong>8</strong>
+                <small>penyusun CVI</small>
             </div>
 
-
             <div class="cvi-stat-item">
-
-                <span>
-                    DATA 1988–2025
-                </span>
-
-                <strong>
-                    1.746
-                </strong>
-
-                <small>
-                    baris analisis
-                </small>
-
+                <span>DATA 1988–2025</span>
+                <strong>1.746</strong>
+                <small>baris analisis</small>
             </div>
 
-
             <div class="cvi-stat-item">
-
-                <span>
-                    RENTANG CVI
-                </span>
-
-                <strong>
-                    5,0–176,8
-                </strong>
-
-                <small>
-                    seluruh periode
-                </small>
-
+                <span>RENTANG CVI</span>
+                <strong>5,0–176,8</strong>
+                <small>seluruh periode</small>
             </div>
 
-
             <div class="cvi-stat-item">
-
-                <span>
-                    RATA-RATA CVI
-                </span>
-
-                <strong>
-                    49,3
-                </strong>
-
-                <small>
-                    seluruh periode
-                </small>
-
+                <span>RATA-RATA CVI</span>
+                <strong>49,3</strong>
+                <small>seluruh periode</small>
             </div>
 
-
             <div class="cvi-stat-item">
-
-                <span>
-                    KELAS
-                </span>
-
-                <strong>
-                    5
-                </strong>
-
-                <small>
-                    sangat rendah–sangat tinggi
-                </small>
-
+                <span>KELAS</span>
+                <strong>5</strong>
+                <small>sangat rendah–sangat tinggi</small>
             </div>
-
 
         </div>
-
 
 
         <!-- =================================================
              PILIH PARAMETER
         ================================================== -->
-
         <div class="cvi-parameter-section">
 
-
             <div class="cvi-parameter-heading">
-
-                <p class="section-mini">
-                    EKSPLORASI PARAMETER
-                </p>
-
-                <h3>
-                    Lihat penyusun CVI pada satu peta
-                </h3>
-
+                <p class="section-mini">EKSPLORASI PARAMETER</p>
+                <h3>Delapan parameter pembentuk kerentanan</h3>
                 <p>
-
-                    Klik nama parameter untuk mengganti peta
-                    dan membuka ringkasan hasil penelitian.
-                    Klik garis untuk membaca atribut
-                    transek/tahun yang dipilih.
-
+                    Klik parameter untuk melihat pola spasial dan kelasnya pada peta.
                 </p>
-
             </div>
-
-
 
             <div class="cvi-param-tabs"
                  role="tablist"
                  aria-label="Parameter CVI">
 
-
                 <button class="cvi-param-btn"
                         data-param="SKOR_SHORE"
                         data-title="Dinamika Garis Pantai">
-
-                    <span>
-                        01
-                    </span>
-
+                    <span>01</span>
                     Shoreline
-
                 </button>
-
 
                 <button class="cvi-param-btn"
                         data-param="SKOR_GEOM"
                         data-title="Geomorfologi">
-
-                    <span>
-                        02
-                    </span>
-
+                    <span>02</span>
                     Geomorfologi
-
                 </button>
-
 
                 <button class="cvi-param-btn"
                         data-param="SKOR_SLOPE"
                         data-title="Kemiringan Lereng">
-
-                    <span>
-                        03
-                    </span>
-
+                    <span>03</span>
                     Slope
-
                 </button>
-
 
                 <button class="cvi-param-btn"
                         data-param="SKOR_ELEV"
                         data-title="Elevasi Pesisir">
-
-                    <span>
-                        04
-                    </span>
-
+                    <span>04</span>
                     Elevasi
-
                 </button>
-
 
                 <button class="cvi-param-btn"
                         data-param="SKOR_GEL"
                         data-title="Gelombang">
-
-                    <span>
-                        05
-                    </span>
-
+                    <span>05</span>
                     Gelombang
-
                 </button>
-
 
                 <button class="cvi-param-btn"
                         data-param="SKOR_PASUT"
                         data-title="Pasang Surut">
-
-                    <span>
-                        06
-                    </span>
-
+                    <span>06</span>
                     Pasut
-
                 </button>
-
 
                 <button class="cvi-param-btn"
                         data-param="SKOR_SLR"
                         data-title="Sea Level Rise">
-
-                    <span>
-                        07
-                    </span>
-
+                    <span>07</span>
                     SLR
-
                 </button>
-
 
                 <button class="cvi-param-btn"
                         data-param="SKOR_LAHAN"
                         data-title="Tutupan Lahan">
-
-                    <span>
-                        08
-                    </span>
-
+                    <span>08</span>
                     Tutupan Lahan
-
                 </button>
-
 
                 <button class="cvi-param-btn cvi-total-btn active"
                         data-param="CVI_TOTAL"
                         data-title="Coastal Vulnerability Index">
-
-                    <span>
-                        CVI
-                    </span>
-
+                    <span>CVI</span>
                     CVI Total
-
                 </button>
-
 
             </div>
 
         </div>
 
 
-
         <!-- =================================================
-             MAP CVI
+             PETA INTERAKTIF
         ================================================== -->
-
         <div class="cvi-map-section">
-
 
             <div class="cvi-map-heading">
 
-                <p class="section-mini">
-                    PETA INTERAKTIF
-                </p>
-
-                <h3 id="cviCurrentTitle">
-                    Coastal Vulnerability Index
-                </h3>
+                <div>
+                    <p class="section-mini">PETA INTERAKTIF</p>
+                    <h3 id="cviCurrentTitle">
+                        Coastal Vulnerability Index
+                    </h3>
+                </div>
 
                 <p>
-
                     Parameter aktif:
-                    <strong id="cviCurrentParameter">
-                        CVI Total
-                    </strong>
-
+                    <strong id="cviCurrentParameter">CVI Total</strong>
                 </p>
 
             </div>
 
-
-
             <div class="cvi-map-layout">
-
 
                 <div class="cvi-map-box">
 
-
                     <div id="cviMap"></div>
-
-
 
                     <div class="cvi-legend">
 
-                        <div class="legend-title"
-                             id="cviLegendTitle">
-
+                        <div class="legend-title" id="cviLegendTitle">
                             Kelas Kerentanan CVI
-
                         </div>
 
-
                         <div class="legend-row">
-
-                            <span class="legend-line"
-                                  style="background:#1a9850;">
-                            </span>
-
+                            <span class="legend-line" style="background:#1a9850;"></span>
                             Sangat Rendah
-
                         </div>
 
-
                         <div class="legend-row">
-
-                            <span class="legend-line"
-                                  style="background:#91cf60;">
-                            </span>
-
+                            <span class="legend-line" style="background:#91cf60;"></span>
                             Rendah
-
                         </div>
 
-
                         <div class="legend-row">
-
-                            <span class="legend-line"
-                                  style="background:#fee08b;">
-                            </span>
-
+                            <span class="legend-line" style="background:#fee08b;"></span>
                             Sedang
-
                         </div>
 
-
                         <div class="legend-row">
-
-                            <span class="legend-line"
-                                  style="background:#fc8d59;">
-                            </span>
-
+                            <span class="legend-line" style="background:#fc8d59;"></span>
                             Tinggi
-
                         </div>
-
 
                         <div class="legend-row">
-
-                            <span class="legend-line"
-                                  style="background:#d73027;">
-                            </span>
-
+                            <span class="legend-line" style="background:#d73027;"></span>
                             Sangat Tinggi
-
                         </div>
-
 
                     </div>
 
-
                 </div>
-
-
 
                 <aside class="cvi-info-panel">
 
-                    <p class="panel-small">
-                        PARAMETER AKTIF
-                    </p>
+                    <p class="panel-small">PARAMETER AKTIF</p>
 
-                    <h3 id="cviInfoTitle">
-                        CVI Total
-                    </h3>
+                    <h3 id="cviInfoTitle">CVI Total</h3>
 
                     <p id="cviInfoText">
-
-                        CVI total merupakan hasil integrasi
-                        delapan parameter kerentanan pesisir.
-
+                        CVI total merupakan hasil integrasi delapan parameter
+                        kerentanan pesisir.
                     </p>
 
                 </aside>
 
-
             </div>
 
         </div>
 
 
+        <!-- =================================================
+             RQ1 - NATURAL VS BUATAN
+        ================================================== -->
+        <section class="cvi-rq1-section">
+
+            <div class="cvi-rq1-heading">
+                <p class="section-mini">MENJAWAB RQ 01</p>
+                <h3>Pola spasial kerentanan dan dinamika garis pantai</h3>
+                <p>
+                    Hubungan CVI dan perubahan shoreline menunjukkan respons yang
+                    berbeda antara segmen natural dan segmen yang telah dimodifikasi manusia.
+                </p>
+            </div>
+
+            <div class="cvi-rq1-grid">
+
+                <article class="cvi-rq1-card">
+                    <span class="cvi-rq1-type">SEGMEN NATURAL</span>
+                    <strong>LRR rata-rata −2,04 m/tahun</strong>
+                    <div class="cvi-rq1-number">78,6%</div>
+                    <p>
+                        11 dari 14 transek natural menunjukkan abrasi sedang hingga tinggi.
+                    </p>
+                    <small>Pola dominan: abrasi</small>
+                </article>
+
+                <article class="cvi-rq1-card featured">
+                    <span class="cvi-rq1-type">SEGMEN BUATAN</span>
+                    <strong>LRR rata-rata −0,47 m/tahun</strong>
+                    <div class="cvi-rq1-number">46,9%</div>
+                    <p>
+                        15 dari 32 transek buatan menunjukkan abrasi; segmen stabil dan
+                        akresi lebih banyak dibandingkan kelompok natural.
+                    </p>
+                    <small>Pola lebih heterogen</small>
+                </article>
+
+            </div>
+
+            <div class="cvi-rq1-interpretation">
+                <span>INTERPRETASI SPASIAL</span>
+                <p>
+                    Segmen natural cenderung mengalami kemunduran garis pantai yang lebih kuat,
+                    sedangkan segmen buatan menunjukkan respons shoreline yang lebih beragam.
+                </p>
+            </div>
+
+        </section>
+
 
         <!-- =================================================
-             PENJELASAN 8 PARAMETER
+             POLA LOKASI 2025
         ================================================== -->
+        <section class="cvi-location-section">
 
-        <div class="cvi-parameter-explanation">
+            <div class="cvi-location-heading">
+                <p class="section-mini">POLA LOKASI 2025</p>
+                <h3>Kerentanan berbeda sepanjang pesisir Kota Tegal</h3>
+                <p>
+                    Ringkasan Barat–Tengah–Timur mengikuti urutan spasial transek dari
+                    barat ke timur untuk memudahkan pembacaan lokasi pada tampilan WebGIS.
+                </p>
+            </div>
 
+            <div class="cvi-location-grid">
 
-            <p class="section-mini">
-                PENYUSUN INDEKS
+                <article class="cvi-location-card west">
+                    <span>BARAT · 16 TRANSEK</span>
+                    <h4>Tekanan shoreline paling kuat</h4>
+                    <div class="cvi-location-metrics">
+                        <div>
+                            <strong>36,84</strong>
+                            <small>rata-rata CVI</small>
+                        </div>
+                        <div>
+                            <strong>−1,89</strong>
+                            <small>LRR rata-rata (m/tahun)</small>
+                        </div>
+                    </div>
+                    <p>
+                        Kelas dominan <b>Rendah</b>, tetapi seluruh transek pada kelompok
+                        barat memiliki LRR negatif. Nilai CVI tinggi muncul terutama pada
+                        T44 dan T09.
+                    </p>
+                </article>
+
+                <article class="cvi-location-card center">
+                    <span>TENGAH · 15 TRANSEK</span>
+                    <h4>Respons paling heterogen</h4>
+                    <div class="cvi-location-metrics">
+                        <div>
+                            <strong>33,98</strong>
+                            <small>rata-rata CVI</small>
+                        </div>
+                        <div>
+                            <strong>−0,03</strong>
+                            <small>LRR rata-rata (m/tahun)</small>
+                        </div>
+                    </div>
+                    <p>
+                        Kelas dominan <b>Sangat Rendah</b>. Nilai LRR rata-rata mendekati nol
+                        menunjukkan kombinasi abrasi, stabil, dan akresi; CVI tinggi muncul
+                        pada T21 dan T23.
+                    </p>
+                </article>
+
+                <article class="cvi-location-card east">
+                    <span>TIMUR · 15 TRANSEK</span>
+                    <h4>Kerentanan tetap menonjol</h4>
+                    <div class="cvi-location-metrics">
+                        <div>
+                            <strong>32,09</strong>
+                            <small>rata-rata CVI</small>
+                        </div>
+                        <div>
+                            <strong>−0,86</strong>
+                            <small>LRR rata-rata (m/tahun)</small>
+                        </div>
+                    </div>
+                    <p>
+                        Kelas dominan <b>Sedang</b>. Abrasi tetap muncul pada sejumlah transek,
+                        dengan CVI tertinggi kelompok timur pada T40.
+                    </p>
+                </article>
+
+            </div>
+
+            <p class="cvi-location-note">
+                Catatan: pembagian Barat–Tengah–Timur pada ringkasan ini digunakan sebagai
+                pengelompokan visual berdasarkan posisi transek 2025, bukan zonasi administratif baru.
             </p>
 
-            <h3>
-                Delapan parameter kerentanan
-            </h3>
+        </section>
 
+
+        <!-- =================================================
+             DELAPAN PARAMETER
+        ================================================== -->
+        <div class="cvi-parameter-explanation">
+
+            <p class="section-mini">PENYUSUN INDEKS</p>
+            <h3>Delapan parameter kerentanan</h3>
 
             <div class="cvi-explanation-grid">
-
 
                 <div>
                     <span>01</span>
@@ -4445,13 +6500,11 @@
                     <p>Abrasi meningkatkan tingkat kerentanan.</p>
                 </div>
 
-
                 <div>
                     <span>02</span>
                     <strong>Geomorfologi</strong>
                     <p>Material yang lebih lunak relatif lebih sensitif.</p>
                 </div>
-
 
                 <div>
                     <span>03</span>
@@ -4459,13 +6512,11 @@
                     <p>Pantai landai lebih mudah terpapar genangan.</p>
                 </div>
 
-
                 <div>
                     <span>04</span>
                     <strong>Elevasi</strong>
                     <p>Elevasi rendah meningkatkan keterpaparan.</p>
                 </div>
-
 
                 <div>
                     <span>05</span>
@@ -4473,13 +6524,11 @@
                     <p>Energi gelombang berkaitan dengan tekanan hidrodinamika.</p>
                 </div>
 
-
                 <div>
                     <span>06</span>
                     <strong>Pasut</strong>
                     <p>Variasi muka air memengaruhi paparan pantai.</p>
                 </div>
-
 
                 <div>
                     <span>07</span>
@@ -4487,208 +6536,109 @@
                     <p>Kenaikan muka laut menambah tekanan jangka panjang.</p>
                 </div>
 
-
                 <div>
                     <span>08</span>
                     <strong>Tutupan Lahan</strong>
                     <p>Tingkat modifikasi dan sensitivitas berbeda antarjenis lahan.</p>
                 </div>
 
-
             </div>
 
         </div>
 
 
-
         <!-- =================================================
-             HASIL 2025
+             KONDISI 2025
         ================================================== -->
-
-        <div class="cvi-result-summary">
-
+        <div class="cvi-result-summary simplified-cvi-summary">
 
             <div class="cvi-year-result">
 
-                <p class="section-mini">
-                    KONDISI TAHUN 2025
-                </p>
+                <p class="section-mini">KONDISI CVI 2025</p>
 
                 <h3>
-                    Kerentanan tahun terakhir tidak didominasi kelas sangat tinggi
+                    Kerentanan didominasi kelas sangat rendah hingga sedang
                 </h3>
-
 
                 <div class="cvi-2025-numbers">
 
-
                     <div>
-
-                        <strong>
-                            10,0–70,7
-                        </strong>
-
-                        <span>
-                            rentang CVI 2025
-                        </span>
-
+                        <strong>10,0–70,7</strong>
+                        <span>rentang CVI</span>
                     </div>
 
-
                     <div>
-
-                        <strong>
-                            14
-                        </strong>
-
-                        <span>
-                            transek sedang
-                        </span>
-
+                        <strong>13</strong>
+                        <span>sangat rendah</span>
                     </div>
 
-
                     <div>
-
-                        <strong>
-                            13
-                        </strong>
-
-                        <span>
-                            transek sangat rendah
-                        </span>
-
+                        <strong>13</strong>
+                        <span>rendah</span>
                     </div>
 
-
                     <div>
-
-                        <strong>
-                            13
-                        </strong>
-
-                        <span>
-                            transek rendah
-                        </span>
-
+                        <strong>14</strong>
+                        <span>sedang</span>
                     </div>
 
-
                     <div>
-
-                        <strong>
-                            0
-                        </strong>
-
-                        <span>
-                            transek sangat tinggi
-                        </span>
-
+                        <strong>6</strong>
+                        <span>tinggi</span>
                     </div>
 
+                    <div>
+                        <strong>0</strong>
+                        <span>sangat tinggi</span>
+                    </div>
 
                 </div>
 
             </div>
 
-
-
             <div class="cvi-spatial-result">
 
-                <p class="section-mini">
-                    POLA SPASIAL
-                </p>
+                <p class="section-mini">MAKNA SPASIAL</p>
 
                 <h3>
-                    Kerentanan tinggi berkaitan dengan pesisir rendah dan segmen termodifikasi
+                    Kerentanan lebih tinggi berkaitan dengan shoreline yang lebih rentan
                 </h3>
 
                 <p>
+                    Segmen dengan elevasi rendah, slope landai, geomorfologi rentan,
+                    dan kecenderungan shoreline mundur menunjukkan tingkat kerentanan
+                    yang lebih tinggi.
+                </p>
 
-                    Pola kerentanan lebih tinggi muncul
-                    pada segmen dengan kombinasi geomorfologi rentan,
-                    slope landai, elevasi rendah,
-                    dan kecenderungan shoreline mundur.
-
+                <p>
+                    Pola tersebut lebih kuat pada segmen natural, sedangkan segmen buatan
+                    menunjukkan respons shoreline yang lebih heterogen.
                 </p>
 
             </div>
-
 
         </div>
 
 
-
-        <div class="editorial-columns cvi-dsas-link">
-
-
-            <div>
-
-                <p class="section-mini">
-                    HUBUNGAN DENGAN DSAS
-                </p>
-
-                <h3>
-                    CVI membantu menjelaskan perbedaan respons shoreline
-                </h3>
-
-                <p>
-
-                    DSAS menunjukkan lokasi dan laju perubahan,
-                    sedangkan CVI memberi konteks kondisi fisik
-                    yang membuat suatu segmen lebih sensitif.
-
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <p class="section-mini">
-                    IMPLIKASI
-                </p>
-
-                <h3>
-                    Perlindungan lokal tidak selalu berarti tekanan hilang
-                </h3>
-
-                <p>
-
-                    Struktur pantai dapat meningkatkan stabilitas lokal,
-                    tetapi redistribusi tekanan ke segmen lain
-                    tetap perlu diperhatikan.
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-
+        <!-- =================================================
+             TEMUAN UTAMA
+        ================================================== -->
         <section class="editorial-conclusion">
 
-            <span>
-                TEMUAN UTAMA CVI
-            </span>
+            <span>MENJAWAB RQ 01</span>
 
             <blockquote>
-
-                Kerentanan pesisir Kota Tegal merupakan hasil
-                kombinasi geomorfologi,
-                elevasi dan slope,
-                tekanan oseanografi,
-                dinamika shoreline,
-                dan penggunaan lahan.
-
+                Pola spasial kerentanan pesisir Kota Tegal menunjukkan keterkaitan dengan
+                dinamika shoreline. Segmen natural cenderung mengalami abrasi lebih kuat,
+                sedangkan segmen buatan memperlihatkan respons yang lebih heterogen.
             </blockquote>
 
         </section>
 
 
-
+        <!-- =================================================
+             NAVIGASI
+        ================================================== -->
         <div class="background-navigation">
 
             <button class="back-results">
@@ -4697,19 +6647,14 @@
 
             <button class="next-section"
                     data-target="hasil-sedimen">
-
                 Lanjut: Proksi Sedimen →
-
             </button>
 
         </div>
 
-
     </div>
 
 </section>
-
-
 
 <!-- =====================================================
      HASIL DAN PEMBAHASAN
@@ -4736,8 +6681,7 @@
                 Proksi Neraca Sedimen
             </h2>
 
-            <h3>
-                Sediment Balance Proxy
+    
             </h3>
 
             <p class="sediment-intro">
@@ -4765,7 +6709,7 @@
         <div class="sediment-method-note">
 
             <strong>
-                CARA MEMBACA
+            
             </strong>
 
             <p>
@@ -4996,13 +6940,7 @@
 
             <span>
 
-                Data:
-
-                <strong>
-                    ANALISIS_SEDIMEN.geojson
-                </strong>
-
-            </span>
+    
 
 
         </div>
@@ -5305,374 +7243,1135 @@
 
 
 
-        <!-- =================================================
-             PERBANDINGAN TIGA PERIODE
-        ================================================== -->
+<!-- =================================================
+     PERBANDINGAN TEMPORAL - GRAFIK BESAR
+================================================== -->
 
-        <div class="sediment-period-comparison">
+<section class="sediment-big-chart-section">
 
+    <p class="section-mini">
+        PERBANDINGAN TEMPORAL
+    </p>
 
-            <p class="section-mini">
-                PERBANDINGAN TEMPORAL
-            </p>
+    <h3>
+        Perubahan kondisi sedimen di 3 periode
+    </h3>
 
-
-            <h3>
-                Tiga periode untuk membaca perubahan kondisi sedimen
-            </h3>
-
-
-
-            <div class="sediment-period-grid">
-
-
-                <article class="sediment-period-card">
-
-                    <span>
-                        PERIODE 01
-                    </span>
-
-                    <h4>
-                        1988–2000
-                    </h4>
-
-                    <p id="sedPeriodText1">
-
-                        Distribusi kelas periode awal akan
-                        dirangkum otomatis dari data.
-
-                    </p>
-
-                </article>
+    <p class="sediment-big-chart-intro">
+        Grafik ini memperlihatkan kelas dominan pada setiap sel sedimen
+        di tiga periode pengamatan, sehingga pergeseran kondisi dari
+        bypass menuju defisit dapat dibaca lebih cepat.
+    </p>
 
 
+    <div class="sediment-big-chart">
 
-                <article class="sediment-period-card">
+        <!-- HEADER -->
+        <div class="sediment-big-chart-header">
 
-                    <span>
-                        PERIODE 02
-                    </span>
-
-                    <h4>
-                        2001–2012
-                    </h4>
-
-                    <p id="sedPeriodText2">
-
-                        Periode tengah digunakan untuk melihat
-                        perubahan relatif terhadap kondisi awal
-                        dan periode terakhir.
-
-                    </p>
-
-                </article>
-
-
-
-                <article class="sediment-period-card">
-
-                    <span>
-                        PERIODE 03
-                    </span>
-
-                    <h4>
-                        2013–2025
-                    </h4>
-
-                    <p id="sedPeriodText3">
-
-                        Periode terbaru menunjukkan kondisi
-                        proses sedimen yang paling dekat
-                        dengan keadaan saat ini.
-
-                    </p>
-
-                </article>
-
-
-            </div>
-
+            <div>Periode</div>
+            <div>Kondisi dominan seluruh pesisir</div>
+            <div>Sel Barat</div>
+            <div>Sel Tengah</div>
+            <div>Sel Timur</div>
 
         </div>
 
 
+        <!-- =========================================
+             1988-2000
+        ========================================== -->
+        <div class="sediment-big-row">
 
-        <!-- =================================================
-             MATRIKS INTERPRETASI
-        ================================================== -->
-
-        <div class="sediment-class-matrix">
-
-
-            <p class="section-mini">
-                CARA INTERPRETASI
-            </p>
-
-
-            <h3>
-
-                Lima kelas menggambarkan kecenderungan proses,
-                bukan volume sedimen absolut
-
-            </h3>
-
-
-
-            <div class="sediment-matrix-grid">
-
-
-                <div class="sediment-matrix-item">
-
-                    <strong>
-                        Surplus / Deposisi
-                    </strong>
-
-                    <p>
-
-                        Garis pantai maju dan
-                        ketersediaan material tersuspensi
-                        relatif tinggi.
-
-                    </p>
-
-                </div>
-
-
-
-                <div class="sediment-matrix-item">
-
-                    <strong>
-                        Deposisi Lokal
-                    </strong>
-
-                    <p>
-
-                        Garis pantai maju meskipun
-                        TSS relatif rendah;
-                        deposisi dapat berasal dari proses lokal.
-
-                    </p>
-
-                </div>
-
-
-
-                <div class="sediment-matrix-item">
-
-                    <strong>
-                        Relatif Seimbang
-                    </strong>
-
-                    <p>
-
-                        Shoreline relatif stabil sehingga
-                        masukan dan keluaran sedimen
-                        dianggap mendekati seimbang.
-
-                    </p>
-
-                </div>
-
-
-
-                <div class="sediment-matrix-item">
-
-                    <strong>
-                        Bypass / Export
-                    </strong>
-
-                    <p>
-
-                        TSS tersedia tetapi shoreline tetap mundur;
-                        material diduga melewati
-                        atau terangkut keluar dari segmen.
-
-                    </p>
-
-                </div>
-
-
-
-                <div class="sediment-matrix-item">
-
-                    <strong>
-                        Defisit / Erosi
-                    </strong>
-
-                    <p>
-
-                        Shoreline mundur bersamaan
-                        dengan ketersediaan material
-                        yang relatif rendah.
-
-                    </p>
-
-                </div>
-
-
+            <div class="period-col">
+                <strong>1988–2000</strong>
+                <small>488 data valid</small>
             </div>
 
+            <div class="dominant-col">
+                <span class="dominant-tag bypass">
+                    Bypass / Export
+                </span>
+                <strong>44,9%</strong>
+            </div>
+
+            <div class="bar-col">
+                <div class="bar-top">
+                    <span>Bypass / Export</span>
+                    <span>39,3%</span>
+                </div>
+                <div class="bar-track">
+                    <div class="bar-fill bypass" style="width:39.3%;"></div>
+                </div>
+            </div>
+
+            <div class="bar-col">
+                <div class="bar-top">
+                    <span>Surplus / Deposisi</span>
+                    <span>46,1%</span>
+                </div>
+                <div class="bar-track">
+                    <div class="bar-fill surplus" style="width:46.1%;"></div>
+                </div>
+            </div>
+
+            <div class="bar-col">
+                <div class="bar-top">
+                    <span>Bypass / Export</span>
+                    <span>54,5%</span>
+                </div>
+                <div class="bar-track">
+                    <div class="bar-fill bypass" style="width:54.5%;"></div>
+                </div>
+            </div>
 
         </div>
 
 
+        <!-- =========================================
+             2001-2012
+        ========================================== -->
+        <div class="sediment-big-row">
+
+            <div class="period-col">
+                <strong>2001–2012</strong>
+                <small>552 data valid</small>
+            </div>
+
+            <div class="dominant-col">
+                <span class="dominant-tag bypass">
+                    Bypass / Export
+                </span>
+                <strong>34,8%</strong>
+            </div>
+
+            <div class="bar-col">
+                <div class="bar-top">
+                    <span>Relatif Seimbang</span>
+                    <span>33,3%</span>
+                </div>
+                <div class="bar-track">
+                    <div class="bar-fill balanced" style="width:33.3%;"></div>
+                </div>
+            </div>
+
+            <div class="bar-col">
+                <div class="bar-top">
+                    <span>Bypass / Export</span>
+                    <span>41,7%</span>
+                </div>
+                <div class="bar-track">
+                    <div class="bar-fill bypass" style="width:41.7%;"></div>
+                </div>
+            </div>
+
+            <div class="bar-col">
+                <div class="bar-top">
+                    <span>Surplus / Deposisi</span>
+                    <span>41,7%</span>
+                </div>
+                <div class="bar-track">
+                    <div class="bar-fill surplus" style="width:41.7%;"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             2013-2025
+        ========================================== -->
+        <div class="sediment-big-row">
+
+            <div class="period-col">
+                <strong>2013–2025</strong>
+                <small>597 data valid</small>
+            </div>
+
+            <div class="dominant-col">
+                <span class="dominant-tag deficit">
+                    Defisit / Erosi
+                </span>
+                <strong>55,8%</strong>
+            </div>
+
+            <div class="bar-col">
+                <div class="bar-top">
+                    <span>Defisit / Erosi</span>
+                    <span>61,4%</span>
+                </div>
+                <div class="bar-track">
+                    <div class="bar-fill deficit" style="width:61.4%;"></div>
+                </div>
+            </div>
+
+            <div class="bar-col">
+                <div class="bar-top">
+                    <span>Defisit / Erosi</span>
+                    <span>46,2%</span>
+                </div>
+                <div class="bar-track">
+                    <div class="bar-fill deficit" style="width:46.2%;"></div>
+                </div>
+            </div>
+
+            <div class="bar-col">
+                <div class="bar-top">
+                    <span>Defisit / Erosi</span>
+                    <span>53,8%</span>
+                </div>
+                <div class="bar-track">
+                    <div class="bar-fill deficit" style="width:53.8%;"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="sediment-big-legend">
+
+        <span><i class="legend-box surplus"></i> Surplus / Deposisi</span>
+        <span><i class="legend-box balanced"></i> Relatif Seimbang</span>
+        <span><i class="legend-box bypass"></i> Bypass / Export</span>
+        <span><i class="legend-box deficit"></i> Defisit / Erosi</span>
+
+    </div>
+
+</section>
+
+<!-- =================================================
+     LOKASI PRIORITAS PROKSI SEDIMEN
+================================================== -->
+
+<section class="sediment-location-section">
+
+    <div class="sediment-location-heading">
+
+        <p class="section-mini">
+            POLA LOKASI
+        </p>
+
+        <h3>
+            Kondisi proksi sedimen berbeda pada setiap sel
+        </h3>
+
+        <p>
+            Perbandingan spasial menunjukkan lokasi dengan
+            kecenderungan defisit, bypass, dan deposisi yang berbeda.
+        </p>
+
+    </div>
+
+
+   <div class="sediment-location-grid">
+
+    <!-- SEL BARAT -->
+    <article class="sediment-location-card deficit">
+
+        <span>
+            SEL BARAT
+        </span>
+
+        <h4>
+            Defisit paling kuat
+        </h4>
+
+        <div class="sediment-location-metrics">
+
+            <div>
+                <strong>61,4%</strong>
+                <small>Defisit / Erosi</small>
+            </div>
+
+            <div>
+                <strong>−1,27 m</strong>
+                <small>rata-rata shoreline</small>
+            </div>
+
+        </div>
+
+        <p>
+            Proporsi defisit tertinggi menunjukkan
+            kondisi sedimen paling lemah pada periode 2013–2025.
+        </p>
+
+    </article>
+
+
+    <!-- SEL TENGAH -->
+    <article class="sediment-location-card surplus">
+
+        <span>
+            SEL TENGAH
+        </span>
+
+        <h4>
+            Respons paling akretif
+        </h4>
+
+        <div class="sediment-location-metrics">
+
+            <div>
+                <strong>46,2%</strong>
+                <small>Defisit / Erosi</small>
+            </div>
+
+            <div>
+                <strong>+1,72 m</strong>
+                <small>rata-rata shoreline</small>
+            </div>
+
+        </div>
+
+        <p>
+            Meskipun kelas defisit masih dominan,
+            beberapa transek mengalami akresi kuat
+            sehingga rata-rata shoreline tetap positif.
+        </p>
+
+    </article>
+
+
+    <!-- SEL TIMUR -->
+    <article class="sediment-location-card bypass">
+
+        <span>
+            SEL TIMUR
+        </span>
+
+        <h4>
+            Abrasi terkonsentrasi
+        </h4>
+
+        <div class="sediment-location-metrics">
+
+            <div>
+                <strong>53,8%</strong>
+                <small>Defisit / Erosi</small>
+            </div>
+
+            <div>
+                <strong>−1,64 m</strong>
+                <small>rata-rata shoreline</small>
+            </div>
+
+        </div>
+
+        <p>
+            Defisit yang tinggi disertai rata-rata
+            shoreline paling negatif menunjukkan
+            kemunduran kuat pada beberapa transek.
+        </p>
+
+    </article>
+
+</div>
+
+
+    <div class="sediment-location-note">
+
+        <span>
+            PERUBAHAN ANTARPERIODE
+        </span>
+
+        <p>
+            Pada periode 1988–2000, Sel Tengah masih menunjukkan
+            kondisi paling positif dengan Surplus/Deposisi 46,1%,
+            sedangkan Sel Timur didominasi Bypass/Export 54,5%.
+            Pada 2013–2025, ketiga sel bergeser menuju kondisi
+            yang lebih defisit.
+        </p>
+
+    </div>
+
+</section>
 
         <!-- =================================================
              PEMBAHASAN
         ================================================== -->
 
-        <div class="editorial-columns"
-             style="margin-top:54px;">
 
+<section class="editorial-conclusion">
 
-            <div>
+    <span>
+        TEMUAN UTAMA PROKSI SEDIMEN
+    </span>
 
-                <p class="section-mini">
-                    PERAN SEL SEDIMEN
-                </p>
-
-                <h3>
-
-                    Barat, Tengah, dan Timur
-                    dibaca sebagai unit proses yang berbeda
-
-                </h3>
-
-                <p>
-
-                    Pembagian sel membantu membandingkan
-                    apakah perubahan shoreline dan TSS
-                    pada satu bagian pesisir
-                    memiliki kecenderungan yang sama
-                    atau berbeda dengan bagian lainnya.
-
-                    Batas sel akan ditampilkan dari
-                    <strong>PEMBAGIAN_SEL.geojson</strong>.
-
-                </p>
-
-            </div>
-
-
-
-            <div>
-
-                <p class="section-mini">
-                    KETERKAITAN DENGAN DSAS
-                </p>
-
-                <h3>
-
-                    Proksi sedimen memberi konteks proses
-                    di balik pola abrasi dan akresi
-
-                </h3>
-
-                <p>
-
-                    DSAS menunjukkan respons morfologi akhir,
-                    sedangkan TSS, muara,
-                    dan forcing gelombang membantu membaca
-                    apakah respons lebih konsisten
-                    dengan deposisi, keseimbangan,
-                    bypass, atau defisit sedimen.
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-
-        <!-- =================================================
-             KESIMPULAN SEDIMEN
-        ================================================== -->
-
-        <section class="editorial-conclusion">
-
-            <span>
-                TEMUAN UTAMA PROKSI SEDIMEN
-            </span>
-
-            <blockquote>
-
-                Kondisi sedimen pesisir Kota Tegal
-                perlu dibaca secara spasial dan temporal,
-                karena ketersediaan material
-                tidak selalu menghasilkan akresi
-                pada lokasi yang sama.
-
-            </blockquote>
-
-            <p>
-
-                Perbandingan tiga periode
-                dan tiga sel sedimen digunakan
-                untuk membaca perubahan kecenderungan proses
-                sebelum variabel sedimen diintegrasikan
-                ke tahap pemodelan Random Forest.
-
-            </p>
-
-        </section>
-
-
-
-        <div class="background-navigation">
-
-            <button class="back-results">
-                ← Kembali ke Hasil
-            </button>
-
-            <button class="next-section"
-                    data-target="hasil-rf">
-
-                Lanjut: Random Forest →
-
-            </button>
-
-        </div>
-
-
-    </div>
+    <blockquote>
+        Proksi sedimen menunjukkan bahwa respons garis pantai
+        tidak hanya ditentukan oleh banyaknya material,
+        tetapi juga oleh lokasi sumber dan proses redistribusinya.
+    </blockquote>
 
 </section>
 
 
 
 <!-- =====================================================
-     HASIL RANDOM FOREST
+     HASIL DAN PEMBAHASAN — RANDOM FOREST
 ===================================================== -->
 
 <section id="hasil-rf"
          class="result-section editorial-results">
 
-    <div class="content-wrapper">
+    <div class="result-wrapper">
 
-        <p class="section-tag">
-            HASIL DAN PEMBAHASAN / 04
-        </p>
 
-        <h2>
-            Prediksi Garis Pantai
-        </h2>
+        <!-- =================================================
+             HEADER
+        ================================================== -->
 
-        <h3>
-            Random Forest
-        </h3>
+        <header class="result-header">
 
-        <p class="lead">
+            <p class="section-tag">
+                HASIL DAN PEMBAHASAN / 04
+            </p>
 
-            Bagian ini akan memuat validasi model,
-            feature importance,
-            observed–predicted,
-            serta prediksi posisi garis pantai
-            tahun 2035.
+            <h2>
+                Prediksi Garis Pantai 2035
+            </h2>
 
-        </p>
+            <p class="result-lead">
+                Random Forest digunakan untuk memproyeksikan posisi garis pantai
+                Kota Tegal tahun 2035 berdasarkan pola historis perubahan shoreline
+                dan karakteristik fisik pesisir.
+            </p>
 
+        </header>
+
+
+
+        <!-- =================================================
+             VALIDASI MODEL — GRAFIK
+        ================================================== -->
+
+        <section class="rf-validation-chart">
+
+            <div class="rf-validation-heading">
+
+                <p class="section-mini">
+                    VALIDASI MODEL
+                </p>
+
+                <h3>
+                    Perbandingan dua skema validasi
+                </h3>
+
+                <p>
+                    Random Split 70:30 dibandingkan dengan Temporal Split.
+                    Panjang bar dinormalisasi pada setiap metrik;
+                    angka di kanan menunjukkan nilai evaluasi aktual.
+                </p>
+
+            </div>
+
+
+            <div class="rf-validation-legend">
+
+                <span>
+                    <i class="rf-legend random"></i>
+                    Random Split 70:30
+                </span>
+
+                <span>
+                    <i class="rf-legend temporal"></i>
+                    Temporal Split
+                </span>
+
+            </div>
+
+
+            <div class="rf-metric-chart">
+
+
+                <!-- MAE -->
+
+                <div class="rf-metric-row">
+
+                    <div class="rf-metric-name">
+
+                        <span>MAE</span>
+
+                        <small>
+                            lebih rendah lebih baik
+                        </small>
+
+                    </div>
+
+
+                    <div class="rf-bars">
+
+                        <div class="rf-bar-line">
+
+                            <span class="rf-method">
+                                Random
+                            </span>
+
+                            <div class="rf-track">
+                                <div class="rf-fill random"
+                                     style="width:100%;">
+                                </div>
+                            </div>
+
+                            <strong>
+                                0,083
+                            </strong>
+
+                        </div>
+
+
+                        <div class="rf-bar-line">
+
+                            <span class="rf-method">
+                                Temporal
+                            </span>
+
+                            <div class="rf-track">
+                                <div class="rf-fill temporal"
+                                     style="width:89.2%;">
+                                </div>
+                            </div>
+
+                            <strong>
+                                0,074
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RMSE -->
+
+                <div class="rf-metric-row">
+
+                    <div class="rf-metric-name">
+
+                        <span>RMSE</span>
+
+                        <small>
+                            lebih rendah lebih baik
+                        </small>
+
+                    </div>
+
+
+                    <div class="rf-bars">
+
+                        <div class="rf-bar-line">
+
+                            <span class="rf-method">
+                                Random
+                            </span>
+
+                            <div class="rf-track">
+                                <div class="rf-fill random"
+                                     style="width:100%;">
+                                </div>
+                            </div>
+
+                            <strong>
+                                0,120
+                            </strong>
+
+                        </div>
+
+
+                        <div class="rf-bar-line">
+
+                            <span class="rf-method">
+                                Temporal
+                            </span>
+
+                            <div class="rf-track">
+                                <div class="rf-fill temporal"
+                                     style="width:81.7%;">
+                                </div>
+                            </div>
+
+                            <strong>
+                                0,098
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- R2 -->
+
+                <div class="rf-metric-row">
+
+                    <div class="rf-metric-name">
+
+                        <span>R²</span>
+
+                        <small>
+                            lebih tinggi lebih baik
+                        </small>
+
+                    </div>
+
+
+                    <div class="rf-bars">
+
+                        <div class="rf-bar-line">
+
+                            <span class="rf-method">
+                                Random
+                            </span>
+
+                            <div class="rf-track">
+                                <div class="rf-fill random"
+                                     style="width:99.7%;">
+                                </div>
+                            </div>
+
+                            <strong>
+                                0,997
+                            </strong>
+
+                        </div>
+
+
+                        <div class="rf-bar-line">
+
+                            <span class="rf-method">
+                                Temporal
+                            </span>
+
+                            <div class="rf-track">
+                                <div class="rf-fill temporal"
+                                     style="width:99.8%;">
+                                </div>
+                            </div>
+
+                            <strong>
+                                0,998
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="rf-validation-result">
+
+                <div>
+
+                    <span>
+                        MODEL UTAMA
+                    </span>
+
+                    <strong>
+                        Temporal Split
+                    </strong>
+
+                </div>
+
+                <p>
+                    Temporal Split menghasilkan MAE 0,074 m/tahun,
+                    RMSE 0,098 m/tahun, dan R² 0,998.
+                    Skema ini digunakan sebagai dasar prediksi 2035 karena
+                    mempertahankan urutan waktu:
+                    1988–2015 untuk training dan 2016–2025 untuk testing.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FEATURE IMPORTANCE
+        ================================================== -->
+
+        <section class="rf-importance-section">
+
+            <div class="rf-importance-header">
+
+                <p class="section-mini">
+                    FEATURE IMPORTANCE
+                </p>
+
+                <h3>
+                    Faktor fisik yang paling membentuk prediksi
+                </h3>
+
+                <p>
+                    Permutation importance pada model Temporal Split
+                    menunjukkan bahwa karakteristik lokal pesisir
+                    menjadi pembeda utama perubahan garis pantai.
+                </p>
+
+            </div>
+
+
+            <div class="rf-importance-chart">
+
+
+                <div class="importance-row">
+
+                    <span class="importance-label">
+                        Jenis Segmen Pantai
+                    </span>
+
+                    <div class="importance-track">
+                        <div class="importance-bar"
+                             style="width:100%">
+                        </div>
+                    </div>
+
+                    <strong>1,1092</strong>
+
+                </div>
+
+
+                <div class="importance-row">
+
+                    <span class="importance-label">
+                        Geomorfologi
+                    </span>
+
+                    <div class="importance-track">
+                        <div class="importance-bar"
+                             style="width:81.6%">
+                        </div>
+                    </div>
+
+                    <strong>0,9049</strong>
+
+                </div>
+
+
+                <div class="importance-row">
+
+                    <span class="importance-label">
+                        Jarak ke Muara
+                    </span>
+
+                    <div class="importance-track">
+                        <div class="importance-bar"
+                             style="width:77.4%">
+                        </div>
+                    </div>
+
+                    <strong>0,8588</strong>
+
+                </div>
+
+
+                <div class="importance-row">
+
+                    <span class="importance-label">
+                        Slope
+                    </span>
+
+                    <div class="importance-track">
+                        <div class="importance-bar"
+                             style="width:71.8%">
+                        </div>
+                    </div>
+
+                    <strong>0,7961</strong>
+
+                </div>
+
+
+                <div class="importance-row">
+
+                    <span class="importance-label">
+                        Elevasi
+                    </span>
+
+                    <div class="importance-track">
+                        <div class="importance-bar"
+                             style="width:64.9%">
+                        </div>
+                    </div>
+
+                    <strong>0,7202</strong>
+
+                </div>
+
+
+                <div class="importance-row">
+
+                    <span class="importance-label">
+                        Tutupan Lahan
+                    </span>
+
+                    <div class="importance-track">
+                        <div class="importance-bar"
+                             style="width:59.4%">
+                        </div>
+                    </div>
+
+                    <strong>0,6588</strong>
+
+                </div>
+
+
+                <div class="importance-row low">
+
+                    <span class="importance-label">
+                        SLR
+                    </span>
+
+                    <div class="importance-track">
+                        <div class="importance-bar"
+                             style="width:1%">
+                        </div>
+                    </div>
+
+                    <strong>0,0000</strong>
+
+                </div>
+
+
+                <div class="importance-row low">
+
+                    <span class="importance-label">
+                        Gelombang
+                    </span>
+
+                    <div class="importance-track">
+                        <div class="importance-bar negative"
+                             style="width:1%">
+                        </div>
+                    </div>
+
+                    <strong>−0,00005</strong>
+
+                </div>
+
+
+                <div class="importance-row low">
+
+                    <span class="importance-label">
+                        Pasang Surut
+                    </span>
+
+                    <div class="importance-track">
+                        <div class="importance-bar negative"
+                             style="width:1%">
+                        </div>
+                    </div>
+
+                    <strong>−0,00024</strong>
+
+                </div>
+
+
+                <div class="importance-row low">
+
+                    <span class="importance-label">
+                        TSS
+                    </span>
+
+                    <div class="importance-track">
+                        <div class="importance-bar negative"
+                             style="width:1%">
+                        </div>
+                    </div>
+
+                    <strong>−0,00088</strong>
+
+                </div>
+
+            </div>
+
+
+            <p class="rf-importance-note">
+                Nilai mendekati nol atau negatif menunjukkan bahwa variabel
+                tersebut tidak menambah akurasi prediksi secara berarti
+                pada model Temporal Split.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PETA PREDIKSI 2035
+        ================================================== -->
+
+        <section class="rf-prediction-section">
+
+            <div class="rf-prediction-heading">
+
+                <p class="section-mini">
+                    PREDIKSI SPASIAL 2035
+                </p>
+
+                <h3>
+                    Posisi garis pantai 2025 dan prediksi 2035
+                </h3>
+
+                <p>
+                    Peta membandingkan shoreline tahun 2025
+                    dengan posisi hasil prediksi Random Forest tahun 2035.
+                </p>
+
+            </div>
+
+
+            <div class="rf-map-layout">
+
+
+                <div class="rf-map-column">
+
+                    <div id="rfMap"></div>
+
+
+                    <div class="rf-map-legend">
+
+                        <strong>
+                            Posisi Garis Pantai
+                        </strong>
+
+                        <div class="legend-row">
+                            <span class="legend-line actual"></span>
+                            <span>Garis Pantai 2025</span>
+                        </div>
+
+                        <div class="legend-row">
+                            <span class="legend-line prediction"></span>
+                            <span>Prediksi 2035</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="rf-summary-column">
+
+
+                    <div class="rf-stat">
+
+                        <span>
+                            ABRASI
+                        </span>
+
+                        <strong>
+                            32
+                        </strong>
+
+                        <small>
+                            dari 46 transek
+                        </small>
+
+                    </div>
+
+
+                    <div class="rf-stat">
+
+                        <span>
+                            AKRESI
+                        </span>
+
+                        <strong>
+                            14
+                        </strong>
+
+                        <small>
+                            dari 46 transek
+                        </small>
+
+                    </div>
+
+
+                    <div class="rf-stat">
+
+                        <span>
+                            RETREAT
+                        </span>
+
+                        <strong>
+                            2–49 m
+                        </strong>
+
+                        <small>
+                            proyeksi ke arah darat
+                        </small>
+
+                    </div>
+
+
+                    <div class="rf-stat">
+
+                        <span>
+                            ADVANCE
+                        </span>
+
+                        <strong>
+                            1–26 m
+                        </strong>
+
+                        <small>
+                            proyeksi ke arah laut
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MENJAWAB RQ 02
+        ================================================== -->
+
+        <section class="rf-rq2-section">
+
+            <div class="rf-rq2-heading">
+
+                <p class="section-mini">
+                    MENJAWAB RQ 02
+                </p>
+
+                <h3>
+                    Prediksi 2035 mempertahankan pola fisik historis,
+                    tetapi responsnya berbeda antarsegmen
+                </h3>
+
+                <p>
+                    Dari 46 transek, 32 transek diproyeksikan mundur
+                    dan 14 transek maju. Pola tersebut sejalan dengan
+                    perbedaan karakter fisik lokal yang juga menjadi
+                    prediktor utama pada model Random Forest.
+                </p>
+
+            </div>
+
+
+            <div class="rf-rq2-grid">
+
+
+                <article class="rf-rq2-card retreat">
+
+                    <span>
+                        SEL BARAT
+                    </span>
+
+                    <h4>
+                        Prediksi kemunduran garis pantai 
+                    </h4>
+
+                    <p>
+                        Prediksi menunjukkan kecenderungan mundur tetap kuat
+                        pada bagian barat. Pola ini konsisten dengan riwayat abrasi
+                        dan karakter pesisir yang lebih rentan.
+                    </p>
+
+                </article>
+
+
+                <article class="rf-rq2-card advance">
+
+                    <span>
+                        SEL TENGAH
+                    </span>
+
+                    <h4>
+                        Stabil–akresi lebih terkonsentrasi
+                    </h4>
+
+                    <p>
+                        Kemajuan garis pantai lebih banyak muncul pada bagian tengah,
+                        terutama pada segmen yang dipengaruhi pelabuhan
+                        dan struktur pantai.
+                    </p>
+
+                </article>
+
+
+                <article class="rf-rq2-card retreat">
+
+                    <span>
+                        SEL TIMUR
+                    </span>
+
+                    <h4>
+                        Abrasi tetap muncul pada beberapa segmen
+                    </h4>
+
+                    <p>
+                        Sebagian segmen timur masih diproyeksikan mundur,
+                        menunjukkan bahwa tekanan fisik historis
+                        belum sepenuhnya berbalik pada horizon 2035.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="rf-rq2-link">
+
+                <span>
+                    KETERKAITAN DENGAN POLA FISIK
+                </span>
+
+                <p>
+                    Feature importance menunjukkan bahwa prediksi terutama
+                    dibentuk oleh <strong>jenis segmen pantai</strong>,
+                    <strong>geomorfologi</strong>,
+                    <strong>jarak ke muara</strong>,
+                    <strong>slope</strong>,
+                    <strong>elevasi</strong>, dan
+                    <strong>tutupan lahan</strong>.
+                    Artinya, posisi shoreline 2035 tidak hanya merupakan
+                    perpanjangan tren waktu, tetapi juga mencerminkan
+                    perbedaan karakter fisik antarsegmen pesisir.
+                </p>
+
+            </div>
+
+
+            <div class="rf-rq2-answer">
+
+                <span>
+                    JAWABAN RQ 02
+                </span>
+
+                <blockquote>
+                    Dalam jangka waktu 10 tahun, pola abrasi historis diproyeksikan
+                    tetap dominan di Kota Tegal, dengan kemunduran terutama
+                    pada Sel Barat dan sebagian Sel Timur,
+                    sedangkan kemajuan shoreline lebih terkonsentrasi
+                    di Sel Tengah. Pola prediksi tersebut paling erat
+                    berkaitan dengan karakter segmen pantai,
+                    geomorfologi, kedekatan terhadap muara,
+                    slope, elevasi, dan tutupan lahan.
+                </blockquote>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =================================================
+             NAVIGASI
+        ================================================== -->
 
         <div class="background-navigation">
 
@@ -5682,9 +8381,7 @@
 
             <button class="next-section"
                     data-target="hasil-rdtr">
-
                 Lanjut: Evaluasi RDTR →
-
             </button>
 
         </div>
@@ -5801,21 +8498,12 @@
 
 
 
-<!-- =====================================================
-     MAPLIBRE
-===================================================== -->
-
 <script src="https://unpkg.com/maplibre-gl@5.7.0/dist/maplibre-gl.js"></script>
 
-
-
-<!-- =====================================================
-     JAVASCRIPT UTAMA
-===================================================== -->
-
+<!-- SCRIPT PETA ASLI -->
 <script src="script.js"></script>
 
-
+<!-- SCRIPT NAVBAR BARU -->
+<script src="nav-fix.js"></script>
 </body>
-
 </html>

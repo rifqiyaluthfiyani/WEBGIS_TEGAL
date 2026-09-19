@@ -795,10 +795,12 @@ function initStoryMap() {
 
 
 // =========================================================
-// 6. STORY PANEL
+// STORY PANELS
+// PETA + CAPTION + FOTO KONTEKS
 // =========================================================
 
 function initStoryPanels() {
+
 
     const panels =
         document.querySelectorAll(
@@ -812,21 +814,51 @@ function initStoryPanels() {
         );
 
 
-    if (
-        !panels.length
-    ) {
+    const popup =
+        document.getElementById(
+            "storyImagePopup"
+        );
+
+
+    const popupImage =
+        document.getElementById(
+            "storyPopupImage"
+        );
+
+
+    const popupTitle =
+        document.getElementById(
+            "storyPopupTitle"
+        );
+
+
+    if (!panels.length) {
+
         return;
+
     }
 
 
+
+    // =====================================================
+    // PANEL YANG SEDANG AKTIF
+    // =====================================================
+
     function activate(panel) {
 
-        panels.forEach(
-            function(el) {
 
-                el
+        // ---------------------------------------------
+        // ACTIVE STATE
+        // ---------------------------------------------
+
+        panels.forEach(
+            function(element) {
+
+                element
                     .classList
-                    .remove("active");
+                    .remove(
+                        "active"
+                    );
 
             }
         );
@@ -834,8 +866,15 @@ function initStoryPanels() {
 
         panel
             .classList
-            .add("active");
+            .add(
+                "active"
+            );
 
+
+
+        // ---------------------------------------------
+        // DATA PANEL
+        // ---------------------------------------------
 
         const text =
             panel.getAttribute(
@@ -851,6 +890,23 @@ function initStoryPanels() {
             );
 
 
+        const image =
+            panel.getAttribute(
+                "data-image"
+            );
+
+
+        const imageTitle =
+            panel.getAttribute(
+                "data-image-title"
+            );
+
+
+
+        // ---------------------------------------------
+        // CAPTION PETA
+        // ---------------------------------------------
+
         if (
             caption &&
             text
@@ -861,6 +917,11 @@ function initStoryPanels() {
 
         }
 
+
+
+        // ---------------------------------------------
+        // ZOOM PETA
+        // ---------------------------------------------
 
         if (
             storyMap &&
@@ -877,37 +938,136 @@ function initStoryPanels() {
                     zoom,
 
                 duration:
-                    800
+                    700
 
             });
+
+        }
+
+
+
+        // ---------------------------------------------
+        // FOTO POPUP
+        // ---------------------------------------------
+
+        if (
+            popup &&
+            popupImage &&
+            image
+        ) {
+
+
+            // Kalau gambar sudah sama,
+            // tidak perlu animasi ulang
+
+            const currentImage =
+                popupImage.getAttribute(
+                    "src"
+                );
+
+
+            if (
+                currentImage === image
+            ) {
+
+                if (
+                    popupTitle &&
+                    imageTitle
+                ) {
+
+                    popupTitle.textContent =
+                        imageTitle;
+
+                }
+
+                return;
+
+            }
+
+
+
+            popup
+                .classList
+                .add(
+                    "changing"
+                );
+
+
+            setTimeout(
+                function() {
+
+
+                    popupImage.src =
+                        image;
+
+
+                    popupImage.alt =
+                        imageTitle ||
+                        "Visual konteks penelitian";
+
+
+                    if (
+                        popupTitle &&
+                        imageTitle
+                    ) {
+
+                        popupTitle.textContent =
+                            imageTitle;
+
+                    }
+
+
+                    popup
+                        .classList
+                        .remove(
+                            "changing"
+                        );
+
+
+                },
+
+                150
+            );
 
         }
 
     }
 
 
+
+    // =====================================================
+    // PANEL PERTAMA
+    // =====================================================
+
     activate(
         panels[0]
     );
 
+
+
+    // =====================================================
+    // SCROLL OBSERVER
+    // =====================================================
 
     const observer =
         new IntersectionObserver(
 
             function(entries) {
 
+
                 const visible =
                     entries
+
                         .filter(
                             function(entry) {
 
                                 return (
-                                    entry
-                                        .isIntersecting
+                                    entry.isIntersecting
                                 );
 
                             }
                         )
+
                         .sort(
                             function(a, b) {
 
@@ -925,30 +1085,30 @@ function initStoryPanels() {
                 ) {
 
                     activate(
-                        visible[0]
-                            .target
+                        visible[0].target
                     );
 
                 }
 
             },
 
+
             {
 
                 rootMargin:
-                    "-25% 0px -35% 0px",
+                    "-20% 0px -30% 0px",
 
                 threshold: [
-
-                    0.2,
-                    0.4,
-                    0.6
-
+                    0.15,
+                    0.30,
+                    0.50,
+                    0.70
                 ]
 
             }
 
         );
+
 
 
     panels.forEach(
@@ -963,8 +1123,6 @@ function initStoryPanels() {
 
 }
 
-
-
 // =========================================================
 // 7. DSAS MAP
 // =========================================================
@@ -974,12 +1132,215 @@ let dsasMap = null;
 let dsasMapInitialized = false;
 
 
+// Menyimpan bounds seluruh DSAS
+let dsasFullBounds = null;
+
+
+// =========================================================
+// HELPER — NORMALISASI NAMA TRANSEK
+// =========================================================
+
+function normalizeDsasTransectId(raw) {
+
+    let value =
+        String(raw ?? "")
+            .trim()
+            .toUpperCase();
+
+
+    // T2 -> T02
+    // T02 -> T02
+    const match =
+        value.match(
+            /^T0*(\d+)$/
+        );
+
+
+    if (match) {
+
+        return (
+            "T" +
+            match[1].padStart(
+                2,
+                "0"
+            )
+        );
+
+    }
+
+
+    return value;
+
+}
+
+
+// =========================================================
+// HELPER — AMBIL ID TRANSEK
+// FIELD UTAMA: NAMA_TITIK
+// =========================================================
+
+function getDsasTransectId(properties) {
+
+    return normalizeDsasTransectId(
+
+        properties?.NAMA_TITIK ??
+        properties?.Nama_Titik ??
+        properties?.Nama_tit_1 ??
+        ""
+
+    );
+
+}
+
+
+// =========================================================
+// HELPER — KOORDINAT REKURSIF UNTUK BOUNDS
+// =========================================================
+
+function extendDsasBounds(
+    bounds,
+    coordinates
+) {
+
+    if (!coordinates) {
+        return;
+    }
+
+
+    if (
+        Array.isArray(coordinates) &&
+        typeof coordinates[0] === "number" &&
+        typeof coordinates[1] === "number"
+    ) {
+
+        bounds.extend(
+            coordinates
+        );
+
+        return;
+
+    }
+
+
+    if (
+        Array.isArray(coordinates)
+    ) {
+
+        coordinates.forEach(
+            function(item) {
+
+                extendDsasBounds(
+                    bounds,
+                    item
+                );
+
+            }
+        );
+
+    }
+
+}
+
+
+// =========================================================
+// HELPER — KUMPULKAN SEMUA KOORDINAT GARIS
+// =========================================================
+
+function collectDsasCoordinates(
+    coordinates,
+    output
+) {
+
+    if (!coordinates) {
+        return;
+    }
+
+
+    if (
+        Array.isArray(coordinates) &&
+        typeof coordinates[0] === "number" &&
+        typeof coordinates[1] === "number"
+    ) {
+
+        output.push(
+            coordinates
+        );
+
+        return;
+
+    }
+
+
+    if (
+        Array.isArray(coordinates)
+    ) {
+
+        coordinates.forEach(
+            function(item) {
+
+                collectDsasCoordinates(
+                    item,
+                    output
+                );
+
+            }
+        );
+
+    }
+
+}
+
+
+// =========================================================
+// HELPER — TITIK TENGAH FEATURE
+// Dipakai agar label highlight selalu muncul
+// =========================================================
+
+function getDsasFeatureMidpoint(
+    feature
+) {
+
+    const coords = [];
+
+
+    collectDsasCoordinates(
+
+        feature?.geometry?.coordinates,
+
+        coords
+
+    );
+
+
+    if (!coords.length) {
+
+        return null;
+
+    }
+
+
+    return coords[
+        Math.floor(
+            coords.length / 2
+        )
+    ];
+
+}
+
+
+// =========================================================
+// INIT DSAS MAP
+// =========================================================
+
 function initDsasMap() {
+
 
     if (
         dsasMapInitialized
     ) {
+
         return;
+
     }
 
 
@@ -994,13 +1355,20 @@ function initDsasMap() {
         typeof maplibregl ===
         "undefined"
     ) {
+
         return;
+
     }
 
 
     dsasMapInitialized =
         true;
 
+
+
+    // =====================================================
+    // BUAT MAP
+    // =====================================================
 
     dsasMap =
         new maplibregl.Map({
@@ -1026,6 +1394,7 @@ function initDsasMap() {
         });
 
 
+
     dsasMap.addControl(
 
         new maplibregl
@@ -1036,12 +1405,19 @@ function initDsasMap() {
     );
 
 
+
+    // =====================================================
+    // LOAD
+    // =====================================================
+
     dsasMap.on(
         "load",
 
         async function() {
 
+
             try {
+
 
                 const response =
                     await fetch(
@@ -1064,6 +1440,11 @@ function initDsasMap() {
                     await response.json();
 
 
+
+                // =================================================
+                // SOURCE UTAMA
+                // =================================================
+
                 dsasMap.addSource(
 
                     "dsas-data",
@@ -1080,6 +1461,11 @@ function initDsasMap() {
 
                 );
 
+
+
+                // =================================================
+                // GARIS DSAS
+                // =================================================
 
                 dsasMap.addLayer({
 
@@ -1116,17 +1502,24 @@ function initDsasMap() {
                             3,
 
                             13,
-                            6
+                            6,
+
+                            16,
+                            8
 
                         ],
 
+
                         "line-opacity":
                             1,
+
 
                         "line-color": [
 
                             "case",
 
+
+                            // Abrasi tinggi
                             [
                                 "<=",
 
@@ -1141,6 +1534,7 @@ function initDsasMap() {
                             "#b2182b",
 
 
+                            // Abrasi sedang
                             [
                                 "all",
 
@@ -1165,11 +1559,13 @@ function initDsasMap() {
 
                                     -0.5
                                 ]
+
                             ],
 
                             "#ef8a62",
 
 
+                            // Stabil
                             [
                                 "all",
 
@@ -1194,11 +1590,13 @@ function initDsasMap() {
 
                                     0.5
                                 ]
+
                             ],
 
                             "#d7b83e",
 
 
+                            // Akresi sedang
                             [
                                 "all",
 
@@ -1223,11 +1621,13 @@ function initDsasMap() {
 
                                     2
                                 ]
+
                             ],
 
                             "#67a9cf",
 
 
+                            // Akresi tinggi
                             [
                                 ">=",
 
@@ -1251,13 +1651,111 @@ function initDsasMap() {
                 });
 
 
-                const bounds =
+
+                // =================================================
+                // LABEL SEMUA TRANSEK
+                //
+                // Hanya muncul ketika zoom cukup dekat.
+                // Field: NAMA_TITIK
+                // =================================================
+
+                dsasMap.addLayer({
+
+                    id:
+                        "dsas-transect-labels",
+
+                    type:
+                        "symbol",
+
+                    source:
+                        "dsas-data",
+
+                    minzoom:
+                        13.2,
+
+                    layout: {
+
+                        "symbol-placement":
+                            "line",
+
+                        "text-field": [
+
+                            "coalesce",
+
+                            ["get", "NAMA_TITIK"],
+
+                            ""
+
+                        ],
+
+                        "text-size": [
+
+                            "interpolate",
+
+                            ["linear"],
+
+                            ["zoom"],
+
+                            13,
+                            10,
+
+                            15,
+                            12,
+
+                            17,
+                            14
+
+                        ],
+
+                        "text-allow-overlap":
+                            false,
+
+                        "text-ignore-placement":
+                            false,
+
+                        "symbol-spacing":
+                            100,
+
+                        "text-rotation-alignment":
+                            "map",
+
+                        "text-pitch-alignment":
+                            "viewport"
+
+                    },
+
+                    paint: {
+
+                        "text-color":
+                            "#123746",
+
+                        "text-halo-color":
+                            "#ffffff",
+
+                        "text-halo-width":
+                            2,
+
+                        "text-halo-blur":
+                            0.5
+
+                    }
+
+                });
+
+
+
+                // =================================================
+                // BOUNDS SELURUH DATA
+                // =================================================
+
+                dsasFullBounds =
                     new maplibregl
                         .LngLatBounds();
 
 
                 (
-                    data.features || []
+                    data.features ||
+                    []
                 )
                     .forEach(
                         function(feature) {
@@ -1268,9 +1766,9 @@ function initDsasMap() {
                                     ?.coordinates
                             ) {
 
-                                extendBoundsRecursive(
+                                extendDsasBounds(
 
-                                    bounds,
+                                    dsasFullBounds,
 
                                     feature
                                         .geometry
@@ -1284,13 +1782,14 @@ function initDsasMap() {
                     );
 
 
+
                 if (
-                    !bounds.isEmpty()
+                    !dsasFullBounds.isEmpty()
                 ) {
 
                     dsasMap.fitBounds(
 
-                        bounds,
+                        dsasFullBounds,
 
                         {
 
@@ -1307,6 +1806,11 @@ function initDsasMap() {
                 }
 
 
+
+                // =================================================
+                // POPUP KLIK TRANSEK
+                // =================================================
+
                 dsasMap.on(
 
                     "click",
@@ -1315,6 +1819,7 @@ function initDsasMap() {
 
                     function(e) {
 
+
                         const props =
                             e.features?.[0]
                                 ?.properties ||
@@ -1322,13 +1827,9 @@ function initDsasMap() {
 
 
                         const nama =
-
-                            props.Nama_Titik ??
-
-                            props.NAMA_TITIK ??
-
-                            props.Nama_tit_1 ??
-
+                            getDsasTransectId(
+                                props
+                            ) ||
                             "-";
 
 
@@ -1339,6 +1840,7 @@ function initDsasMap() {
                             props.Kategori_1 ??
 
                             "-";
+
 
 
                         const html = `
@@ -1444,6 +1946,7 @@ function initDsasMap() {
                         `;
 
 
+
                         new maplibregl.Popup({
 
                             maxWidth:
@@ -1467,6 +1970,11 @@ function initDsasMap() {
 
                 );
 
+
+
+                // =================================================
+                // CURSOR
+                // =================================================
 
                 dsasMap.on(
 
@@ -1505,6 +2013,18 @@ function initDsasMap() {
 
                 );
 
+
+
+                // =================================================
+                // BARU SETELAH PETA SELESAI:
+                // INIT TEMUAN SPASIAL
+                // =================================================
+
+                initDsasSpatialFindings(
+                    data
+                );
+
+
             }
 
             catch(error) {
@@ -1521,6 +2041,793 @@ function initDsasMap() {
 
 }
 
+
+
+// =========================================================
+// 8. DSAS SPATIAL FINDINGS
+// Temuan → highlight + label + zoom
+// =========================================================
+
+function initDsasSpatialFindings(
+    data
+) {
+
+
+    if (
+        !dsasMap ||
+        !data
+    ) {
+
+        return;
+
+    }
+
+
+    const buttons =
+        document.querySelectorAll(
+            ".dsas-finding-btn"
+        );
+
+
+    if (!buttons.length) {
+
+        return;
+
+    }
+
+
+
+    // =====================================================
+    // DEFINISI TEMUAN
+    // =====================================================
+
+    const findings = {
+
+
+        // 3 klaster abrasi
+
+        "abrasion-clusters": [
+
+            "T02",
+            "T03",
+            "T04",
+
+            "T06",
+            "T07",
+
+            "T14",
+            "T15",
+            "T16",
+            "T17",
+
+            "T36",
+            "T37",
+            "T38",
+            "T39",
+            "T40",
+            "T41"
+
+        ],
+
+
+
+        // abrasi maksimum
+
+        "maximum-abrasion": [
+
+            "T36"
+
+        ],
+
+
+
+        // stabil-akresi
+
+        "stable-accretion": [
+
+            "T24",
+            "T25",
+            "T26",
+            "T27",
+            "T28",
+            "T29",
+            "T30",
+            "T31",
+            "T32",
+            "T33",
+            "T34",
+            "T35"
+
+        ]
+
+    };
+
+
+
+    // =====================================================
+    // SOURCE GARIS HIGHLIGHT
+    // =====================================================
+
+    if (
+        !dsasMap.getSource(
+            "dsas-finding-highlight"
+        )
+    ) {
+
+        dsasMap.addSource(
+
+            "dsas-finding-highlight",
+
+            {
+
+                type:
+                    "geojson",
+
+                data: {
+
+                    type:
+                        "FeatureCollection",
+
+                    features:
+                        []
+
+                }
+
+            }
+
+        );
+
+
+
+        // Outline putih
+
+        dsasMap.addLayer({
+
+            id:
+                "dsas-finding-outline",
+
+            type:
+                "line",
+
+            source:
+                "dsas-finding-highlight",
+
+            paint: {
+
+                "line-color":
+                    "#ffffff",
+
+                "line-width":
+                    10,
+
+                "line-opacity":
+                    0.90
+
+            }
+
+        });
+
+
+
+        // Garis highlight
+
+        dsasMap.addLayer({
+
+            id:
+                "dsas-finding-line",
+
+            type:
+                "line",
+
+            source:
+                "dsas-finding-highlight",
+
+            paint: {
+
+                "line-color":
+                    "#111111",
+
+                "line-width":
+                    6,
+
+                "line-opacity":
+                    1
+
+            }
+
+        });
+
+    }
+
+
+
+    // =====================================================
+    // SOURCE POINT UNTUK LABEL
+    //
+    // Label dibuat sebagai titik tengah masing-masing
+    // feature agar NAMA_TITIK PASTI muncul.
+    // =====================================================
+
+    if (
+        !dsasMap.getSource(
+            "dsas-finding-label-points"
+        )
+    ) {
+
+        dsasMap.addSource(
+
+            "dsas-finding-label-points",
+
+            {
+
+                type:
+                    "geojson",
+
+                data: {
+
+                    type:
+                        "FeatureCollection",
+
+                    features:
+                        []
+
+                }
+
+            }
+
+        );
+
+
+
+        // =================================================
+        // LABEL TRANSEK YANG DIPILIH
+        // =================================================
+
+        dsasMap.addLayer({
+
+            id:
+                "dsas-finding-labels",
+
+            type:
+                "symbol",
+
+            source:
+                "dsas-finding-label-points",
+
+            layout: {
+
+                "text-field": [
+
+                    "get",
+                    "NAMA_TITIK"
+
+                ],
+
+                "text-size":
+                    15,
+
+                "text-anchor":
+                    "bottom",
+
+                "text-offset": [
+                    0,
+                    -0.6
+                ],
+
+                "text-allow-overlap":
+                    true,
+
+                "text-ignore-placement":
+                    true
+
+            },
+
+            paint: {
+
+                "text-color":
+                    "#111111",
+
+                "text-halo-color":
+                    "#ffffff",
+
+                "text-halo-width":
+                    3,
+
+                "text-halo-blur":
+                    0.4
+
+            }
+
+        });
+
+    }
+
+
+
+    // =====================================================
+    // MEMBUAT LABEL POINT DARI FEATURE TERPILIH
+    // =====================================================
+
+    function createLabelPoints(
+        selected
+    ) {
+
+
+        const labelFeatures =
+            [];
+
+
+        selected.forEach(
+            function(feature) {
+
+
+                const midpoint =
+                    getDsasFeatureMidpoint(
+                        feature
+                    );
+
+
+                if (!midpoint) {
+
+                    return;
+
+                }
+
+
+                const id =
+                    getDsasTransectId(
+                        feature.properties ||
+                        {}
+                    );
+
+
+                labelFeatures.push({
+
+                    type:
+                        "Feature",
+
+                    geometry: {
+
+                        type:
+                            "Point",
+
+                        coordinates:
+                            midpoint
+
+                    },
+
+                    properties: {
+
+                        NAMA_TITIK:
+                            id
+
+                    }
+
+                });
+
+            }
+        );
+
+
+        return {
+
+            type:
+                "FeatureCollection",
+
+            features:
+                labelFeatures
+
+        };
+
+    }
+
+
+
+    // =====================================================
+    // TAMPILKAN TEMUAN
+    // =====================================================
+
+    function showFinding(
+        findingKey
+    ) {
+
+
+        const ids =
+            findings[
+                findingKey
+            ] ||
+            [];
+
+
+        // =================================================
+        // FILTER FEATURE
+        // =================================================
+
+        const selected =
+            (
+                data.features ||
+                []
+            )
+                .filter(
+                    function(feature) {
+
+
+                        const id =
+                            getDsasTransectId(
+
+                                feature.properties ||
+                                {}
+
+                            );
+
+
+                        return ids.includes(
+                            id
+                        );
+
+                    }
+                );
+
+
+
+        console.log(
+            "TEMUAN:",
+            findingKey
+        );
+
+
+        console.log(
+            "DICARI:",
+            ids
+        );
+
+
+        console.log(
+            "DITEMUKAN:",
+            selected.map(
+                function(feature) {
+
+                    return getDsasTransectId(
+                        feature.properties ||
+                        {}
+                    );
+
+                }
+            )
+        );
+
+
+
+        if (
+            !selected.length
+        ) {
+
+            console.warn(
+                "Tidak ada transek ditemukan untuk:",
+                findingKey
+            );
+
+            return;
+
+        }
+
+
+
+        // =================================================
+        // UPDATE GARIS HIGHLIGHT
+        // =================================================
+
+        dsasMap
+            .getSource(
+                "dsas-finding-highlight"
+            )
+            .setData({
+
+                type:
+                    "FeatureCollection",
+
+                features:
+                    selected
+
+            });
+
+
+
+        // =================================================
+        // UPDATE LABEL NAMA TITIK
+        // =================================================
+
+        dsasMap
+            .getSource(
+                "dsas-finding-label-points"
+            )
+            .setData(
+
+                createLabelPoints(
+                    selected
+                )
+
+            );
+
+
+
+        // =================================================
+        // SATU TRANSEK:
+        // FLY KE TITIK TENGAH
+        // =================================================
+
+        if (
+            selected.length === 1
+        ) {
+
+
+            const center =
+                getDsasFeatureMidpoint(
+                    selected[0]
+                );
+
+
+            if (center) {
+
+                dsasMap.flyTo({
+
+                    center:
+                        center,
+
+                    zoom:
+                        16,
+
+                    duration:
+                        1200,
+
+                    essential:
+                        true
+
+                });
+
+            }
+
+
+            return;
+
+        }
+
+
+
+        // =================================================
+        // BANYAK TRANSEK:
+        // FIT BOUNDS
+        // =================================================
+
+        const bounds =
+            new maplibregl
+                .LngLatBounds();
+
+
+        selected.forEach(
+            function(feature) {
+
+                if (
+                    feature
+                        ?.geometry
+                        ?.coordinates
+                ) {
+
+                    extendDsasBounds(
+
+                        bounds,
+
+                        feature
+                            .geometry
+                            .coordinates
+
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        if (
+            !bounds.isEmpty()
+        ) {
+
+            dsasMap.fitBounds(
+
+                bounds,
+
+                {
+
+                    padding: {
+
+                        top:
+                            90,
+
+                        right:
+                            90,
+
+                        bottom:
+                            90,
+
+                        left:
+                            90
+
+                    },
+
+                    maxZoom:
+                        14.5,
+
+                    duration:
+                        1100
+
+                }
+
+            );
+
+        }
+
+    }
+
+
+
+    // =====================================================
+    // BUTTON
+    // =====================================================
+
+    buttons.forEach(
+        function(button) {
+
+
+            button.addEventListener(
+                "click",
+
+                function() {
+
+
+                    buttons.forEach(
+                        function(item) {
+
+                            item
+                                .classList
+                                .remove(
+                                    "active"
+                                );
+
+                        }
+                    );
+
+
+                    button
+                        .classList
+                        .add(
+                            "active"
+                        );
+
+
+                    showFinding(
+
+                        button.getAttribute(
+                            "data-finding"
+                        )
+
+                    );
+
+                }
+
+            );
+
+        }
+    );
+
+
+
+    // =====================================================
+    // RESET
+    // =====================================================
+
+    const reset =
+        document.getElementById(
+            "dsasResetView"
+        );
+
+
+    if (reset) {
+
+        reset.addEventListener(
+            "click",
+
+            function() {
+
+
+                // hilangkan active button
+
+                buttons.forEach(
+                    function(item) {
+
+                        item
+                            .classList
+                            .remove(
+                                "active"
+                            );
+
+                    }
+                );
+
+
+
+                // kosongkan highlight
+
+                dsasMap
+                    .getSource(
+                        "dsas-finding-highlight"
+                    )
+                    .setData({
+
+                        type:
+                            "FeatureCollection",
+
+                        features:
+                            []
+
+                    });
+
+
+
+                // kosongkan label pilihan
+
+                dsasMap
+                    .getSource(
+                        "dsas-finding-label-points"
+                    )
+                    .setData({
+
+                        type:
+                            "FeatureCollection",
+
+                        features:
+                            []
+
+                    });
+
+
+
+                // kembali ke seluruh data
+
+                if (
+                    dsasFullBounds &&
+                    !dsasFullBounds.isEmpty()
+                ) {
+
+                    dsasMap.fitBounds(
+
+                        dsasFullBounds,
+
+                        {
+
+                            padding:
+                                55,
+
+                            maxZoom:
+                                13.5,
+
+                            duration:
+                                1000
+
+                        }
+
+                    );
+
+                }
+
+            }
+
+        );
+
+    }
+
+}
 
 
 // =========================================================
@@ -7227,11 +8534,15 @@ window.addEventListener(
 
             initDsasMap();
 
+            initDsasMap();
+
             initCviParameterButtons();
 
             initCviMap();
 
             initMapResizeObserver();
+
+            initRfMap();
 
         }
 
@@ -12190,4 +13501,676 @@ window.addEventListener(
 
     }
 
-);
+)
+// =========================================================
+// RANDOM FOREST MAP
+// SHORELINE 2025 vs PREDIKSI 2035
+// =========================================================
+
+let rfMap = null;
+
+
+function initRfMap() {
+
+    const container =
+        document.getElementById("rfMap");
+
+
+    if (!container) {
+
+        console.warn(
+            "rfMap container tidak ditemukan."
+        );
+
+        return;
+
+    }
+
+
+    // Hindari inisialisasi ganda
+
+    if (rfMap) {
+
+        try {
+            rfMap.remove();
+        }
+        catch (e) {}
+
+        rfMap = null;
+
+    }
+
+
+
+    // =====================================================
+    // BUAT MAP
+    // =====================================================
+
+    rfMap =
+        new maplibregl.Map({
+
+            container:
+                "rfMap",
+
+            center: [
+                109.125,
+                -6.85
+            ],
+
+            zoom:
+                11.2,
+
+
+            // =============================================
+            // STYLE OSM LANGSUNG
+            // Tidak memakai makeOsmStyle()
+            // =============================================
+
+            style: {
+
+                version: 8,
+
+                sources: {
+
+                    osm: {
+
+                        type:
+                            "raster",
+
+                        tiles: [
+
+                            "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+
+                        ],
+
+                        tileSize:
+                            256,
+
+                        attribution:
+                            "© OpenStreetMap contributors"
+
+                    }
+
+                },
+
+
+                layers: [
+
+                    {
+
+                        id:
+                            "osm-basemap",
+
+                        type:
+                            "raster",
+
+                        source:
+                            "osm",
+
+                        minzoom:
+                            0,
+
+                        maxzoom:
+                            19
+
+                    }
+
+                ]
+
+            }
+
+        });
+
+
+
+    // =====================================================
+    // CONTROL
+    // =====================================================
+
+    rfMap.addControl(
+
+        new maplibregl.NavigationControl({
+
+            showCompass:
+                false
+
+        }),
+
+        "top-right"
+
+    );
+
+
+
+    // =====================================================
+    // ERROR MAP
+    // =====================================================
+
+    rfMap.on(
+        "error",
+        function(event) {
+
+            console.error(
+                "RF MAPLIBRE ERROR:",
+                event.error
+            );
+
+        }
+    );
+
+
+
+    // =====================================================
+    // SETELAH BASEMAP SELESAI
+    // =====================================================
+
+    rfMap.on(
+        "load",
+        async function() {
+
+            console.log(
+                "RF basemap berhasil dimuat."
+            );
+
+
+            // Paksa resize setelah section terbentuk
+
+            setTimeout(
+                function() {
+
+                    rfMap.resize();
+
+                },
+                300
+            );
+
+
+            try {
+
+
+                // =========================================
+                // 1. GARIS PANTAI 2025
+                // =========================================
+
+                const response2025 =
+                    await fetch(
+                        "Data/SHORELINE_2025.geojson"
+                    );
+
+
+                if (!response2025.ok) {
+
+                    throw new Error(
+                        "SHORELINE_2025.geojson tidak ditemukan. HTTP " +
+                        response2025.status
+                    );
+
+                }
+
+
+                const shoreline2025 =
+                    await response2025.json();
+
+
+                console.log(
+                    "Shoreline 2025:",
+                    shoreline2025
+                );
+
+
+
+                // =========================================
+                // 2. PREDIKSI 2035
+                // =========================================
+
+                const response2035 =
+                    await fetch(
+                        "Data/PREDIKSI_SHORELINE_2035.geojson"
+                    );
+
+
+                if (!response2035.ok) {
+
+                    throw new Error(
+                        "PREDIKSI_SHORELINE_2035.geojson tidak ditemukan. HTTP " +
+                        response2035.status
+                    );
+
+                }
+
+
+                const shoreline2035 =
+                    await response2035.json();
+
+
+                console.log(
+                    "Prediksi 2035:",
+                    shoreline2035
+                );
+
+
+
+                // =========================================
+                // SOURCE 2025
+                // =========================================
+
+                rfMap.addSource(
+                    "rf-shoreline-2025",
+                    {
+
+                        type:
+                            "geojson",
+
+                        data:
+                            shoreline2025
+
+                    }
+                );
+
+
+
+                rfMap.addLayer({
+
+                    id:
+                        "rf-shoreline-2025-line",
+
+                    type:
+                        "line",
+
+                    source:
+                        "rf-shoreline-2025",
+
+                    layout: {
+
+                        "line-join":
+                            "round",
+
+                        "line-cap":
+                            "round"
+
+                    },
+
+                    paint: {
+
+                        "line-color":
+                            "#2166ac",
+
+                        "line-width":
+                            4,
+
+                        "line-opacity":
+                            0.95
+
+                    }
+
+                });
+
+
+
+                // =========================================
+                // SOURCE PREDIKSI 2035
+                // =========================================
+
+                rfMap.addSource(
+                    "rf-shoreline-2035",
+                    {
+
+                        type:
+                            "geojson",
+
+                        data:
+                            shoreline2035
+
+                    }
+                );
+
+
+
+                rfMap.addLayer({
+
+                    id:
+                        "rf-shoreline-2035-line",
+
+                    type:
+                        "line",
+
+                    source:
+                        "rf-shoreline-2035",
+
+                    layout: {
+
+                        "line-join":
+                            "round",
+
+                        "line-cap":
+                            "round"
+
+                    },
+
+                    paint: {
+
+                        "line-color":
+                            "#d73027",
+
+                        "line-width":
+                            4,
+
+                        "line-opacity":
+                            0.95
+
+                    }
+
+                });
+
+
+
+                // =========================================
+                // HITUNG BOUNDS DARI KEDUA GEOJSON
+                // =========================================
+
+                const bounds =
+                    new maplibregl
+                        .LngLatBounds();
+
+
+                function addCoordinates(
+                    coordinates
+                ) {
+
+                    if (!coordinates) {
+                        return;
+                    }
+
+
+                    // titik koordinat [lng, lat]
+
+                    if (
+                        typeof coordinates[0] ===
+                            "number" &&
+                        typeof coordinates[1] ===
+                            "number"
+                    ) {
+
+                        bounds.extend(
+                            coordinates
+                        );
+
+                        return;
+
+                    }
+
+
+                    coordinates.forEach(
+                        addCoordinates
+                    );
+
+                }
+
+
+
+                shoreline2025.features
+                    .forEach(
+                        function(feature) {
+
+                            if (
+                                feature.geometry &&
+                                feature.geometry.coordinates
+                            ) {
+
+                                addCoordinates(
+                                    feature.geometry.coordinates
+                                );
+
+                            }
+
+                        }
+                    );
+
+
+
+                shoreline2035.features
+                    .forEach(
+                        function(feature) {
+
+                            if (
+                                feature.geometry &&
+                                feature.geometry.coordinates
+                            ) {
+
+                                addCoordinates(
+                                    feature.geometry.coordinates
+                                );
+
+                            }
+
+                        }
+                    );
+
+
+
+                if (!bounds.isEmpty()) {
+
+                    rfMap.fitBounds(
+
+                        bounds,
+
+                        {
+
+                            padding: {
+
+                                top:
+                                    55,
+
+                                right:
+                                    55,
+
+                                bottom:
+                                    55,
+
+                                left:
+                                    55
+
+                            },
+
+                            maxZoom:
+                                15,
+
+                            duration:
+                                1000
+
+                        }
+
+                    );
+
+                }
+
+
+
+                // =========================================
+                // POPUP GARIS 2035
+                // =========================================
+
+                rfMap.on(
+                    "click",
+                    "rf-shoreline-2035-line",
+                    function(event) {
+
+                        if (
+                            !event.features ||
+                            !event.features.length
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        const feature =
+                            event.features[0];
+
+
+                        const p =
+                            feature.properties || {};
+
+
+                        const id =
+                            p.ID_TRANSEK ??
+                            p.TRANSEK ??
+                            p.TransectID ??
+                            p.ID ??
+                            "-";
+
+
+                        const pred =
+                            p.PRED_M ??
+                            p.DELTA_M ??
+                            p.PREDIKSI ??
+                            p.PRED_2035 ??
+                            "-";
+
+
+                        const kategori =
+                            p.KELAS ??
+                            p.KATEGORI ??
+                            p.CLASS ??
+                            "-";
+
+
+                        const html =
+                            `
+
+                            <div class="dsas-popup">
+
+                                <div class="dsas-popup-header">
+
+                                    <span>
+                                        PREDIKSI GARIS PANTAI 2035
+                                    </span>
+
+                                    <strong>
+                                        Transek ${id}
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="dsas-popup-body">
+
+                                    <div class="popup-row">
+
+                                        <span>
+                                            Pergeseran
+                                        </span>
+
+                                        <b>
+                                            ${pred} m
+                                        </b>
+
+                                    </div>
+
+
+                                    <div class="popup-row">
+
+                                        <span>
+                                            Kategori
+                                        </span>
+
+                                        <b>
+                                            ${kategori}
+                                        </b>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            `;
+
+
+
+                        new maplibregl.Popup({
+
+                            closeButton:
+                                true,
+
+                            closeOnClick:
+                                true,
+
+                            maxWidth:
+                                "300px"
+
+                        })
+
+                        .setLngLat(
+                            event.lngLat
+                        )
+
+                        .setHTML(
+                            html
+                        )
+
+                        .addTo(
+                            rfMap
+                        );
+
+                    }
+                );
+
+
+
+                // =========================================
+                // CURSOR
+                // =========================================
+
+                rfMap.on(
+                    "mouseenter",
+                    "rf-shoreline-2035-line",
+                    function() {
+
+                        rfMap
+                            .getCanvas()
+                            .style
+                            .cursor =
+                            "pointer";
+
+                    }
+                );
+
+
+                rfMap.on(
+                    "mouseleave",
+                    "rf-shoreline-2035-line",
+                    function() {
+
+                        rfMap
+                            .getCanvas()
+                            .style
+                            .cursor =
+                            "";
+
+                    }
+                );
+
+
+
+                console.log(
+                    "RF shoreline 2025 dan 2035 berhasil ditampilkan."
+                );
+
+
+            }
+
+            catch(error) {
+
+                console.error(
+                    "RF GEOJSON ERROR:",
+                    error
+                );
+
+            }
+
+        }
+    );
+
+}
